@@ -1,0 +1,1528 @@
+schema_version: rea-hardware/spec/v1
+product:
+  slug: thin-laptop-cm5
+  name: 13-inch Thin Aluminum CM5 Laptop
+  summary: 13-inch thin CNC aluminum laptop powered by Raspberry Pi Compute Module 5 with scissor keyboard, multi-touch trackpad, 2S2P 7.4V 9,000mAh (66.6Wh) Li-Po battery pack (four identical LP4466104 cells contoured around and under the trackpad), dual left USB-C ports (45-65W 20V PD charging via CH224A + BQ25798RQMR 2S NVDC buck-boost charger and TPS56628DDAR 5V/6A synchronous buck converter), right 3.5mm audio jack, stereo speakers, mic, lid Hall sensor, and 1080p MIPI webcam
+  category: laptop
+inputs:
+  images:
+  - inputs/board_in_hand.jpg
+  - inputs/keyboard_top.jpg
+  - inputs/logic_board.jpg
+  - inputs/open_side.jpg
+  - inputs/teardown_exploded.jpg
+  - inputs/teardown_shells.jpg
+  prompt: inputs/prompt.md
+view:
+  up:
+  - 0
+  - 1
+  - 0
+  front:
+  - 0
+  - 0
+  - 1
+envelope:
+  width_mm: 297.5
+  height_mm: 206.4
+  depth_mm: 12.7
+  corner_radius_mm: 10.0
+  derivation: Published 13-inch thin laptop exterior dimensions 297.5 x 206.4 x 12.7 mm (8.6 mm base + 4.1 mm lid), verified with rea-hw measure on teardown_exploded.jpg and teardown_shells.jpg
+  front_origin_world_mm:
+  - -68.75
+  - 12.0
+  - 11.6
+fidelity:
+  brand_marks_excluded:
+  - apple
+  - macbook
+  - macbook neo
+  - macbook pro
+  - macbook air
+  - ifixit
+  out_of_scope:
+  - proprietary biometric fingerprint sensor inside lock key
+  - anodized surface micro-grain texture
+  dimensions:
+  - name: overall_width
+    kind: overall_width
+    value_mm: 297.5
+    tol_mm: 2.0
+    source: Published 13-inch thin laptop specification (297.5 mm width) and rea-hw measure on teardown_exploded.jpg
+  - name: overall_height
+    kind: overall_height
+    value_mm: 206.4
+    tol_mm: 2.0
+    source: Published 13-inch thin laptop specification (206.4 mm depth)
+  - name: overall_depth
+    kind: overall_depth
+    value_mm: 12.7
+    tol_mm: 1.0
+    source: Published 13-inch thin laptop specification (12.7 mm closed thickness)
+  - name: center_thickness
+    kind: center_thickness
+    value_mm: 12.7
+    tol_mm: 1.0
+    source: Flat unibody profile measured in open_side.jpg and teardown_shells.jpg
+  - name: edge_thickness
+    kind: edge_thickness
+    value_mm: 11.5
+    tol_mm: 1.5
+    source: Radiused bottom edge profile measured 1.5 mm inward from perimeter
+  must_match:
+  - id: F_DISPLAY
+    name: 13-inch IPS display panel
+    kind: display
+    view: front
+    center_mm:
+    - 148.75
+    - 102.0
+    size_mm:
+    - 284.0
+    - 178.0
+    implement: case
+    source: photo
+    confidence: high
+    pose: open
+    notes: Active display window inside narrow dark bezel on open lid
+  - id: F_WEBCAM
+    name: 1080p top-bezel webcam window
+    kind: sensor
+    view: front
+    center_mm:
+    - 148.75
+    - 196.25
+    size_mm:
+    - 6.0
+    - 4.0
+    implement: case
+    source: photo
+    confidence: high
+    pose: open
+    notes: Centered in top display bezel above screen (at y=196.25 mm in closed deck frame, swinging to top of lid when open)
+  - id: F_KEYBOARD
+    name: 78-key scissor-switch keyboard well
+    kind: button
+    view: front
+    center_mm:
+    - 148.75
+    - 64.0
+    size_mm:
+    - 270.0
+    - 104.0
+    implement: case
+    source: photo
+    confidence: high
+    pose: open
+    notes: Recessed keyboard well in top deck holding 78-key module (#1..#76 in measure-teardown_exploded.png)
+  - id: F_TRACKPAD
+    name: Multi-touch glass trackpad surface
+    kind: button
+    view: front
+    center_mm:
+    - 148.75
+    - 160.0
+    size_mm:
+    - 120.0
+    - 76.0
+    implement: case
+    source: photo
+    confidence: high
+    pose: open
+    notes: Centered below keyboard (#77 in measure-teardown_exploded.png)
+  - id: F_USBC_2
+    name: Rear-left USB-C data and 5V accessory port
+    kind: port
+    view: left
+    center_mm:
+    - 27.0
+    - 8.8
+    size_mm:
+    - 9.2
+    - 3.5
+    implement: case
+    source: prompt
+    confidence: high
+    pose: closed
+    notes: Left edge rear USB-C port on usb_left daughterboard; mouth faces -X
+  - id: F_USBC_1
+    name: Front-left USB-C PD 45-65W charging and data port
+    kind: port
+    view: left
+    center_mm:
+    - 43.0
+    - 8.8
+    size_mm:
+    - 9.2
+    - 3.5
+    implement: case
+    source: prompt
+    confidence: high
+    pose: closed
+    notes: Left edge front USB-C charging port on usb_left daughterboard (20V @ 2.25-3.25A = 45-65W USB-C PD negotiated by autonomous CH224A PD sink U1 feeding main-board BQ25798RQMR 5A 2S buck-boost NVDC charger); mouth faces -X
+  - id: F_AUDIO
+    name: Right-edge 3.5mm TRRS headphone jack
+    kind: port
+    view: right
+    center_mm:
+    - 35.0
+    - 7.5
+    size_mm:
+    - 6.0
+    - 5.2
+    implement: case
+    source: prompt
+    confidence: high
+    pose: closed
+    notes: Right edge 3.5mm CTIA TRRS audio jack J1 on audio_right daughterboard with Ring 2 grounded, Sleeve biased for headset mic/plug detection via TLV7041DBVR rail-to-rail input comparators U1..U3 (driving J2/J_AUDR pin 7 to dedicated main-board net /HP_DET on CM5 GPIO24 U1 pin 45 with R37=10k pull-up, isolated from /LID_SNS), TS5A23159DGSR dual SPDT differential mic mux U4, and R21 1k/BAT54HT1G D8 transient clamp; mouth faces +X
+  - id: F_HALL
+    name: Lid closure Hall-effect sensor
+    kind: sensor
+    view: any
+    center_mm:
+    - 188.75
+    - 44.0
+    size_mm:
+    - 3.5
+    - 3.5
+    implement: pcb+case
+    source: prompt
+    confidence: high
+    pose: closed
+    notes: Internal DRV5032FADBZR Hall sensor U_HALL on main board at (120.0, 32.0) aligned with lid_magnet seated in a blind pocket inside the lid (between display_panel/display_bezel and lid_shell's continuous outer skin, with no hole through lid_shell's outer skin), driving dedicated active-low /LID_SNS to CM5 GPIO13 (U1 pin 28) with R13=10k pull-up to +3V3
+fab:
+  profile: jlcpcb
+  layers: 4
+  thickness_mm: 1.6
+  assembly_sides:
+  - top
+electrical:
+  mcu: Raspberry Pi Compute Module 5 (rea_refs:ComputeModule5-CM5)
+  power: Front-left USB-C PD 3.0 autonomous sink (CH224A on usb_left, strapped for 20V PD request, 20V @ 2.25-3.25A = 45-65W) -> BQ25798RQMR I2C 5A 1S-4S buck-boost battery charger & NVDC power-path manager (3.6-24V input, charging 2S2P 7.4V nominal [6.0-8.4V] 9,000 mAh / 66.6 Wh Li-Po battery pack at 8.40V via single 8-pin pack connector J_BAT with BATP Kelvin sense and TS 10k NTC sense, regulating NVDC VSYS at 6.0-8.6V) -> TPS56628DDAR 6A synchronous buck converter (4.5-18V input) stepping down 2S VSYS (6.0-8.6V) to +5V (5.06V / 6A continuous) for CM5 +5V inputs, PAM8406DR stereo Class-D speaker amplifier, TLV62569DBVR +3.3V_PER camera/display buck regulator, TPS61165DBVR WLED backlight boost driver, and SY6280AAC / TPS25810RVCR USB-C 5V accessory host power; HT7530S 30V-input 3.0V ultra-low-Iq LDO powers CM5 RTC from always-on 2S VBAT
+  blocks:
+  - id: cm5_core
+    purpose: Raspberry Pi Compute Module 5 (200-pin dual high-density board-to-board footprint rea_refs:Raspberry-Pi-5-Compute-Module), feeding all six +5v_(Input) pins (77,79,81,83,85,87), tying GPIO_VREF (pin 78) to +3.3v_(Output) (pins 84,86), and wiring USB2_P/USB2_N (pins 105/103), USB_OTG_ID (pin 101), PMIC_EN, and nRPIBOOT (pin 93 with top-side SW1 recovery tactile switch) to internal service test pads TP1..TP5 on the top side of the main board (allowing a continuous unperforated bottom_shell)
+    key_parts:
+    - ComputeModule5-CM5
+    - PTS526SM15SMTR2LFS
+    reference: https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf (Raspberry Pi CM5 Datasheet & CM5IO rev 2 reference)
+  - id: power_charger
+    purpose: 20V USB-C PD autonomous sink (CH224A on usb_left, 45-65W from 20V / 2.25-3.25A contract) feeding BQ25798RQMR 5A 2S buck-boost NVDC battery charger (3.6-24V input, R_PROG=8.2k for 2S 8.40V @ 750kHz with L1=2.2uH FXL0630-2R2-M, ILIM_HIZ resistor divider setting 3.25A input current limit [65W at 20V], 100R BATP Kelvin sense and 5.23k/30.1k JEITA TS thermistor sense to single 8-pin battery pack header J_BAT S8B-PH-SM4-TB(LF)(SN) protected by 10A fuse F1), TPS56628DDAR 6A synchronous buck converter stepping down 2S VSYS (6.0-8.6V) to +5V (5.06V, R1=124k / R2=22.1k, L2=2.2uH FXL0630-2R2-M), HT7530S 30V-input 3.0V RTC LDO on 2S VBAT, and SY6280AAC high-side switch for USB-C 5V accessory output
+    key_parts:
+    - CH224A
+    - BQ25798RQMR
+    - TPS56628DDAR
+    - S8B-PH-SM4-TB(LF)(SN)
+    - HT7530S
+    - SY6280AAC
+    reference: https://www.ti.com/lit/ds/symlink/bq25798.pdf (TI BQ25798 1S-4S Buck-Boost Charger & TPS56628 6A Buck Converter standard application circuits)
+  - id: display_camera_backlight
+    purpose: 22-pin 0.5mm MIPI DSI1 display connector (J_DSI, 4-lane MIPI1_D0..3_P/N + MIPI1_C_P/N + I2C0), TPS61165DBVR constant-current boost LED backlight driver on 2-pin JST-PH (J_BL) dimmed by CM5 GPIO12 PWM, and 22-pin 0.5mm MIPI CSI0 webcam connector (J_CSI, MIPI0_D0..1_P/N + MIPI0_C_P/N + CAM_GPIO0/1 + I2C0) powered by TLV62569DBVR +3.3V_PER buck regulator
+    key_parts:
+    - FH12-22S-0.5SH(55)
+    - TPS61165DBVR
+    - TLV62569DBVR
+    - S2B-PH-SM4-TB(LF)(SN)
+    reference: https://www.ti.com/lit/ds/symlink/tps61165.pdf (TI TPS61165 WLED boost driver reference)
+  - id: keyboard_trackpad
+    purpose: TCA8418RTWR I2C 8x10 keypad matrix scanner reading all 78 scissor keys via 24-pin 0.5mm FPC connector (J_KB, rows 0..7, cols 0..9, plus power key to CM5 PWR_BUT pin 92) and 8-pin 0.5mm FPC connector (J_TP) carrying I2C1 (GPIO2/GPIO3) + interrupt/reset to capacitive multi-touch trackpad
+    key_parts:
+    - TCA8418RTWR
+    - 05A20L24P
+    - FPC-05F-8PH20
+    reference: https://www.ti.com/lit/ds/symlink/tca8418.pdf (TI TCA8418 8x10 I2C keypad scan reference)
+  - id: audio_subsystem
+    purpose: ES8388 low-power I2S stereo codec (connected to CM5 PCM I2S GPIO18..21 and I2C) driving right daughterboard 3.5mm headphone jack (LOUT1/ROUT1 via 8-pin FFC J_AUDR) and PAM8406DR stereo 5W Class-D amplifier (from LOUT2/ROUT2) feeding left and right speaker headers (J_SPKL, J_SPKR), plus differential mic input from ICS-40720 MEMS mic on audio_right
+    key_parts:
+    - ES8388
+    - PAM8406DR
+    - S2B-PH-SM4-TB(LF)(SN)
+    - FPC-05F-8PH20
+    reference: http://www.everest-semi.com/pdf/ES8388%20DS.pdf (Everest ES8388 + Diodes PAM8406 reference)
+  - id: usb_left_subboard
+    purpose: Left daughterboard (usb_left, single-sided top assembly so bottom_shell is continuous with no through-cutouts) with front-left 45-65W PD charging/data USB-C receptacle (J2, autonomous CH224A 20V PD 3.0 sink controller U1 + TPD6S300RUKR 24V CC/SBU OVP & ESD protector + SMF24A VBUS TVS + RP1 USB3-0-D_P/N) and rear-left accessory USB-C receptacle (J1, TPS25810RVCR 5V DFP controller U2 + TPD6S300RUKR + SMF6.0A + RP1 USB3-1-D_P/N), linked via 16-pin 0.5mm FFC (J3 <-> J_USBL) and high-current wire-to-board headers (J4, J5) to main board
+    key_parts:
+    - TYPE-C-31-M-12
+    - CH224A
+    - TPS25810RVCR
+    - TPD6S300RUKR
+    - 05B20U16P
+  - id: audio_right_subboard
+    purpose: Right daughterboard (audio_right) with 3.5mm CTIA TRRS headphone/headset jack (J1), ICS-40720 differential analog MEMS microphone (MK1), TLV7041DBVR plug/mic comparators (U1..U3), and TS5A23159DGSR dual SPDT mic mux (U4), linked via 8-pin 0.5mm FFC (J2 <-> J_AUDR) to main board
+    key_parts:
+    - PJ-320D
+    - ICS-40720
+    - TLV7041DBVR
+    - TS5A23159DGSR
+    - FPC-05F-8PH20
+  nets_must_connect:
+  - - U1.nRPIBOOT
+    - SW1.1
+  - - U1.USB2_P
+    - TP2.1
+  - - U1.USB2_N
+    - TP3.1
+  - - U1.USB3-0-D_P
+    - J_USBL.10
+  - - U1.USB3-0-D_N
+    - J_USBL.11
+  - - U1.USB3-1-D_P
+    - J_USBL.13
+  - - U1.USB3-1-D_N
+    - J_USBL.14
+  - - U_CHG.SW1
+    - L1.1
+  - - U_CHG.SW2
+    - L1.2
+  - - U_BUCK.SW
+    - L2.1
+  - - U_BL.SW
+    - L3.1
+  high_speed:
+  - name: usb_otg_flash
+    board: main
+    kind: diff_pairs
+    nets:
+    - '*USB2_P*'
+    - '*USB2_N*'
+    tolerance_mm: 1.5
+    diff_impedance_ohm: 90.0
+    source: 'Raspberry Pi CM5 Datasheet Section 3.3: USB 2.0 90 ohm differential pair'
+  - name: usb_host0_port1
+    board: main
+    kind: diff_pairs
+    nets:
+    - '*USB3-0-D_P*'
+    - '*USB3-0-D_N*'
+    tolerance_mm: 1.5
+    diff_impedance_ohm: 90.0
+    source: 'Raspberry Pi CM5 Datasheet Section 3.4: RP1 USB 2.0 host 90 ohm differential pair'
+  - name: usb_host1_port2
+    board: main
+    kind: diff_pairs
+    nets:
+    - '*USB3-1-D_P*'
+    - '*USB3-1-D_N*'
+    tolerance_mm: 1.5
+    diff_impedance_ohm: 90.0
+    source: 'Raspberry Pi CM5 Datasheet Section 3.4: RP1 USB 2.0 host 90 ohm differential pair'
+  - name: mipi_dsi1_display
+    board: main
+    kind: diff_pairs
+    nets:
+    - '*MIPI1_C_P*'
+    - '*MIPI1_C_N*'
+    - '*MIPI1_D0_P*'
+    - '*MIPI1_D0_N*'
+    - '*MIPI1_D1_P*'
+    - '*MIPI1_D1_N*'
+    - '*MIPI1_D2_P*'
+    - '*MIPI1_D2_N*'
+    - '*MIPI1_D3_P*'
+    - '*MIPI1_D3_N*'
+    tolerance_mm: 1.0
+    diff_impedance_ohm: 100.0
+    source: 'Raspberry Pi CM5 Datasheet Section 3.7: MIPI D-PHY 100 ohm differential pairs'
+  - name: mipi_csi0_camera
+    board: main
+    kind: diff_pairs
+    nets:
+    - '*MIPI0_C_P*'
+    - '*MIPI0_C_N*'
+    - '*MIPI0_D0_P*'
+    - '*MIPI0_D0_N*'
+    - '*MIPI0_D1_P*'
+    - '*MIPI0_D1_N*'
+    tolerance_mm: 1.0
+    diff_impedance_ohm: 100.0
+    source: 'Raspberry Pi CM5 Datasheet Section 3.7: MIPI D-PHY 100 ohm differential pairs'
+board:
+  width_mm: 160.0
+  height_mm: 44.0
+  corner_radius_mm: 2.0
+  mounting_holes:
+  - x_mm: 4.0
+    y_mm: 10.0
+    drill_mm: 2.2
+    plated: true
+  - x_mm: 4.0
+    y_mm: 34.0
+    drill_mm: 2.2
+    plated: true
+  - x_mm: 156.0
+    y_mm: 10.0
+    drill_mm: 2.2
+    plated: true
+  - x_mm: 156.0
+    y_mm: 34.0
+    drill_mm: 2.2
+    plated: true
+  placement:
+  - ref: U1
+    role: cm5_module_socket
+    side: top
+    x_mm: 56.0
+    y_mm: 5.5
+    rot_deg: 270
+    tolerance_mm: 1.0
+  - ref: J_DSI
+    role: display_mipi_ffc
+    side: top
+    x_mm: 24.0
+    y_mm: 2.2
+    rot_deg: 180
+    tolerance_mm: 1.0
+  - ref: J_BL
+    role: display_backlight_conn
+    side: top
+    x_mm: 42.0
+    y_mm: 2.5
+    rot_deg: 180
+    tolerance_mm: 1.0
+  - ref: J_CSI
+    role: camera_mipi_ffc
+    side: top
+    x_mm: 136.0
+    y_mm: 2.2
+    rot_deg: 180
+    tolerance_mm: 1.0
+  - ref: J_USBL
+    role: usb_left_ffc
+    side: top
+    x_mm: 2.0
+    y_mm: 22.0
+    rot_deg: 270
+    tolerance_mm: 1.0
+  - ref: J_AUDR
+    role: audio_right_ffc
+    side: top
+    x_mm: 158.0
+    y_mm: 22.0
+    rot_deg: 90
+    tolerance_mm: 1.0
+  - ref: J_SPKL
+    role: speaker_left_conn
+    side: top
+    x_mm: 10.0
+    y_mm: 41.5
+    rot_deg: 0
+    tolerance_mm: 1.0
+  - ref: J_BAT
+    role: battery_pack_conn
+    side: top
+    x_mm: 24.5
+    y_mm: 41.0
+    rot_deg: 0
+    tolerance_mm: 1.5
+  - ref: J_KB
+    role: keyboard_fpc
+    side: top
+    x_mm: 43.0
+    y_mm: 41.8
+    rot_deg: 0
+    tolerance_mm: 1.0
+  - ref: J_TP
+    role: trackpad_fpc
+    side: top
+    x_mm: 114.0
+    y_mm: 41.8
+    rot_deg: 0
+    tolerance_mm: 1.0
+  - ref: J_SPKR
+    role: speaker_right_conn
+    side: top
+    x_mm: 148.0
+    y_mm: 41.5
+    rot_deg: 0
+    tolerance_mm: 1.0
+  - ref: U_HALL
+    role: hall_lid_sensor
+    side: top
+    x_mm: 120.0
+    y_mm: 32.0
+    rot_deg: 0
+    feature: F_HALL
+    tolerance_mm: 1.0
+  - ref: SW1
+    role: rpiboot_button
+    side: top
+    x_mm: 125.0
+    y_mm: 22.0
+    rot_deg: 0
+    tolerance_mm: 2.0
+  max_component_height_mm:
+    top: 5.5
+    bottom: 0.5
+sub_boards:
+- id: usb_left
+  name: Left Dual USB-C PD & Data Daughter Board
+  layers: 2
+  width_mm: 36.0
+  height_mm: 38.0
+  corner_radius_mm: 2.0
+  world_position_mm:
+  - -66.5
+  - -4.0
+  - 0.0
+  world_rotation_deg:
+  - 0.0
+  - 0.0
+  - 0.0
+  mounting_holes:
+  - x_mm: 18.0
+    y_mm: 4.0
+    drill_mm: 2.2
+    plated: true
+  - x_mm: 18.0
+    y_mm: 34.0
+    drill_mm: 2.2
+    plated: true
+  placement:
+  - ref: J1
+    role: usbc_data_5v_port
+    side: top
+    x_mm: 3.5
+    y_mm: 11.0
+    rot_deg: 270
+    feature: F_USBC_2
+    tolerance_mm: 1.0
+  - ref: J2
+    role: usbc_pd_charge_port
+    side: top
+    x_mm: 3.5
+    y_mm: 27.0
+    rot_deg: 270
+    feature: F_USBC_1
+    tolerance_mm: 1.0
+  - ref: U1
+    role: usb_pd_sink_controller
+    side: top
+    x_mm: 18.0
+    y_mm: 27.0
+    rot_deg: 0
+    tolerance_mm: 2.0
+  - ref: J3
+    role: main_board_ffc
+    side: top
+    x_mm: 34.0
+    y_mm: 18.0
+    rot_deg: 90
+    tolerance_mm: 1.0
+  max_component_height_mm:
+    top: 4.0
+    bottom: 0.5
+- id: audio_right
+  name: Right Headphone & Microphone Daughter Board
+  layers: 2
+  width_mm: 36.0
+  height_mm: 38.0
+  corner_radius_mm: 2.0
+  world_position_mm:
+  - 190.5
+  - -4.0
+  - 0.0
+  world_rotation_deg:
+  - 0.0
+  - 0.0
+  - 0.0
+  mounting_holes:
+  - x_mm: 18.0
+    y_mm: 4.0
+    drill_mm: 2.2
+    plated: true
+  - x_mm: 18.0
+    y_mm: 34.0
+    drill_mm: 2.2
+    plated: true
+  placement:
+  - ref: J1
+    role: headphone_jack
+    side: top
+    x_mm: 28.5
+    y_mm: 19.0
+    rot_deg: 180
+    feature: F_AUDIO
+    tolerance_mm: 1.0
+  - ref: MK1
+    role: microphone
+    side: top
+    x_mm: 18.0
+    y_mm: 10.0
+    rot_deg: 0
+    tolerance_mm: 1.0
+  - ref: J2
+    role: main_board_ffc
+    side: top
+    x_mm: 2.0
+    y_mm: 18.0
+    rot_deg: 270
+    tolerance_mm: 1.0
+  max_component_height_mm:
+    top: 5.5
+    bottom: 0.5
+bom:
+- refs:
+  - U1
+  role: cm5_socket
+  mpn: DF40C-100DS-0.4V(51)
+  lcsc: C597931
+  footprint: rea_refs:Raspberry-Pi-5-Compute-Module
+  description: Raspberry Pi Compute Module 5 dual 100-pin high-density board-to-board footprint
+- refs:
+  - U_CHG
+  role: battery_charger
+  mpn: BQ25798RQMR
+  lcsc: C2876593
+  footprint: lcsc:QFN-29_L4.0-W4.0-P0.40-TL-BQ25792RQMR
+  description: 'I2C 5A 1S-4S buck-boost battery charger and NVDC power-path manager (3.6-24V operating input, 26V internal VBUS_OVP, charging 2S2P 7.4V nominal [6.0-8.4V] 9,000mAh Li-Po pack at VREG=8.40V with up to 5A charge current from 20V / 2.25-3.25A [45-65W] USB-C PD input): VAC1 (pin 9) tied to /VBUS_PD (clamped by low-clamping 22V-standoff / 27.7V-clamping surge TVS D7 TVS2200DRVR C2875234 and decoupled by 100nF 50V C2) and switched into VBUS/VAC2 (pins 2/3/8, /CHG_VBUS, decoupled by 2x 10uF 50V 0805 + 100nF 50V 0402) via external back-to-back 30V 5.8A N-MOSFETs Q3 and Q4 (2x AO3400A C20917, common sources on /CHG_AC_SRC with R60=100R C25077 and C82=10nF 50V C15195) driven by ACDRV1 (pin 11, /CHG_ACDRV1 via R69=10R C25077, with ACDRV2 pin 10 tied to GND) to actively disconnect VBUS above 26V, PMID (pin 29) decoupled by 3x 10uF 50V 0805 + 100nF 50V 0402, L1=2.2uH 10A shielded inductor (FXL0630-2R2-M C167218) between SW1 (pin 28) and SW2 (pin 26) with 47nF 50V 0402 bootstrap caps on BTST1 (pin 4) and BTST2 (pin 19), PROG (pin 20) strapped with R_PROG=8.2k 1% (C25981) to GND for 2S cell count (8.4V VREG, 7.0V VSYSMIN) and 750kHz switching frequency, ILIM_HIZ (pin 17, /CHG_ILIM) biased from REGN (pin 5, decoupled by 4.7uF 50V 0603 C29823) via R29=78.7k 1% (C2998104) top / R30=100k 1% (C25741) bottom divider setting V_ILIM_HIZ=2.80V (I_INDPM=2.25A -> 45W hardware input limit at 20V so 45W 20V@2.25A PD adapters are never overloaded prior to software I2C override, while CM5 software can disable EN_ILIM_HIZ_PIN over I2C to allow 3.25A / 65W on 65W contracts), ~QON (pin 12, /CHG_QON) relying on internal BQ25798 pull-up (no external pull-up to /VBAT) and isolated from CM5 /CM5_PWR_BUT (U1 pin 92) via dual-anode blocking Schottky diodes D16 and D17 (2x B16WS C364278) with common cathodes at J_KB pin 19 (/PWR_BUT), BAT (pins 22/23) decoupled by 2x 10uF 50V 0805 and routed via 5A SMD fuse F1 (JFC1206-1500FS C136351) to J_BAT pins 1..4 (/VBAT_PACK), BATP (pin 18, /CHG_BATP) connected via R50=100R 1% (C25076) Kelvin sense resistor to the fused /VBAT side of F1 (preventing R50 overload if F1 opens), TS (pin 16, /CHG_TS) biased from REGN via R23=5.23k 1% (C11631) / R42=30.1k 1% (C29402) JEITA divider to J_BAT pin 5 (10k NTC in pack) and clamped by 5.5V bidirectional TVS diode D19 (TSD05CDYFR C20611048), SDRV (pin 24) decoupled by 1nF 50V 0402 (C1523) to GND, CE (pin 13) pulled low to GND, and SYS (pin 25) decoupled by 5x 10uF 50V 0805 + 100nF 0402 feeding /VSYS (6.5-8.6V)'
+- refs:
+  - U_BUCK
+  role: buck_5v
+  mpn: TPS56628DDAR
+  lcsc: C485522
+  footprint: lcsc:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL-EP
+  description: 'Dual 6A synchronous step-down (buck) converter architecture (U_BUCK and U_BUCK2, 2x TPS56628DDAR C485522, 12A total 5V capacity from 2S /VSYS 6.5-8.6V): U_BUCK steps down /VSYS (decoupled by 2x 22uF 25V X5R 0805 C45783 + 100nF 0402 C307331, EN pin 1 driven via R33=100k C25741 / R34=22.1k C163478 UVLO divider setting >=6.63V battery cutoff for full dropout headroom, VREG5 pin 3 decoupled by 1uF C52923 with 100k pull-up to PG, L2=2.2uH 10A FXL0630-2R2-M C167218, R27=133k C25753 / R28=24k C25769 setting V_OUT=5.00V, 3x 22uF 25V 0805 C45783 + 100nF output filter, and 5.5V-standoff TVS D3 TSD05CDYFR C20611048) to /+5V (5.00V, 6A continuous) dedicated to CM5 /+5V_CM5 (via back-to-back common-source AO4407A P-MOSFETs Q1/Q2 C2841482 gated on /DBG_GATE by U_DBG TPS2117DRLR ST pin 8 with R59=10k C25744 tied to common source /DBG_Q_SRC so V_GS=0V when ST is Hi-Z, while U_DBG MODE pin 5 is tied to /DBG_PWR and PR1 pin 4 on /DBG_PR1 is pulled low by 2N7002 N-MOSFET Q_DBG C8545 gated by /+5V so internal 6A /+5V always takes priority over external 500mA TP1 /DBG_PWR) and U_VBUS (SY6280AAC on /+5V_USBC, clamped by 5.5V-standoff TVS D2 TSD05CDYFR C20611048); U_BUCK2 steps down /VSYS (decoupled by 2x 22uF 25V 0805 C69/C79 + 100nF C81, EN pin 1 driven via R67=100k C25741 / R68=22.1k C163478 UVLO divider setting >=6.63V cutoff, L5=2.2uH 10A FXL0630-2R2-M C167218, R64=133k C25753 / R65=24k C25769 setting V_OUT=5.00V with 22pF C84, 3x 22uF 25V 0805 C85..C87 + 100nF C78 output filter, and 5.5V-standoff TVS D18 TSD05CDYFR C20611048) to dedicated peripheral rail /+5V_PER (5.00V, 6A continuous) powering U_AMP (PAM8406DR) and U_3V3 (TLV62569DBVR)'
+- refs:
+  - J_BAT
+  role: battery_pack_conn_8p
+  mpn: S8B-PH-SM4-TB(LF)(SN)
+  lcsc: C265121
+  footprint: lcsc:CONN-SMD_8P-P2.00_S8B-PH-SM4-TB-LF-SN
+  description: 8-pin 2.0mm pitch right-angle SMD JST-PH battery pack connector (pins 1..4 parallel VBAT+ on /VBAT_PACK protected by 5A 1206 SMD fuse F1 [JFC1206-1500FS C136351] into /VBAT with R50=100R C25076 Kelvin sense connected to fused /VBAT side of F1 into U_CHG pin 18 BATP, pin 5 TS 10k NTC thermistor sense on /CHG_TS to U_CHG pin 16 protected by 5.5V bidirectional TVS diode D19 [TSD05CDYFR C20611048], pins 6..8 parallel GND [6.0A continuous return])
+- refs:
+  - U_RTC
+  role: rtc_ldo_3v0
+  mpn: HT7530S
+  lcsc: C347214
+  footprint: lcsc:SOT-23_L2.9-W1.6-P1.90-LS2.8-BR
+  description: 30V-input 3.0V 100mA ultra-low-quiescent-current (2uA) CMOS LDO regulator powered from always-on 2S /VBAT (6.0-8.4V) supplying CM5 PMIC_BAT_V (/RTC_3V0)
+- refs:
+  - U_VBUS
+  role: vbus_switch
+  mpn: SY6280AAC
+  lcsc: C55136
+  footprint: lcsc:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BL
+  description: 2A current-limited 5V USB accessory power switch (configured by R31=3.3k C25890 on ISET for 2.06A typ current limit above usb_left U2 TPS25810RVCR 1.7A typ / 1.85A max internal switch limit for selective overcurrent coordination while U2 CHG=GND, CHG_HI=GND advertises Default USB 500mA on J1)
+- refs:
+  - U_BL
+  role: backlight_driver
+  mpn: TPS61165DBVR
+  lcsc: C58756
+  footprint: lcsc:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+  description: 38V constant-current white LED boost driver with PWM dimming, powered directly from 2S /VSYS (6.0-8.6V) on /VSYS_BL via high-side P-MOSFET load switch Q_BL (AO3401A C15127, gated by Q_BL_EN 2N7002 C8545 + R67=100k/R68=10k from /+3V3, reducing peak switch current to ~0.62A well below the 0.96A minimum switch limit and offloading 0.74A from /+5V), with R32=1.5R 0603 (C22769, setting 133.3mA / ~3.2W WLED current for LP130WQ1-MIPI-22P) and D1=B16WS 60V 1A SOD-323 Schottky catch diode (C364278, >=1.5x margin over 38V-40V open-LED OVP)
+- refs:
+  - U_KB
+  role: keyboard_scanner
+  mpn: TCA8418RTWR
+  lcsc: C138713
+  footprint: lcsc:WQFN-24_L4.0-W4.0-P0.50-TL-EP2.5
+  description: I2C 8x10 keypad matrix controller scanning all 78 laptop keys
+- refs:
+  - U_CODEC
+  role: audio_codec
+  mpn: ES8388
+  lcsc: C365736
+  footprint: lcsc:QFN-28_L4.0-W4.0-P0.45-BL-EP
+  description: Low-power I2S stereo audio codec with headphone driver (LOUT1/ROUT1 AC-coupled via C29+C52=200uF on /HP_L_AC and C30+C53=200uF on /HP_R_AC [4x 100uF 6.3V X5R 0805 GRM21BR60J107ME15L C141660] followed by R61=10R and R62=10R 0402 C25077 series isolation resistors and D10/D11 PESD5V0S1BA C2827694 ESD clamps on /HP_L and /HP_R at J_AUDR), differential mic preamp on LIN1/RIN1 biased from pin 25 MICBIAS (decoupled by C51=4.7uF 0603 C19666 with R51=2.2k/R52=2.2k C25879 bias network and D12/D13 PESD5V0S1BA ESD clamps on /MIC_P and /MIC_N; unused LIN2/RIN2 pins 21/22 left open so internal VMID bias is unloaded), MCLK driven from CM5 GPIO4 (GPCLK0, U1 pin 54) via R36=22R damping resistor, and analog supplies AVDD/HPVDD (pins 17, 16) isolated on /CODEC_AVDD via R49=4.7R + C49=10uF + C50=100nF low-pass RC filter
+- refs:
+  - U_AMP
+  role: speaker_amp
+  mpn: PAM8406DR
+  lcsc: C86270
+  footprint: lcsc:SOIC-16_L9.9-W3.9-P1.27-LS6.0-BL
+  description: Stereo Class-D speaker amplifier powered directly from /+5V (PVDDL/PVDDR/VDD decoupled by C35=10uF + C36=100nF) with Pin 9 (MODE, /AMP_MODE) pulled High to /+5V via R71=10k (0402, C25744) to enable ~88-90% high-efficiency Class-D modulation, hardware shutdown/mute on /AMP_SHDN_N from CM5 GPIO16 (U1 pin 29) with R17=10k pull-down, and EMI ferrite-bead/capacitor filters on all 4 speaker outputs (/AMP_OUTL_P/N and /AMP_OUTR_P/N via 4x BLM18PG121SN1D 120R@100MHz 2A 50mOhm 0603 ferrite beads FB1..FB4 [C14709] and 4x 1nF 50V X7R 0402 shunt capacitors C60..C63 [C1523] on /SPKL_P/N and /SPKR_P/N)
+- refs:
+  - J_DSI
+  - J_CSI
+  role: mipi_ffc_22p
+  mpn: FH12-22S-0.5SH(55)
+  lcsc: C597981
+  footprint: lcsc:FPC-SMD_22P-P0.50_FH12-22S-0.5SH-55
+  description: 22-pin 0.5mm pitch right-angle FFC connector for MIPI DSI1 display (with J_DSI pin 17 /DSI_RST_N wired to CM5 GPIO7 U1 pin 37 + R55=10k pull-down, J_DSI pin 18 /DSI_EN wired to CM5 GPIO8 U1 pin 39 + R56=10k pull-down, and J_DSI pins 20/21 moved to dedicated camera/display bus /SCL0 and /SDA0 alongside J_CSI pins 20/21 with pull-ups R9=2.2k and R10=2.2k [C25879] referenced to switched /+3V3_PER) and CSI0 camera (with R53=22R series source termination placed within 1.5mm of U1 pin 100 on /CAM_GPIO1_SRC -> /CAM_GPIO1 J_CSI pin 18 and R54=10k pull-down on /CAM_GPIO0 J_CSI pin 17), with Pin 22 powered from dedicated soft-started 3.3V 2A synchronous buck regulator U_3V3 (TLV62569DBVR, C141836, L4=2.2uH TMPC0402HP-2R2MG-Z02 C357134, R47=45.3k/R48=10k, enabled on /3V3_PER_EN by CM5 +3V3/GPIO11 via R45=10k/R46=100k) on /+3V3_PER with local 10uF+100nF decoupling at J_DSI.22 (C45, C46) and J_CSI.22 (C47, C48)
+- refs:
+  - J_KB
+  role: keyboard_fpc_24p
+  mpn: 05A20L24P
+  lcsc: C5362158
+  footprint: lcsc:FPC-SMD_24P-P0.50_05A20L24P
+  description: 24-pin 0.5mm pitch right-angle FPC connector for scissor keyboard tail (with PESD5V0S1BA C2827694 ESD TVS clamp D9 on /PWR_BUT at pin 19 and dual-anode blocking Schottky diodes D16/D17 [2x B16WS C364278] isolating U_CHG ~QON on /CHG_QON and CM5 PWR_BUT on /CM5_PWR_BUT)
+- refs:
+  - J_USBL
+  role: usb_left_ffc_16p
+  mpn: 05B20U16P
+  lcsc: C18164516
+  footprint: lcsc:FPC-SMD_16P-P0.50_05B20U16P
+  description: '16-pin 0.5mm pitch right-angle top-contact FFC connector (Pad 1 at North y=18.25mm, Pad 16 at South y=25.75mm) mating 1-to-1 across straight FFC c_usb_left with usb_left bottom-contact J3 (FPC-05F-16PH20 C2856801, Pad 1 at North y=13.75mm, Pad 16 at South y=21.25mm) carrying only USB 2.0 differential pairs (/USB3-0-D_P/N pins 10/11 and /USB3-1-D_P/N pins 13/14, protected by ultra-low-capacitance 0.35pF USB 2.0 ESD arrays U_ESD1 and U_ESD2 [2x USBLC6-2SC6, C2687116]) and ground shielding (pins 5, 6, 9, 12, 15, 16, 17, 18), with pins 1..4 and 7..8 uncommitted (no_connect on main board) so zero /VBUS_PD or /+5V_USBC current traverses the 0.5mm FFC and high-current rails flow exclusively over 1.0mm pitch wire-to-board headers J4 (SM06B-SRSS-TB(LF)(SN), C160405: +5V_USBC pins 1..3 [3.0A rating], GND pins 4..6) and J5 (SM10B-SRSS-TB(LF)(SN), C160409: VBUS_PD pins 1..5 [5.0A continuous rating > 3.25A max 20V PD current, switched from J2_VBUS by adjacent back-to-back AO4407A P-MOSFETs Q1/Q2 on usb_left and gated into U_CHG on main board by back-to-back 30V N-MOSFETs Q3/Q4 AO3400A C20917 + TVS2200DRVR D7 C2875234], GND pins 6..10)'
+- refs:
+  - J_TP
+  - J_AUDR
+  role: ffc_8p
+  mpn: FPC-05F-8PH20
+  lcsc: C2856797
+  footprint: lcsc:FPC-SMD_8P-P0.50_FPC-05F-8PH20
+  description: 8-pin 0.5mm pitch right-angle FFC/FPC connector for trackpad and audio_right daughterboard (with R61=10R/R62=10R C25077 headphone isolation resistors and PESD5V0S1BA C2827694 ESD clamps D10..D14 on /HP_L, /HP_R, /MIC_P, /MIC_N, and /HP_DET at J_AUDR; pin 7 routed to dedicated /HP_DET on CM5 GPIO24 U1 pin 45 with R37=10k pull-up)
+- refs:
+  - J_BL
+  - J_SPKL
+  - J_SPKR
+  role: jst_ph_2p
+  mpn: S2B-PH-SM4-TB(LF)(SN)
+  lcsc: C295747
+  footprint: lcsc:CONN-SMD_P2.00_S2B-PH-SM4-TB-LF-SN
+  description: 2-pin 2.0mm pitch right-angle wire-to-board connector (S2B-PH-SM4-TB(LF)(SN), C295747) for display WLED backlight (J_BL) and left/right stereo speakers (J_SPKL, J_SPKR, EMI-filtered by FB1..FB4 BLM18PG121SN1D C14709 + C60..C63 1nF C1523)
+- refs:
+  - U_HALL
+  role: hall_lid_sensor
+  mpn: DRV5032FADBZR
+  lcsc: C140921
+  footprint: lcsc:SOT-23-3_L2.9-W1.3-P0.95-LS2.4-BR
+  description: Ultra-low-power omnipolar Hall-effect switch detecting lid closure magnet on dedicated /LID_SNS to CM5 GPIO13 (U1 pin 28)
+- refs:
+  - SW1
+  role: rpiboot_switch
+  mpn: PTS526SM15SMTR2LFS
+  lcsc: C2689538
+  footprint: lcsc:SW-SMD_4P-L5.2-W5.2-P3.70-LS6.4
+  description: Top-actuated SMD tactile button on top side of main board for internal CM5 nRPIBOOT recovery flashing mode
+purchased:
+- id: cm5_module
+  description: Raspberry Pi Compute Module 5 (BCM2712 quad-core Cortex-A76, 8GB LPDDR4X, 64GB eMMC, Wi-Fi/BLE)
+  mpn: SC1598
+  url: https://www.raspberrypi.com/products/compute-module-5/
+  datasheet: https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf
+  dims_mm:
+  - 55.3
+  - 40.3
+  - 4.92
+  position_mm:
+  - 52.35
+  - -42.15
+  - 1.62
+  connects_to: pcba
+  dims_source: Raspberry Pi Compute Module 5 mechanical drawing and rea-hw ref cm5 model (55.3 x 40.3 x 4.92 mm)
+  model: case/purchased/cm5_module.stl
+  color: '#2b6f3e'
+- id: keyboard_module
+  description: 78-key ANSI ultra-thin scissor-switch laptop keyboard module with printed legends and 24-pin 0.5mm FPC tail
+  mpn: KB-78-ANSI-SCISSOR-270X104
+  url: https://www.alibaba.com/product-detail/Laptop-Scissor-Switch-Keyboard-Module_1600592841102.html
+  dims_mm:
+  - 270.0
+  - 104.0
+  - 1.8
+  position_mm:
+  - -55.0
+  - -104.0
+  - 6.8
+  connects_to: pcba
+  dims_source: 'Standard 13-inch 78-key ANSI scissor-switch module mechanical drawing: 270.0 x 104.0 mm outline, 1.0 mm aluminum backplate + 0.8 mm keycap travel height, 6 rows on 19.05 x 18.0 mm pitch (row 0 function keys 15.5 x 8.5 mm, alpha keys 16.5 x 15.5 mm, spacebar 92.0 x 15.5 mm), 6 perimeter M1.6 mounting tabs, 24-pin 0.5mm pitch FPC tail exiting at [98.0, 56.0, 0.2] mm in module coords (world [43.0, -48.0, 7.0] mm)'
+  model: case/purchased/keyboard_module.stl
+  decor: case/purchased/keyboard_module_legends.stl
+  decor_color: '#2b2b2b'
+  color: '#f2f1ed'
+  connectors:
+  - id: KB_FPC
+    at_mm:
+    - 98.0
+    - 56.0
+    - 0.2
+    pins: 24
+    pitch_mm: 0.5
+    kind: fpc
+- id: trackpad_module
+  description: Capacitive multi-touch glass-surface I2C laptop trackpad module with 8-pin 0.5mm FPC tail
+  mpn: TP-I2C-120X76-GLASS
+  url: https://www.azoteq.com/products/proxsense/trackpads/
+  dims_mm:
+  - 120.0
+  - 76.0
+  - 2.0
+  position_mm:
+  - 20.0
+  - -186.0
+  - 6.4
+  connects_to: pcba
+  dims_source: 'Azoteq IQS572 / 13-inch laptop glass trackpad mechanical drawing: 120.0 x 76.0 x 2.0 mm (0.8 mm glass + 1.2 mm sensor PCB), 8-pin 0.5mm FPC tail centered at rear edge [60.0, 75.0, 0.5] mm in module coords (world [80.0, -111.0, 6.9] mm)'
+  model: case/purchased/trackpad_module.stl
+  color: '#dcdad3'
+  connectors:
+  - id: TP_FPC
+    at_mm:
+    - 60.0
+    - 75.0
+    - 0.5
+    pins: 8
+    pitch_mm: 0.5
+    kind: fpc
+- id: display_panel
+  description: 13.0-inch 2560x1600 4-lane MIPI DSI IPS thin LCD panel with integrated WLED backlight bar
+  mpn: LP130WQ1-MIPI-22P
+  url: https://www.panelook.com/modeldetail.php?id=51842
+  dims_mm:
+  - 284.0
+  - 178.0
+  - 1.5
+  position_mm:
+  - -62.0
+  - -178.0
+  - 8.9
+  connects_to: pcba
+  dims_source: '13.0-inch 16:10 thinoxide IPS panel mechanical drawing: 284.0 x 178.0 x 1.5 mm outline, 22-pin 0.5mm MIPI DSI connector at rear-left [86.0, 176.0, 0.5] mm and 2-pin backlight header at [104.0, 176.0, 0.5] mm in module coords'
+  model: case/purchased/display_panel.stl
+  color: '#14181e'
+  connectors:
+  - id: DSI_IN
+    at_mm:
+    - 86.0
+    - 176.0
+    - 0.5
+    pins: 22
+    pitch_mm: 0.5
+    kind: ffc
+  - id: BL_IN
+    at_mm:
+    - 104.0
+    - 176.0
+    - 0.5
+    pins: 2
+    pitch_mm: 2.0
+    kind: harness
+- id: webcam_module
+  description: Slim 1080p MIPI CSI-2 camera module with 22-pin 0.5mm micro-coax receptacle for laptop top bezel
+  mpn: CAM-OV5647-SLIM-28X6
+  url: https://www.arducam.com/product/arducam-ov5647-mini-camera-module/
+  dims_mm:
+  - 28.0
+  - 6.5
+  - 1.5
+  position_mm:
+  - 66.0
+  - -187.5
+  - 8.9
+  connects_to: pcba
+  dims_source: 'Slim laptop bezel MIPI CSI camera module drawing: 28.0 x 6.5 x 1.5 mm outline, lens at center, 22-pin 0.5mm micro-coax/FFC connector at right end [26.0, 3.25, 0.5] mm in module coords'
+  model: case/purchased/webcam_module.stl
+  color: '#1c2026'
+  connectors:
+  - id: CSI_OUT
+    at_mm:
+    - 26.0
+    - 3.25
+    - 0.5
+    pins: 22
+    pitch_mm: 0.5
+    kind: coax
+- id: battery_pack
+  description: Custom 2S2P 7.4V nominal (6.0-8.4V) 9000mAh / 66.6Wh Li-Po laptop battery pack built from four identical LP4466104 pouch cells (4x 3.7V 4500mAh, 104.0 x 66.0 x 4.4 mm each) joined by the pack maker with one integrated 2S protection and cell-balancing board (PCM with internal mid-point balance lead), 10k NTC thermistor, and one 8-pin JST-PH 2.0mm harness connector, contoured around and under the trackpad
+  mpn: LP4466104-2S2P-9000MAH
+  url: https://www.lipolbattery.com/LiPo-Battery-4500mAh+.html
+  dims_mm:
+  - 280.0
+  - 138.0
+  - 4.4
+  position_mm:
+  - -60.0
+  - -187.0
+  - 0.0
+  connects_to: pcba
+  dims_source: 'Custom 2S2P laptop pack mechanical drawing using 4 identical LP4466104 pouch cells (104.0 x 66.0 x 4.4 mm each): rear-left cell at X=[-60.0..44.0], Y=[-115.0..-49.0], Z=[0.0..4.4]; rear-right cell at X=[116.0..220.0], Y=[-115.0..-49.0], Z=[0.0..4.4]; front-left cell (around/under trackpad, clearing speaker_left) at X=[-25.0..79.0], Y=[-187.0..-121.0], Z=[0.0..4.4]; front-right cell (around/under trackpad, clearing speaker_right) at X=[81.0..185.0], Y=[-187.0..-121.0], Z=[0.0..4.4]; joined into one watertight solid by central 2S protection/balance PCB housing at X=[43.0..117.0], Y=[-65.0..-49.0], Z=[0.0..3.0] and inter-cell tab bridges at X=[20.0..40.0]/X=[120.0..140.0], Y=[-122.0..-114.0], Z=[0.0..3.0] and X=[77.0..83.0], Y=[-160.0..-140.0], Z=[0.0..3.0]; overall pack envelope 280.0 x 138.0 x 4.4 mm with 8-pin JST-PH 2.0mm harness exiting at world [24.5, -49.0, 2.2] mm'
+  model: case/purchased/battery_pack.stl
+  color: '#1e1e22'
+  connectors:
+  - id: BAT_PACK_LEAD
+    at_mm:
+    - 24.5
+    - -49.0
+    - 2.2
+    pins: 8
+    pitch_mm: 2.0
+    kind: harness
+- id: speaker_left
+  description: Low-profile 8-ohm 2W rectangular laptop speaker box module (left channel)
+  mpn: SPK-LAPTOP-36X68X4
+  url: https://www.puiaudio.com/products/speakers
+  dims_mm:
+  - 36.0
+  - 68.0
+  - 4.2
+  position_mm:
+  - -64.0
+  - -187.0
+  - 0.0
+  connects_to: pcba
+  dims_source: 'Laptop acoustic box speaker mechanical drawing: 36.0 x 68.0 x 4.2 mm ABS enclosure with 2-pin wire lead at rear-right corner [34.0, 67.0, 2.1] mm'
+  model: case/purchased/speaker_left.stl
+  color: '#222428'
+  connectors:
+  - id: SPKL_LEAD
+    at_mm:
+    - 34.0
+    - 67.0
+    - 2.1
+    pins: 2
+    pitch_mm: 2.0
+    kind: harness
+- id: speaker_right
+  description: Low-profile 8-ohm 2W rectangular laptop speaker box module (right channel)
+  mpn: SPK-LAPTOP-36X68X4
+  url: https://www.puiaudio.com/products/speakers
+  dims_mm:
+  - 36.0
+  - 68.0
+  - 4.2
+  position_mm:
+  - 188.0
+  - -187.0
+  - 0.0
+  connects_to: pcba
+  dims_source: 'Laptop acoustic box speaker mechanical drawing: 36.0 x 68.0 x 4.2 mm ABS enclosure with 2-pin wire lead at rear-left corner [2.0, 67.0, 2.1] mm'
+  model: case/purchased/speaker_right.stl
+  color: '#222428'
+  connectors:
+  - id: SPKR_LEAD
+    at_mm:
+    - 2.0
+    - 67.0
+    - 2.1
+    pins: 2
+    pitch_mm: 2.0
+    kind: harness
+- id: hinge_left
+  description: Compact friction torque laptop hinge (left)
+  mpn: HG-TORQUE-L-24X10
+  url: https://www.southco.com/en_us_int/hinges/positioning-hinges
+  dims_mm:
+  - 24.0
+  - 8.0
+  - 5.0
+  position_mm:
+  - -48.0
+  - 2.0
+  - 4.0
+  dims_source: 'Southco / laptop friction torque hinge drawing: 24.0 mm width x 8.0 mm depth x 5.0 mm barrel height, pivot axis at Y=8.5 mm, Z=8.6 mm'
+  model: case/purchased/hinge_left.stl
+  color: '#8a8f96'
+- id: hinge_right
+  description: Compact friction torque laptop hinge (right)
+  mpn: HG-TORQUE-R-24X10
+  url: https://www.southco.com/en_us_int/hinges/positioning-hinges
+  dims_mm:
+  - 24.0
+  - 8.0
+  - 5.0
+  position_mm:
+  - 184.0
+  - 2.0
+  - 4.0
+  dims_source: 'Southco / laptop friction torque hinge drawing: 24.0 mm width x 8.0 mm depth x 5.0 mm barrel height, pivot axis at Y=8.5 mm, Z=8.6 mm'
+  model: case/purchased/hinge_right.stl
+  color: '#8a8f96'
+enclosure:
+  process: cnc
+  wall_mm: 1.2
+  clearance_floor_mm: 0.15
+  parts:
+  - id: top_deck
+    file: case/out/top_deck.stl
+    role: shell
+    process: cnc
+    material: 6061-T6 aluminum
+    finish: bead-blast + silver-gold anodize
+    color: '#d6d4be'
+    description: Unibody palmrest and keyboard deck with perimeter port cutouts and rear hinge/cable channel
+  - id: bottom_shell
+    file: case/out/bottom_shell.stl
+    role: shell
+    process: cnc
+    material: 6061-T6 aluminum
+    finish: bead-blast + silver-gold anodize
+    color: '#d6d4be'
+    description: Continuous CNC aluminum bottom enclosure pan with no through-cutouts under usb_left and no bottom service slot
+  - id: lid_shell
+    file: case/out/lid_shell.stl
+    role: shell
+    process: cnc
+    material: 6061-T6 aluminum
+    finish: bead-blast + silver-gold anodize
+    color: '#d6d4be'
+    description: Continuous thin CNC aluminum display lid back shell with blind internal pocket for lid_magnet and no hole through the outer skin
+  - id: display_bezel
+    file: case/out/display_bezel.stl
+    role: window
+    process: mjf
+    material: PA12 nylon / polycarbonate
+    finish: matte black
+    color: '#181a1f'
+    description: Front display bezel framing the 13-inch LCD panel and top webcam window, with enclosed hinge barrel and internal cable channels concealing all lid flexes/coax
+  - id: lid_magnet
+    file: case/out/lid_magnet.stl
+    role: button
+    process: cnc
+    material: NdFeB N52 magnet
+    finish: bead-blast + silver-gold anodize
+    color: '#d6d4be'
+    description: Lid closure magnet seated in a blind pocket inside the right side of the lid (with no hole through lid_shell outer skin) aligned with Hall sensor U_HALL on pcba
+assembly:
+- part: top_deck
+  travel_mm: 0
+  held_by: base
+  note: Place inverted aluminum top deck on fixture as inside-out build base
+- part: keyboard_module
+  direction:
+  - 0
+  - 0
+  - -1
+  travel_mm: 20
+  may_touch:
+  - top_deck
+  held_by: captured
+  note: Install 78-key scissor keyboard module into top_deck well from inside
+- part: trackpad_module
+  direction:
+  - 0
+  - 0
+  - -1
+  travel_mm: 20
+  may_touch:
+  - top_deck
+  held_by: captured
+  note: Seat capacitive glass trackpad module into palmrest opening from inside
+- part: hinge_left
+  direction:
+  - 0
+  - 0
+  - -1
+  travel_mm: 20
+  may_touch:
+  - top_deck
+  held_by: captured
+  note: Mount left torque hinge into rear-left deck pocket
+- part: hinge_right
+  direction:
+  - 0
+  - 0
+  - -1
+  travel_mm: 20
+  may_touch:
+  - top_deck
+  held_by: captured
+  note: Mount right torque hinge into rear-right deck pocket
+- part: cm5_module
+  direction:
+  - 0
+  - 0
+  - 1
+  travel_mm: 20
+  may_touch:
+  - top_deck
+  held_by: captured
+  note: Seat Compute Module 5 into rear bay from below before main carrier board
+- part: pcba
+  direction:
+  - 0
+  - 0
+  - 1
+  travel_mm: 25
+  may_touch:
+  - top_deck
+  - cm5_module
+  held_by: captured
+  note: Seat main CM5 carrier board into rear-center bay from below onto CM5 connectors
+- part: pcba:usb_left
+  direction:
+  - 0
+  - 0
+  - 1
+  travel_mm: 25
+  may_touch:
+  - top_deck
+  held_by: captured
+  note: Seat left dual USB-C daughterboard (top-side assembly only) behind left-edge port cutouts
+- part: pcba:audio_right
+  direction:
+  - 0
+  - 0
+  - 1
+  travel_mm: 25
+  may_touch:
+  - top_deck
+  held_by: captured
+  note: Seat right headphone and microphone daughterboard behind right-edge port cutout
+- part: speaker_left
+  direction:
+  - 0
+  - 0
+  - 1
+  travel_mm: 25
+  may_touch:
+  - top_deck
+  held_by: captured
+  note: Install left speaker box in front-left corner
+- part: speaker_right
+  direction:
+  - 0
+  - 0
+  - 1
+  travel_mm: 25
+  may_touch:
+  - top_deck
+  held_by: captured
+  note: Install right speaker box in front-right corner
+- part: battery_pack
+  direction:
+  - 0
+  - 0
+  - 1
+  travel_mm: 25
+  may_touch:
+  - top_deck
+  - keyboard_module
+  - trackpad_module
+  held_by: captured
+  note: Install 2S2P 7.4V 9000mAh (66.6Wh) Li-Po battery pack (four identical LP4466104 cells joined with 2S PCM, balance lead, NTC, and single J_BAT connector) contoured around and under the trackpad
+- part: bottom_shell
+  direction:
+  - 0
+  - 0
+  - 1
+  travel_mm: 25
+  may_touch:
+  - top_deck
+  - pcba
+  - pcba:usb_left
+  - pcba:audio_right
+  - battery_pack
+  - speaker_left
+  - speaker_right
+  held_by: press_fit
+  held_with:
+  - top_deck
+  note: Close lower base with continuous CNC aluminum bottom pan
+- part: display_bezel
+  direction:
+  - 0
+  - 0
+  - -1
+  travel_mm: 25
+  may_touch:
+  - top_deck
+  - hinge_left
+  - hinge_right
+  held_by: captured
+  note: Position display bezel frame on torque hinges above top deck
+- part: display_panel
+  direction:
+  - 0
+  - 0
+  - -1
+  travel_mm: 20
+  may_touch:
+  - display_bezel
+  held_by: captured
+  note: Seat 13-inch MIPI DSI LCD panel into display bezel
+- part: webcam_module
+  direction:
+  - 0
+  - 0
+  - -1
+  travel_mm: 20
+  may_touch:
+  - display_bezel
+  held_by: captured
+  note: Seat 1080p MIPI CSI webcam module into top bezel cavity
+- part: lid_magnet
+  direction:
+  - 0
+  - 0
+  - -1
+  travel_mm: 20
+  may_touch:
+  - display_bezel
+  - display_panel
+  held_by: captured
+  note: Seat lid closure magnet into blind pocket on rear of display_panel/display_bezel
+- part: lid_shell
+  direction:
+  - 0
+  - 0
+  - -1
+  travel_mm: 25
+  may_touch:
+  - display_bezel
+  - display_panel
+  - webcam_module
+  - lid_magnet
+  - hinge_left
+  - hinge_right
+  held_by: press_fit
+  held_with:
+  - display_bezel
+  note: Close lid assembly with continuous CNC aluminum lid shell (capturing lid_magnet in blind pocket with no exterior hole)
+articulations:
+- id: lid_hinge
+  parts:
+  - lid_shell
+  - display_bezel
+  - display_panel
+  - webcam_module
+  - lid_magnet
+  hinge_parts:
+  - hinge_left
+  - hinge_right
+  pivot_mm:
+  - 80.0
+  - 8.5
+  - 8.6
+  axis:
+  - -1
+  - 0
+  - 0
+  open_deg: 110.0
+  note: Clamshell lid rotates 110 degrees open around rear hinge axis [-1,0,0] by right-hand rule
+cables:
+- id: c_usb_left
+  kind: ffc
+  a:
+    part: pcba
+    connector: J_USBL
+  b:
+    part: pcba:usb_left
+    connector: J3
+  pins: 16
+  pitch_mm: 0.5
+  length_mm: 45.0
+  width_mm: 8.5
+  route:
+  - at_mm:
+    - -2.0
+    - -22.0
+    - 2.5
+  - at_mm:
+    - -16.0
+    - -22.0
+    - 2.5
+  - at_mm:
+    - -29.0
+    - -22.0
+    - 2.5
+  note: '16-pin 0.5mm straight FFC ribbon connecting main board top-contact J_USBL (05B20U16P C18164516, Pad 1 at North y=18.25mm, Pad 16 at South y=25.75mm) 1-to-1 to left USB-C daughterboard bottom-contact J3 (FPC-05F-16PH20 C2856801, Pad 1 at North y=13.75mm, Pad 16 at South y=21.25mm) (carrying USB3-0-D_P/N pins 10/11, USB3-1-D_P/N pins 13/14, and GND shield pins 5/6/9/12/15/16, with J_USBL pins 1..4 and 7..8 uncommitted/no_connect on main board so zero /VBUS_PD or /+5V_USBC current flows through the 0.5mm FFC), while high-current power is carried exclusively over 1.0mm pitch wire-to-board harnesses J4<->J4 (SM06B-SRSS-TB(LF)(SN) C160405: +5V_USBC pins 1..3 [3.0A rating, fed by U_VBUS SY6280AAC with R31=3.3k C25890 setting 2.06A typ / 1.55A min limit], GND pins 4..6) and J5<->J5 (SM10B-SRSS-TB(LF)(SN) C160409: 20V VBUS_PD pins 1..5 [5.0A continuous rating > 3.25A max PD current], GND pins 6..10)'
+- id: c_audio_right
+  kind: ffc
+  a:
+    part: pcba
+    connector: J_AUDR
+  b:
+    part: pcba:audio_right
+    connector: J2
+  pins: 8
+  pitch_mm: 0.5
+  length_mm: 45.0
+  width_mm: 4.5
+  route:
+  - at_mm:
+    - 162.0
+    - -22.0
+    - 2.5
+  - at_mm:
+    - 176.0
+    - -22.0
+    - 2.5
+  - at_mm:
+    - 189.0
+    - -22.0
+    - 2.5
+  note: 8-pin 0.5mm FFC ribbon connecting main board J_AUDR to right audio daughterboard J2 (HP_L, HP_R, differential MIC_P/MIC_N switched by TS5A23159DGSR U4, active-low J1 plug-detect on pin 7 routed to dedicated main-board net /HP_DET on CM5 GPIO24 U1 pin 45 with R37=10k pull-up, +3V3, GND)
+- id: c_display_dsi
+  kind: ffc
+  a:
+    part: pcba
+    connector: J_DSI
+  b:
+    part: display_panel
+    connector: DSI_IN
+  pins: 22
+  pitch_mm: 0.5
+  length_mm: 35.0
+  width_mm: 11.5
+  route:
+  - at_mm:
+    - 24.0
+    - 7.8
+    - 4.5
+  - at_mm:
+    - 24.0
+    - 7.8
+    - 8.5
+  - at_mm:
+    - 24.0
+    - 4.5
+    - 9.85
+    follows: lid_shell
+  - at_mm:
+    - 24.0
+    - 0.5
+    - 9.85
+    follows: lid_shell
+  note: 22-pin 0.5mm MIPI DSI FFC routed at constant X=24.0 mm through enclosed hinge barrel and inside lid behind bezel (never looping outside the rear edge or twisting across X)
+- id: c_display_bl
+  kind: harness
+  a:
+    part: pcba
+    connector: J_BL
+  b:
+    part: display_panel
+    connector: BL_IN
+  pins: 2
+  pitch_mm: 2.0
+  length_mm: 35.0
+  route:
+  - at_mm:
+    - 42.0
+    - 7.8
+    - 4.5
+  - at_mm:
+    - 42.0
+    - 7.8
+    - 8.5
+  - at_mm:
+    - 42.0
+    - 4.5
+    - 9.5
+    follows: lid_shell
+  - at_mm:
+    - 42.0
+    - 1.5
+    - 9.5
+    follows: lid_shell
+  note: 2-pin backlight power harness routed at constant X=42.0 mm through enclosed hinge barrel and inside lid behind bezel
+- id: c_webcam_csi
+  kind: coax
+  a:
+    part: pcba
+    connector: J_CSI
+  b:
+    part: webcam_module
+    connector: CSI_OUT
+  pins: 22
+  pitch_mm: 0.5
+  length_mm: 435.0
+  width_mm: 1.5
+  route:
+  - at_mm:
+    - 136.0
+    - 7.8
+    - 4.5
+  - at_mm:
+    - 136.0
+    - 7.8
+    - 8.5
+  - at_mm:
+    - 136.0
+    - 4.5
+    - 9.95
+    follows: lid_shell
+  - at_mm:
+    - 136.0
+    - 0.55
+    - 9.95
+    follows: lid_shell
+  - at_mm:
+    - 223.5
+    - 0.55
+    - 9.95
+    follows: lid_shell
+  - at_mm:
+    - 223.5
+    - -184.0
+    - 9.95
+    follows: lid_shell
+  - at_mm:
+    - 94.0
+    - -184.0
+    - 9.95
+    follows: lid_shell
+  note: 22-pin 0.5mm 100-ohm controlled-impedance EMI-shielded micro-coax MIPI CSI webcam assembly (1.13 mm bundle diameter) routed at constant X=136.0 mm through enclosed hinge barrel and inside display_bezel internal perimeter channel without poking through the bezel or looping outside the rear edge
+- id: c_keyboard
+  kind: fpc
+  a:
+    part: pcba
+    connector: J_KB
+  b:
+    part: keyboard_module
+    connector: KB_FPC
+  pins: 24
+  pitch_mm: 0.5
+  length_mm: 18.0
+  width_mm: 12.5
+  route:
+  - at_mm:
+    - 43.0
+    - -45.0
+    - 3.5
+  - at_mm:
+    - 43.0
+    - -47.0
+    - 5.5
+  note: 24-pin 0.5mm scissor keyboard FPC tail routed straight at constant X=43.0 mm into main board J_KB
+- id: c_trackpad
+  kind: fpc
+  a:
+    part: pcba
+    connector: J_TP
+  b:
+    part: trackpad_module
+    connector: TP_FPC
+  pins: 8
+  pitch_mm: 0.5
+  length_mm: 115.0
+  width_mm: 4.5
+  route:
+  - at_mm:
+    - 114.0
+    - -46.5
+    - 5.0
+  - at_mm:
+    - 80.0
+    - -46.5
+    - 5.0
+  - at_mm:
+    - 80.0
+    - -110.0
+    - 5.0
+  - at_mm:
+    - 80.0
+    - -110.5
+    - 6.2
+  note: 8-pin 0.5mm trackpad FPC routed at Z=5.0 mm above battery_pack central channel into J_TP
+- id: c_battery
+  kind: harness
+  a:
+    part: pcba
+    connector: J_BAT
+  b:
+    part: battery_pack
+    connector: BAT_PACK_LEAD
+  pins: 8
+  pitch_mm: 2.0
+  length_mm: 20.0
+  route:
+  - at_mm:
+    - 24.5
+    - -45.0
+    - 2.2
+  - at_mm:
+    - 24.5
+    - -47.5
+    - 2.2
+  note: Single 8-pin JST-PH 2.0mm 2S2P battery pack harness (pins 1..4 parallel VBAT+ on /VBAT_PACK fused by 5A F1 JFC1206-1500FS C136351 into /VBAT with R50=100R C25076 Kelvin sense from fused /VBAT to U_CHG BATP, pin 5 TS 10k NTC sense on /CHG_TS protected by D19 TSD05CDYFR C20611048, pins 6..8 GND) connecting battery_pack directly to main board J_BAT
+- id: c_speaker_left
+  kind: harness
+  a:
+    part: pcba
+    connector: J_SPKL
+  b:
+    part: speaker_left
+    connector: SPKL_LEAD
+  pins: 2
+  pitch_mm: 2.0
+  length_mm: 195.0
+  route:
+  - at_mm:
+    - 10.0
+    - -46.5
+    - 2.5
+  - at_mm:
+    - -62.0
+    - -46.5
+    - 2.5
+  - at_mm:
+    - -62.0
+    - -117.0
+    - 2.5
+  - at_mm:
+    - -30.0
+    - -117.0
+    - 2.1
+  note: Left speaker 195 mm 2-wire lead routed around left side of battery_pack into J_SPKL, EMI-filtered on main board by FB1/FB2 (BLM18PG121SN1D 120R@100MHz 2A C14709) and C60/C61 (1nF 50V X7R 0402 C1523)
+- id: c_speaker_right
+  kind: harness
+  a:
+    part: pcba
+    connector: J_SPKR
+  b:
+    part: speaker_right
+    connector: SPKR_LEAD
+  pins: 2
+  pitch_mm: 2.0
+  length_mm: 195.0
+  route:
+  - at_mm:
+    - 148.0
+    - -46.5
+    - 2.5
+  - at_mm:
+    - 222.0
+    - -46.5
+    - 2.5
+  - at_mm:
+    - 222.0
+    - -117.0
+    - 2.5
+  - at_mm:
+    - 190.0
+    - -117.0
+    - 2.1
+  note: Right speaker 195 mm 2-wire lead routed around right side of battery_pack into J_SPKR, EMI-filtered on main board by FB3/FB4 (BLM18PG121SN1D 120R@100MHz 2A C14709) and C62/C63 (1nF 50V X7R 0402 C1523)
+actuators:
+- id: A_LID_HALL
+  feature: F_HALL
+  case_part: lid_magnet
+  target:
+    part: pcba
+    ref: U_HALL
+  kind: magnetic
+  element_axis:
+  - 0
+  - 0
+  - 1
+  range_mm: 8.0
+  source: 'TI DRV5032FADBZR datasheet: SOT-23 omnipolar Hall-effect switch sensitive perpendicular to package top (+Z), +-4.8 mT threshold (~8 mm range with N52 magnet)'
+requirements:
+- id: R1
+  text: Thin aluminum laptop matching reference dimensions (297.5 x 206.4 x 12.7 mm)
+  how_met: CNC 6061-T6 aluminum top_deck, continuous bottom_shell, and continuous lid_shell totaling 297.5 x 206.4 x 12.7 mm closed
+  quantity: 297.5 x 206.4 x 12.7 mm
+- id: R2
+  text: Raspberry Pi Compute Module 5 brain with real 3D model from rea-hw ref cm5
+  how_met: rea_refs:ComputeModule5-CM5 footprint on main carrier PCB with real CM5_module.stl model
+  quantity: 1x CM5 module (55.3 x 40.3 x 4.92 mm)
+- id: R3
+  text: 2 USB-C ports on left edge (front-left 45-65W 20V PD charging + data; rear-left data + 5V out) and 1 headphone jack on right edge
+  how_met: 'usb_left daughterboard (single-sided top assembly so bottom_shell is continuous with no through-cutouts) with 2x TYPE-C-31-M-12 (J2 with autonomous CH224A PD 3.0 sink controller U1 strapped for 20V PD negotiation via single-resistor R11=120k 1% C25750 on CFG1 to GND with CFG2/CFG3 open per CH224 Section 5.2.1 [20V @ 2.25-3.25A = 45-65W], C12=1uF+C13=100nF=1.1uF <=4.7uF unswitched cSnkPwr on J2_VBUS, adjacent back-to-back AO4407A P-MOSFET load switch Q1/Q2 C2841482 with continuous F.Cu polygon pour on /PD_SW_MID controlled by U1.10 PG via 2N7002 Q3/Q4 + R13/R14=10k + C17=100nF soft-start + D9=BZT52C12 gate clamp isolating downstream VBUS_PD bulk capacitance C15=10uF+C16=100nF, TPD6S300RUKR 24V CC/SBU OVP & ESD protector U3 with VPWR powered strictly from J2_VBUS via D3 + R12=1k + D8=BZT52C16 16V Zener clamp + U4 XC6216B332MR-G, SMF24A 24V TVS D6/D7, and RP1 USB3-0 D+/D-; J1 with TPS25810RVCR 5V DFP controller U2 [CHG=GND, CHG_HI=GND advertising Default USB 500mA with 1.7A typ internal switch limit coordinated below upstream U_VBUS SY6280AAC R31=3.3k 2.06A limit, R8=100k C25741 EN pull-up, 2x 150uF 10V 55mOhm polymer tantalum C1/C18 T520C157M010ATE055 C600588 + C19=10uF 50V 0805 C440198 + C2=100nF C307331 = 310.1uF nominal / 308.6uF effective >=120uF cSrcPwr at 5V bias, and wide F.Cu/B.Cu copper pours on /+5V_USBC and /J1_VBUS] + TPD6S300RUKR U5 powered from dedicated 3.3V LDO U6 XC6206P332MR-G C5446 on +5V_USBC + SMF6.0A + RP1 USB3-1 D+/D-), bottom-contact 16P 0.5mm FFC J3 (FPC-05F-16PH20 C2856801, Pad 1 at North y=13.75mm, Pad 16 at South y=21.25mm) mating 1-to-1 with main-board top-contact J_USBL (05B20U16P C18164516), and 1.0mm high-current harnesses J4/J5 feeding BQ25798RQMR 5A 2S buck-boost NVDC charger on main board; audio_right daughterboard with PJ-320D 3.5mm CTIA TRRS jack J1, ICS-40720 differential MEMS mic MK1, TLV7041DBVR comparators U1..U3, and TS5A23159DGSR dual SPDT mic mux U4'
+  quantity: 2x USB-C left (20V 45-65W PD + 5V DFP), 1x 3.5mm jack right
+- id: R4
+  text: Bought scissor-switch laptop keyboard module with readable legends and FPC tail, plus large multi-touch trackpad
+  how_met: 270x104mm 78-key ANSI scissor keyboard with keyboard_module_legends.stl and 24P FPC to TCA8418RTWR; 120x76mm I2C glass trackpad with 8P FPC
+  quantity: 78 keys with legends, 120x76mm trackpad
+- id: R5
+  text: Re-arrange battery as 2S2P (7.4V nominal, 6.0-8.4V) filling >=70% of base floor around and under trackpad as one bought pack (four identical cells joined by pack maker with one 2S protection board, balance lead, NTC, and one connector)
+  how_met: 'Single bought 2S2P Li-Po laptop battery pack (battery_pack, LP4466104-2S2P-9000MAH, 7.4V nominal, 6.0-8.4V, 9,000mAh / 66.6Wh) built from four identical LP4466104 pouch cells (104.0 x 66.0 x 4.4 mm each) contoured around and under trackpad_module (covering >85% of free floor) and joined by the pack maker with an integrated 2S protection/balance board (PCM with mid-point balance lead), 10k NTC thermistor, and one 8-pin JST-PH 2.0mm harness connecting to J_BAT (S8B-PH-SM4-TB(LF)(SN) C265121: pins 1..4 VBAT+ on /VBAT_PACK protected by 5A 1206 fuse F1 JFC1206-1500FS C136351 into /VBAT with R50=100R C25076 Kelvin sense on fused /VBAT, pin 5 TS NTC sense on /CHG_TS protected by D19 TSD05CDYFR C20611048, pins 6..8 GND) on the main board'
+  quantity: 1x 2S2P pack (4 identical LP4466104 cells, 7.4V 9,000mAh / 66.6Wh)
+- id: R6
+  text: CM5 boot recovery via internal pads and top-side recovery switch with continuous bottom pan (no service slot and no through-cutouts under usb_left)
+  how_met: Internal top-side service test pads TP1..TP5 (USB2_P/N protected by USBLC6-2SC6 U_ESD, DBG_PWR via TPS2117DRLR U_DBG with MODE pin 5 tied to /DBG_PWR and PR1 pin 4 on /DBG_PR1 biased by R58=30k C25776 / R7=10k C25744 and pulled low by 2N7002 N-MOSFET Q_DBG C8545 gated by /+5V so internal 6A /+5V always takes priority over TP1 /DBG_PWR, in parallel with back-to-back common-source blocking AO4407A P-MOSFETs Q1/Q2 gated on /DBG_GATE by U_DBG ST pin 8 and R59=10k C25744 tied to common source /DBG_Q_SRC, GND, PMIC_EN) and top-side nRPIBOOT recovery switch SW1 (PTS526SM15SMTR2LFS) on main board, keeping bottom_shell 100% continuous with no service slot and no through-cutouts under usb_left
+  quantity: 5 internal test pads + 1 internal top-side boot switch
+- id: R7
+  text: Articulated lid on real torque hinges (110 deg open) with blind magnet pocket (no hole through lid outer skin) and all cables routed inside body and hinge barrel
+  how_met: hinge_left and hinge_right at pivot [80, 8.5, 8.6] mm; lid_magnet seated in blind pocket inside lid_shell/display_bezel with continuous lid_shell outer skin; c_display_dsi, c_display_bl, and micro-coax c_webcam_csi routed at constant X through enclosed hinge barrel and internal bezel channels without looping outside the rear edge or poking through the bezel
+  quantity: 2 hinges, 110 deg open, 9 internal cables
+decisions:
+- question: Power tree and 2S 45-65W USB-C PD charging architecture?
+  choice: 'Autonomous CH224A PD 3.0 sink controller U1 on usb_left (C42459160, strapped for 20V PD request via single-resistor R11=120k 1% C25750 on CFG1 to GND with CFG2/CFG3 left open per CH224 Section 5.2.1, powered from unswitched J2_VBUS [C12=1uF + C13=100nF = 1.1uF <= 4.7uF cSnkPwr] via R3/R4 to VHV/VBUS with C5=1uF decoupling, driving back-to-back AO4407A P-MOSFET load switch Q1/Q2 C2841482 via 2N7002 Q3/Q4 + R13/R14=10k + C17=100nF + D9=BZT52C12 to isolate downstream VBUS_PD bulk capacitance C15=10uF+C16=100nF, with U4 XC6216B332MR-G and U3.10 TPD6S300RUKR VPWR powered from J2_VBUS and U5.10 powered from dedicated U6 XC6206P332MR-G C5446 on +5V_USBC) -> 10-pin 1.0mm harness J5 (SM10B-SRSS-TB(LF)(SN) C160409: 5x VBUS_PD + 5x GND = 5.0A rating, with /VBUS_PD and /+5V_USBC removed from 0.5mm FFC J_USBL) -> BQ25798RQMR I2C 5A 1S-4S buck-boost battery charger & NVDC power-path manager U_CHG (C2876593, 3.6-24V input, 26V VBUS_OVP, with VAC1 pin 9 on /VBUS_PD protected by low-clamping 22V-standoff / 27.7V-clamping surge TVS D7 TVS2200DRVR C2875234 and switched into VBUS/VAC2 pins 2/3/8 /CHG_VBUS via external back-to-back 30V N-MOSFETs Q3/Q4 [2x AO3400A C20917] driven by ACDRV1 pin 11 via R69=10R with R60=100R+C82=10nF on /CHG_AC_SRC, R_PROG=8.2k 1% C25981 setting 2S cell count [8.40V VREG, 7.0V VSYSMIN] and 750kHz switching frequency with L1=2.2uH 10A inductor FXL0630-2R2-M C167218 between SW1/SW2 and 47nF bootstrap caps on BTST1/BTST2, ILIM_HIZ divider R29=78.7k 1% C2998104 / R30=100k 1% C25741 from REGN setting V_ILIM_HIZ=2.80V [I_INDPM=2.25A -> 45W hardware input limit at 20V so 45W 20V@2.25A PD adapters are never overloaded prior to software I2C override, while CM5 software can disable EN_ILIM_HIZ_PIN over I2C to allow 3.25A / 65W on 65W contracts], ~QON pin 12 relying on internal bias pull-up and isolated from CM5 /CM5_PWR_BUT via dual-anode blocking Schottky diodes D16/D17 [2x B16WS C364278] to J_KB pin 19, R50=100R C25076 Kelvin battery voltage sense on BATP pin 18 from fused /VBAT side of 5A fuse F1, and R23=5.23k C11631 / R42=30.1k C29402 JEITA NTC divider from REGN on TS pin 16 to J_BAT pin 5 clamped by 5.5V TVS diode D19 TSD05CDYFR C20611048) -> single 8-pin JST-PH battery pack connector J_BAT (S8B-PH-SM4-TB(LF)(SN) C265121: pins 1..4 VBAT+ on /VBAT_PACK via 5A fuse F1 JFC1206-1500FS C136351 to /VBAT, pin 5 TS NTC, pins 6..8 GND) connected to the 2S2P 7.4V 9,000mAh / 66.6Wh battery_pack (4 identical LP4466104 cells with integrated 2S protection/balance board) -> dual 6A synchronous buck converters U_BUCK and U_BUCK2 (2x TPS56628DDAR C485522, 12A total 5V capacity from 2S NVDC /VSYS [6.5-8.6V], with R33/R34=100k/22.1k and R67/R68=100k/22.1k UVLO dividers setting >=6.63V battery cutoff, L2/L5=2.2uH FXL0630-2R2-M C167218, feedback dividers R27/R28=133k/24k and R64/R65=133k/24k setting V_OUT=5.00V, and 5.5V-standoff TVS diodes D3/D18/D2 TSD05CDYFR C20611048): U_BUCK supplies /+5V (5.00V, 6A) for CM5 +5V_CM5 (via back-to-back common-source blocking AO4407A P-MOSFETs Q1/Q2 gated on /DBG_GATE by U_DBG ST pin 8 with R59=10k tied to common source /DBG_Q_SRC + TPS2117DRLR U_DBG with MODE pin 5 on /DBG_PWR and PR1 pin 4 on /DBG_PR1 pulled low by 2N7002 Q_DBG C8545 gated by /+5V so internal /+5V always takes priority over TP1 /DBG_PWR) and SY6280AAC U_VBUS (with R31=3.3k C25890 setting 2.06A typ / 1.55A min limit on /+5V_USBC), U_BUCK2 supplies /+5V_PER (5.00V, 6A) for PAM8406DR Class-D amp U_AMP and TLV62569DBVR +3.3V_PER buck U_3V3, TPS61165DBVR backlight boost U_BL is powered directly from 2S /VSYS via high-side P-MOSFET switch Q_BL (AO3401A C15127) on /VSYS_BL, and HT7530S 30V-input 3.0V RTC LDO U_RTC (C347214) runs on 2S /VBAT.'
+  reason: Moving from 1S to 2S2P (7.4V nominal, 6.0-8.4V) cuts battery and charger/converter currents in half for the same power (~3.0-4.8A instead of 11-13A), eliminates the dual-AO4407A battery bypass stage (Q_BAT1/Q_BAT2) and the 4 separate cell connectors/fuses/ballast resistors, allows direct 20V USB-C PD charging at 45-65W through BQ25798RQMR with a single autonomous CH224A 20V PD sink (eliminating FUSB302BMPX and the discrete 13V OVP circuit on usb_left), and replaces the 5V boost converter with a high-efficiency 6A synchronous buck converter (TPS56628DDAR) from 2S VSYS (6.0-8.6V).
+- question: Mechanical enclosure continuity (bottom pan, lid magnet pocket, and hinge cable routing)?
+  choice: '1) bottom_shell is a continuous CNC 6061-T6 aluminum pan (Z=-1.10..-0.02 mm) with no bottom service slot (F_FLASH removed; SW1 and TP1..TP5 moved to top side of main board) and no through-cutouts under usb_left (all usb_left components placed on top side F.Cu). 2) lid_magnet sits in a blind internal pocket inside the lid (Z=9.35..10.38 mm between display_panel/display_bezel and lid_shell continuous inner ceiling Z=10.42 mm) with F_HALL.view=any and zero hole through lid_shell outer skin. 3) c_display_dsi, c_display_bl, and c_webcam_csi (kind=coax, 1.13 mm micro-coax bundle) cross the hinge at constant X (24.0, 42.0, 136.0 mm) inside the enclosed hinge barrel and internal display_bezel channels without any axial X-jog that would loop outside the rear edge or poke through the bezel.'
+  reason: Directly fulfills owner mechanical requirements for a continuous bottom pan, blind lid magnet pocket with unperforated lid outer skin, and clean internal flex/coax routing inside the body and hinge barrel.
+- question: 78-key ANSI scissor-switch keyboard layout and matrix?
+  choice: '6-row 78-key ANSI layout (19.05mm horizontal x 18.0mm vertical pitch, 1.2mm scissor travel) scanned by TCA8418RTWR 8x10 matrix (ROW0..7 x COL0..9): Row 0 (14 half-height keys: ESC, F1..F12, LOCK/PWR), Row 1 (14 keys: ~, 1..0, -, =, DELETE), Row 2 (14 keys: TAB, Q..P, [, ], \), Row 3 (13 keys: CAPS, A..L, ;, '', RETURN), Row 4 (12 keys: LSHIFT, Z..M, ,, ., /, RSHIFT), Row 5 (11 keys: FN, CTRL, LOPT, LCMD, SPACE, RCMD, ROPT, LEFT, UP, DOWN, RIGHT).'
+  reason: Matches every key visible in teardown_exploded.jpg (#1..#76) and fits within TCA8418RTWR's 80-key (8x10) I2C matrix capacity over the 24-pin FPC tail.

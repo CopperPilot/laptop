@@ -1,0 +1,147 @@
+(module easyeda2kicad:CAP-SMD_L6.0-W3.2
+	(layer F.Cu)
+	(tedit 5DC5F6A4)
+	(attr smd)
+	(fp_text reference REF**
+		(at 0.000 -4.000)
+		(layer F.SilkS)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text value CAP-SMD_L6.0-W3.2
+		(at 0.000 4.000)
+		(layer F.Fab)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user %R
+		(at 0 0)
+		(layer F.Fab)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C600588")
+	(fp_line
+		(start 3.18 1.68)
+		(end -3.18 1.68)
+		(layer F.SilkS)
+		(width 0.15)
+	)
+	(fp_line
+		(start 3.18 -1.68)
+		(end -3.18 -1.68)
+		(layer F.SilkS)
+		(width 0.15)
+	)
+	(fp_line
+		(start -1.65 1.68)
+		(end -1.65 -1.68)
+		(layer F.SilkS)
+		(width 0.15)
+	)
+	(fp_line
+		(start 3.18 1.68)
+		(end 3.18 1.39)
+		(layer F.SilkS)
+		(width 0.15)
+	)
+	(fp_line
+		(start 3.18 -1.68)
+		(end 3.18 -1.39)
+		(layer F.SilkS)
+		(width 0.15)
+	)
+	(pad 2 smd rect
+		(at 2.96 0.00 180.00)
+		(size 2.207 2.376)
+		(layers F.Cu F.Paste F.Mask)
+	)
+	(pad 1 smd rect
+		(at -2.96 0.00 180.00)
+		(size 2.207 2.376)
+		(layers F.Cu F.Paste F.Mask)
+	)
+	(fp_circle
+		(center -3.00 -1.57)
+		(end -2.97 -1.57)
+		(layer F.SilkS)
+		(width 0.06)
+	)
+	(fp_poly
+		(pts
+			(xy -3.100019 1.752448)
+			(xy -3.100019 1.340460)
+			(xy -3.557219 1.340460)
+			(xy -3.557219 1.752448)
+			(xy -3.100019 1.752448)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+	)
+	(fp_poly
+		(pts
+			(xy -3.100019 -1.752346)
+			(xy -3.100019 -1.340358)
+			(xy -3.557219 -1.340358)
+			(xy -3.557219 -1.752346)
+			(xy -3.100019 -1.752346)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+	)
+	(model "${KIPRJMOD}/lcsc.3dshapes/CASE-C_L6.0-W3.2-H2.7.step"
+		(offset
+			(xyz 0.000 0.000 0.000)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(fp_line
+		(start -4.20 1.80)
+		(end -4.20 -1.80)
+		(layer "F.CrtYd")
+		(width 0.05)
+	)
+	(fp_line
+		(start -4.20 -1.80)
+		(end 4.20 -1.80)
+		(layer "F.CrtYd")
+		(width 0.05)
+	)
+	(fp_line
+		(start 4.20 -1.80)
+		(end 4.20 1.80)
+		(layer "F.CrtYd")
+		(width 0.05)
+	)
+	(fp_line
+		(start 4.20 1.80)
+		(end -4.20 1.80)
+		(layer "F.CrtYd")
+		(width 0.05)
+	)
+)

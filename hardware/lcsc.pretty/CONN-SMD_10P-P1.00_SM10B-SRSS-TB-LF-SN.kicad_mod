@@ -1,0 +1,241 @@
+(footprint "CONN-SMD_10P-P1.00_SM10B-SRSS-TB-LF-SN"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -5.938 0)
+		(layer "F.Fab")
+		(uuid "7d72c982-8353-4aef-b51e-2e7d795beb58")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CONN-SMD_10P-P1.00_SM10B-SRSS-TB-LF-SN"
+		(at 0 5.938 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b88f4c32-95c0-4895-8768-53b9fcf7dccc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "091bbc64-d562-43b1-b330-fb438b70cd3d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "054127a3-969b-4d96-a2c9-8b4654e1206f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C160409"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a93d2a5b-78dc-42a6-80e8-76fefab3e63a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center -5.5 -1.32)
+		(end -5.37 -1.32)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "d57d2ca5-a073-4389-8b24-e0b417870ee2")
+	)
+	(fp_line
+		(start -6.5 -2.89)
+		(end 6.5 -2.89)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "be1f13a9-d446-40cf-b3e0-fd0b6f9d57b4")
+	)
+	(fp_line
+		(start -6.5 2.94)
+		(end -6.5 -2.89)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "cb94c1c8-612b-4c1e-921e-6b163bc463b9")
+	)
+	(fp_line
+		(start 6.5 -2.89)
+		(end 6.5 2.94)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "d079cf1b-1647-43af-8b16-9b9fb1870f71")
+	)
+	(fp_line
+		(start 6.5 2.94)
+		(end -6.5 2.94)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "23533b3d-3efb-4ef9-a8a1-d902c7d68a7a")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "4a09d3f9-8878-4c1e-adcc-28350b5ea185")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -4.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "88885232-372b-401e-8de9-db8e11124e9a")
+	)
+	(pad "2" smd rect
+		(at -3.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "aaaf53e1-07e2-4156-b1b7-17016bcdc234")
+	)
+	(pad "3" smd rect
+		(at -2.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fed757b6-9519-4eac-95c2-049e42f86d9b")
+	)
+	(pad "4" smd rect
+		(at -1.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7e4a0d81-481d-403e-a9fe-3eb5c5361680")
+	)
+	(pad "5" smd rect
+		(at -0.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b40af5c3-c6b1-4174-8058-265f957280fa")
+	)
+	(pad "6" smd rect
+		(at 0.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f3f1de79-d4c0-4e83-93c7-3becbead6419")
+	)
+	(pad "7" smd rect
+		(at 1.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8186ab29-05c5-4f21-87a6-522b11dfab5e")
+	)
+	(pad "8" smd rect
+		(at 2.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a7ad4fa7-d3b3-4202-b977-83600ad8776e")
+	)
+	(pad "9" smd rect
+		(at 3.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "84940750-a3bd-4699-a861-189c51ae6db5")
+	)
+	(pad "10" smd rect
+		(at 4.5 -1.94)
+		(size 0.6 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4ac335ff-3655-4c20-8631-2025a5833292")
+	)
+	(pad "11" smd rect
+		(at 5.8 1.94)
+		(size 1.2 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ab790cd5-39ee-4672-807a-9c2438af4655")
+	)
+	(pad "12" smd rect
+		(at -5.8 1.94)
+		(size 1.2 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bcbb6394-66ca-4082-8973-84f4b1da0cb3")
+	)
+	(zone
+		(layer "F.Cu")
+		(uuid "2f504543-1f01-4f5c-8b5b-22bf87c5fc0d")
+		(name "MATING")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads allowed)
+			(copperpour allowed)
+			(footprints not_allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 6.8 2.54) (xy -6.8 2.54) (xy -6.8 6.84) (xy 6.8 6.84)
+			)
+		)
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/lcsc.3dshapes/CONN-SMD_SH1.00-WS-10P.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

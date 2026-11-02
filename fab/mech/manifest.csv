@@ -1,0 +1,16 @@
+part,files,process,material,finish,qty,bbox_mm,volume_cm3,mass_g,service
+top_deck,top_deck.stl top_deck.step,cnc,6061-T6 aluminum,bead-blast + silver-gold anodize,1,297.5x206.4x8.5,38.63,104.3,JLCCNC 3-axis milling
+bottom_shell,bottom_shell.stl bottom_shell.step,cnc,6061-T6 aluminum,bead-blast + silver-gold anodize,1,297.5x206.4x1.9,66.61,179.8,JLCCNC 3-axis milling
+lid_shell,lid_shell.stl lid_shell.step,cnc,6061-T6 aluminum,bead-blast + silver-gold anodize,1,297.5x201.2x2.8,71.96,194.3,JLCCNC 3-axis milling
+display_bezel,display_bezel.stl,mjf,PA12 nylon / polycarbonate,matte black,1,294.5x203.8x4.2,15.81,16.0,JLC3DP MJF PA12
+lid_magnet,lid_magnet.stl lid_magnet.step,cnc,NdFeB N52 magnet,bead-blast + silver-gold anodize,1,6.6x6.6x1.2,0.05,0.1,JLCCNC 3-axis milling
+cm5_module,,purchased,SC1598,,1,55.3x40.3x4.9,,,https://www.raspberrypi.com/products/compute-module-5/
+keyboard_module,,purchased,KB-78-ANSI-SCISSOR-270X104,,1,270.0x104.0x1.8,,,https://www.alibaba.com/product-detail/Laptop-Scissor-Switch-Keyboard-Module_1600592841102.html
+trackpad_module,,purchased,TP-I2C-120X76-GLASS,,1,120.0x76.0x2.0,,,https://www.azoteq.com/products/proxsense/trackpads/
+display_panel,,purchased,LP130WQ1-MIPI-22P,,1,284.0x178.0x1.5,,,https://www.panelook.com/modeldetail.php?id=51842
+webcam_module,,purchased,CAM-OV5647-SLIM-28X6,,1,28.0x6.5x1.5,,,https://www.arducam.com/product/arducam-ov5647-mini-camera-module/
+battery_pack,,purchased,LP4466104-2S2P-9000MAH,,1,280.0x138.0x4.4,,,https://www.lipolbattery.com/LiPo-Battery-4500mAh+.html
+speaker_left,,purchased,SPK-LAPTOP-36X68X4,,1,36.0x68.0x4.2,,,https://www.puiaudio.com/products/speakers
+speaker_right,,purchased,SPK-LAPTOP-36X68X4,,1,36.0x68.0x4.2,,,https://www.puiaudio.com/products/speakers
+hinge_left,,purchased,HG-TORQUE-L-24X10,,1,24.0x8.0x5.0,,,https://www.southco.com/en_us_int/hinges/positioning-hinges
+hinge_right,,purchased,HG-TORQUE-R-24X10,,1,24.0x8.0x5.0,,,https://www.southco.com/en_us_int/hinges/positioning-hinges

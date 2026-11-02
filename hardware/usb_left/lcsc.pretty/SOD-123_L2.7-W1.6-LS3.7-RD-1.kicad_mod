@@ -1,0 +1,140 @@
+(footprint "SOD-123_L2.7-W1.6-LS3.7-RD-1"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "B5819W SL")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.Fab")
+		(uuid "f71bc450-49a4-4491-8b2f-2fc61f6c22a0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SOD-123_L2.7-W1.6-LS3.7-RD-1"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a021ab65-1b3e-417b-b405-8abc60d22320")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "157e8c22-4147-4f71-9266-551be374b039")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d3110f7e-4ee1-4d78-9530-826584370ce5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C8598"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c745944e-29a9-49e4-afe3-423dbb5fe23d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2.4 -0.57)
+		(end 2.4 -0.57)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "74fb8d7e-fd8a-458c-a854-e1cd57bca715")
+	)
+	(fp_line
+		(start -2.4 0.57)
+		(end -2.4 -0.57)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "1068e1b3-2b65-4c2b-8616-1e53b09b3387")
+	)
+	(fp_line
+		(start 2.4 -0.57)
+		(end 2.4 0.57)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "53030aaf-521c-42d5-b4db-df9c2b322dbb")
+	)
+	(fp_line
+		(start 2.4 0.57)
+		(end -2.4 0.57)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "62df061d-3b8a-4ba7-8380-1848503fb95d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "1aa99d86-9689-4230-9301-5854ba86f97c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.7 0)
+		(size 1.2 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fde09cdf-db7a-4117-afdd-5741debbc440")
+	)
+	(pad "2" smd rect
+		(at 1.7 0)
+		(size 1.2 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "cb605533-0f0a-4849-b83c-0a98d8373b16")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/lcsc.3dshapes/SOD-123_L2.7-W1.6-LS3.7-RD-1.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,139 @@
+(footprint "F0603"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.Fab")
+		(uuid "bd70c5f1-fb58-46a0-990a-7badccaad8f3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "F0603"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f2df6a3f-3117-4b72-998f-ee58527b6f3b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3e87f25e-3d04-4cb8-a1ce-4c1977799623")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a149c0a0-49bf-40a8-8eac-368a150266b1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C883092"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8782f60e-9ce5-49c3-8a2e-c38dd64cfd35")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.25 -0.53)
+		(end 1.25 -0.53)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "d37ed0d3-5716-4ba1-84ba-09834ceb3187")
+	)
+	(fp_line
+		(start -1.25 0.53)
+		(end -1.25 -0.53)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "88490181-4c89-4dea-a49c-4776ca2d98bf")
+	)
+	(fp_line
+		(start 1.25 -0.53)
+		(end 1.25 0.53)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "41227ead-fd81-423c-af0d-f56d294a6110")
+	)
+	(fp_line
+		(start 1.25 0.53)
+		(end -1.25 0.53)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "22f7b6fe-0c57-4bd1-b9ff-ae2c140f63b0")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "62adadb1-0d48-402a-9e35-54bbb2600669")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.75 0)
+		(size 0.806 0.864)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "17ecbdbd-b4a2-4999-9bac-c3686ab44c7d")
+	)
+	(pad "2" smd rect
+		(at 0.75 0)
+		(size 0.806 0.864)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a8304777-e1ce-4f85-97fd-e3b18ee7bf23")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/lcsc.3dshapes/F0603_L1.7-W0.9-H0.7.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
