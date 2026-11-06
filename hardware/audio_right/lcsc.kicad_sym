@@ -2,160 +2,6 @@
 	(version 20251024)
 	(generator "kicad_symbol_editor")
 	(generator_version "10.0")
-	(symbol "0402WGF220JTCE"
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(duplicate_pin_numbers_are_jumpers no)
-		(property "Reference" "R"
-			(at 0 5.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0402WGF220JTCE"
-			(at 0 -5.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "lib:R0402"
-			(at 0 -7.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_22R-22R0-1_C25092.html"
-			(at 0 -10.16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "22Ω (22R0) ±1%"
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "UNI-ROYAL(厚声)"
-			(at 0 -12.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0402WGF220JTCE"
-			(at 0 -15.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C25092"
-			(at 0 -17.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "Resistors"
-			(at 0 0 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(symbol "0402WGF220JTCE_0_1"
-			(rectangle
-				(start -2.54 1.02)
-				(end 2.54 -1.02)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type background)
-				)
-			)
-			(pin passive line
-				(at -5.08 0 0)
-				(length 2.54)
-				(name "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at 5.08 0 180)
-				(length 2.54)
-				(name "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-		)
-		(embedded_fonts no)
-	)
 	(symbol "BAT54HT1G"
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -313,6 +159,310 @@
 					)
 				)
 				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "BAV99,215"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAV99,215"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Switching-Diode_NXP_BAV99_BAV99_C2500.html"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "BAV99"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 0 -22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BAV99,215"
+			(at 0 -25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C2500"
+			(at 0 -27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Switching Diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "BAV99,215_0_1"
+			(rectangle
+				(start -10.16 5.08)
+				(end 10.41 -5.08)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -7.62 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -7.62 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -5.08 -5.08) (xy -5.08 2.79) (xy 5.08 2.79)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -2.54) (xy -5.08 0) (xy -7.62 -2.54) (xy -2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -2.54) (xy -5.08 0) (xy -7.62 -2.54) (xy -2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 5.08) (xy 0 2.79)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 5.08 -2.54) (xy 7.62 0) (xy 2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 5.08 -2.54) (xy 7.62 0) (xy 2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.08 2.79) (xy 5.08 -5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.62 -2.54) (xy 2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.62 -2.54) (xy 2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 -10.16 90)
+				(length 5.08)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 -10.16 90)
+				(length 5.08)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 10.16 270)
+				(length 5.08)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -537,7 +687,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TI(德州仪器)"
+		(property "Manufacturer" "Texas Instruments"
 			(at 0 -15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -720,7 +870,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TI(德州仪器)"
+		(property "Manufacturer" "Texas Instruments"
 			(at 0 -15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -948,6 +1098,315 @@
 			)
 		)
 		(symbol "FPC-05F-8PH20_0_1"
+			(rectangle
+				(start -1.27 11.43)
+				(end 3.81 -11.43)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center 0 10.16)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -3.81 8.89 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 6.35 0)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 3.81 0)
+				(length 2.54)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 1.27 0)
+				(length 2.54)
+				(name "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -1.27 0)
+				(length 2.54)
+				(name "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -3.81 0)
+				(length 2.54)
+				(name "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -6.35 0)
+				(length 2.54)
+				(name "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -8.89 0)
+				(length 2.54)
+				(name "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -13.97 90)
+				(length 2.54)
+				(name "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 13.97 270)
+				(length 2.54)
+				(name "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "FPC-05FB-8PH20"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "FPC"
+			(at 0 19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FPC-05FB-8PH20"
+			(at 0 -19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:FPC-SMD_8P-P0.50_XUNPU_FPC-05FB-8PH20"
+			(at 0 -21.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2856828.pdf"
+			(at 0 -24.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XUNPU(讯普)"
+			(at 0 -26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FPC-05FB-8PH20"
+			(at 0 -29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C2856828"
+			(at 0 -31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "FFC/FPC Connectors"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "FPC-05FB-8PH20_0_1"
 			(rectangle
 				(start -1.27 11.43)
 				(end 3.81 -11.43)
@@ -1402,7 +1861,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TI(德州仪器)"
+		(property "Manufacturer" "Texas Instruments"
 			(at 0 -22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1562,6 +2021,411 @@
 		)
 		(embedded_fonts no)
 	)
+	(symbol "LP5907MFX-2.8_NOPB"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LP5907MFX-2.8/NOPB"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:TSOT-23-5_L2.9-W1.6-P0.95-LS2.8-BL"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_Texas-Instruments_LP5907MFX-2-8-NOPB_Texas-Instruments-TI-LP5907MFX-2-8-NOPB_C186700.html"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LP5907MFX-2.8/NOPB"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C186700"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Linear Voltage Regulators (LDO)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LP5907MFX-2.8_NOPB_0_1"
+			(rectangle
+				(start -7.62 5.08)
+				(end 7.62 -5.08)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center -6.98 4.44)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -10.16 2.54 0)
+				(length 2.54)
+				(name "IN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 0 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 -1.27 180)
+				(length 2.54)
+				(name "N/C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 1.27 180)
+				(length 2.54)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "LP5907MFX-3.0_NOPB"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LP5907MFX-3.0/NOPB"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BL"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C475492.pdf"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C475492"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C475492"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LP5907MFX-3.0_NOPB_0_1"
+			(rectangle
+				(start -6.35 5.08)
+				(end 6.35 -5.08)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin passive line
+				(at -8.89 2.54 0)
+				(length 2.54)
+				(name "IN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -8.89 0 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -8.89 -2.54 0)
+				(length 2.54)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 -2.54 180)
+				(length 2.54)
+				(name "N/C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 2.54 180)
+				(length 2.54)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "MountingHole_Pad"
 		(pin_numbers
 			(hide yes)
@@ -1606,7 +2470,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1722,7 +2586,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Nexperia(安世)"
+		(property "Manufacturer" "Nexperia"
 			(at 0 -12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1986,14 +2850,14 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "PJ-320D"
+	(symbol "PJ-3701-SMT"
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "CN"
-			(at 0 7.62 0)
+			(at 0 10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2002,18 +2866,18 @@
 				)
 			)
 		)
-		(property "Value" "PJ-320D"
-			(at 0 -10.16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "lcsc:AUDIO-SMD_PJ-320D-1"
+		(property "Value" "PJ-3701-SMT"
 			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:AUDIO-SMD_PJ-3701-SMT"
+			(at 0 -15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -2023,8 +2887,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Audio-Video-Connectors_SHOU-HAN-PJ-320D_C431535.html"
-			(at 0 -15.24 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2684645.pdf"
+			(at 0 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -2045,18 +2909,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "SHOU HAN(首韩)"
-			(at 0 -17.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "PJ-320D"
+		(property "Manufacturer" "XKB Connection"
 			(at 0 -20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2067,8 +2920,19 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C431535"
+		(property "MPN" "PJ-3701-SMT"
 			(at 0 -22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C2684645"
+			(at 0 -25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -2089,10 +2953,10 @@
 				)
 			)
 		)
-		(symbol "PJ-320D_0_1"
+		(symbol "PJ-3701-SMT_0_1"
 			(rectangle
-				(start -8.38 0)
-				(end -6.86 -4.57)
+				(start -6.86 4.32)
+				(end -5.84 -6.1)
 				(stroke
 					(width 0)
 					(type default)
@@ -2103,7 +2967,7 @@
 			)
 			(polyline
 				(pts
-					(xy 2.54 2.54) (xy -7.62 2.54) (xy -7.62 0)
+					(xy -1.02 0) (xy -1.27 1.27)
 				)
 				(stroke
 					(width 0)
@@ -2115,7 +2979,7 @@
 			)
 			(polyline
 				(pts
-					(xy 2.54 -2.54) (xy -2.03 -2.54) (xy -2.54 -1.52) (xy -3.05 -2.54)
+					(xy 1.27 5.08) (xy -4.83 5.08) (xy -5.33 4.06) (xy -5.84 5.08)
 				)
 				(stroke
 					(width 0)
@@ -2127,7 +2991,7 @@
 			)
 			(polyline
 				(pts
-					(xy 2.54 -5.08) (xy -3.3 -5.08) (xy -3.81 -4.06) (xy -4.32 -5.08)
+					(xy 1.27 -5.08) (xy -3.81 -5.08) (xy -4.32 -4.06) (xy -4.83 -5.08)
 				)
 				(stroke
 					(width 0)
@@ -2139,7 +3003,43 @@
 			)
 			(polyline
 				(pts
-					(xy 3.56 0) (xy -0.76 0) (xy -1.27 -1.02) (xy -1.78 0)
+					(xy 1.52 2.54) (xy -1.02 2.54) (xy -1.02 0) (xy -0.76 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.52 -7.62) (xy -6.35 -7.62) (xy -6.35 -6.1)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy -2.79 0) (xy -2.79 -1.02) (xy -3.3 -1.02) (xy -3.3 0) (xy -2.79 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy -2.54 -2.54) (xy -3.05 -1.52) (xy -3.56 -2.54)
 				)
 				(stroke
 					(width 0)
@@ -2150,7 +3050,7 @@
 				)
 			)
 			(pin passive line
-				(at 7.62 2.54 180)
+				(at 6.35 -7.62 180)
 				(length 5.08)
 				(name "1"
 					(effects
@@ -2168,7 +3068,7 @@
 				)
 			)
 			(pin passive line
-				(at 7.62 -5.08 180)
+				(at 6.35 5.08 180)
 				(length 5.08)
 				(name "2"
 					(effects
@@ -2186,7 +3086,7 @@
 				)
 			)
 			(pin passive line
-				(at 7.62 -2.54 180)
+				(at 6.35 -5.08 180)
 				(length 5.08)
 				(name "3"
 					(effects
@@ -2204,7 +3104,7 @@
 				)
 			)
 			(pin passive line
-				(at 7.62 0 180)
+				(at 6.35 -2.54 180)
 				(length 5.08)
 				(name "4"
 					(effects
@@ -2214,6 +3114,42 @@
 					)
 				)
 				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 6.35 0 180)
+				(length 5.08)
+				(name "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 6.35 2.54 180)
+				(length 5.08)
+				(name "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2423,7 +3359,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TI(德州仪器)"
+		(property "Manufacturer" "Texas Instruments"
 			(at 0 -15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2671,7 +3607,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TI(德州仪器)"
+		(property "Manufacturer" "Texas Instruments"
 			(at 0 -22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2940,7 +3876,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TI(德州仪器)"
+		(property "Manufacturer" "Texas Instruments"
 			(at 0 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)

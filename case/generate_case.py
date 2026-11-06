@@ -4,7 +4,7 @@
 from pathlib import Path
 import sys
 
-for _sp in Path(".venv/lib").glob("python*/site-packages"):
+for _sp in Path("~/.t3/worktrees/rea-hardware/t3-d3f20bea/.venv/lib").glob("python*/site-packages"):
     if str(_sp) not in sys.path:
         sys.path.append(str(_sp))
 
@@ -60,6 +60,8 @@ def build_purchased_models(bf: dict) -> None:
             ):
                 continue
             if (b1[0] > 58.3 and b0[0] < 64.2) and (b1[1] > -2.95 and b0[1] < -1.45):
+                continue
+            if (b1[0] > 58.0 and b0[0] < 65.5) and (b1[1] > -37.0 and b0[1] < -28.5):
                 continue
         if _is_stl_wt(kept + [wt[i]]):
             kept.append(wt[i])

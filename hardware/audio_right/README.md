@@ -4,99 +4,40 @@
 - **Project**: `hardware/audio_right/thin-laptop-cm5-audio_right.kicad_pro`
 - **Dimensions**: `36.0 mm x 38.0 mm`, 2-layer FR-4 PCB (`1.6 mm` thickness, `2.0 mm` corner radius)
 - **World Placement**: `[190.5, -4.0, 0.0] mm` inside the 13-inch thin aluminum laptop lower deck
-- **Mating Cable (`c_audio_right`)**: 8-pin `0.5 mm` pitch FFC (`45.0 mm` length) from main board `J_AUDR` to `J2` (`FPC-05F-8PH20`, LCSC `C2856797`)
+- **Mating Cable (`c_audio_right`)**: 8-pin `0.5 mm` pitch **Type-B (opposite-side / reversed-contact)** FFC ribbon (`45.0 mm` length) connecting main-board bottom-contact `J_AUDR` (`FPC-05F-8PH20`, LCSC `C2856797`, contacts `-Z`, Pad 1 at South `y=23.75 mm`, Pad 8 at North `y=20.25 mm`) 1-to-1 to `audio_right` top-contact `J2` (`FPC-05FB-8PH20`, LCSC `C2856828`, contacts `+Z`, Pad 1 at South `y=19.75 mm`, Pad 8 at North `y=16.25 mm`)
 
 ---
 
 ## Sub-Board Architecture & Design Review Verification
 
-1. **CTIA / AHJ 3.5 mm 4-Pole TRRS Jack Mapping (`J1`, SHOU HAN `PJ-320D`, LCSC `C431535`)**:
-   - Placed at `(28.50, 19.00) mm`, `rot = 180.0 deg` on `F.Cu` (`mouth` facing `+X` `[1, 0, 0]` into right-edge case cutout `F_AUDIO`).
-   - Verified pin-to-contact mapping in both `lcsc:PJ-320D` symbol and `lcsc:AUDIO-SMD_PJ-320D-1` footprint:
-     - **Pin 4 (Tip, deepest contact at pad `(25.70, 22.50) mm`)**: `HP_L_JACK` (Left headphone audio).
-     - **Pin 3 (Ring 1, middle contact at pad `(29.70, 22.50) mm`)**: `HP_R_JACK` (Right headphone audio).
-     - **Pin 2 (Ring 2, barrel-entrance contact at pad `(32.70, 22.50) mm`)**: `GND` (CTIA common ground return).
-     - **Pin 1 (Sleeve, rear contact at pad `(24.30, 15.50) mm`)**: `HS_MIC_DET` (CTIA headset microphone & plug sense).
+1. **CTIA / AHJ 3.5 mm 6-Pin Switched TRRS Jack Mapping (`J1`, XKB Connection `PJ-3701-SMT`, LCSC `C2684645`, `[P1]` Resolved)**:
+   - Replaced unswitched 4-pin `PJ-320D` with 6-pin `XKB Connection PJ-3701-SMT` (LCSC `C2684645`, `lcsc:AUDIO-SMD_PJ-3701-SMT`) placed at `(28.50, 19.00) mm`, `rot = 180.0 deg` on `F.Cu` (`mouth` facing `+X` `[1, 0, 0]` into right-edge case cutout `F_AUDIO`).
+   - Verified pin-to-contact mapping against the `PJ-3701-SMT` mechanical drawing and schematic (`SCHEMATIC(PLUG OUT)`):
+     - **Pin 4 (Tip, `12.21 mm` deepest contact at pad `(24.02, 22.85) mm`)**: `/HP_L_JACK` (Left headphone audio).
+     - **Pin 3 (Ring 1, `4.79 mm` middle contact at pad `(30.02, 22.85) mm`)**: `/HP_R_JACK` (Right headphone audio).
+     - **Pin 2 (Ring 2, `7.84 mm` common return contact at pad `(32.98, 15.15) mm`)**: `/GND` (CTIA common ground return, Kelvin-sensed via `C20 = 2.2 uF` placed at `(32.30, 12.50) mm` with dedicated `F.Cu` Kelvin trace directly to `J1.2` and `R29 = 1.3 kOhm` into `/HS_REF_MUX`).
+     - **Pin 1 (Sleeve, `1.81 mm` entrance contact at pad `(31.92, 22.85) mm`)**: `/HS_MIC_DET` (CTIA headset microphone & bias/sense, clamped by unidirectional 3.3 V ESD diode `D3` `PESD3V3U1UA,115`, LCSC `C403915`).
+     - **Pin 5 (`/TIP_SW` at pad `(24.02, 15.15) mm`) & Pin 6 (`/GND` at pad `(26.02, 15.15) mm`)**: Isolated Normally-Closed (NC) Mechanical Tip Plug-Detect Switch (`5 VDC`, `0.5 A`, `<= 70 mOhm` closed resistance). When unplugged (`PLUG OUT`), Pin 5 is shorted to Pin 6 (`/GND`), holding `/TIP_SW = 0.000 V`. When any 3.5 mm plug is fully seated, Tip lifts insulator block `#9` to open Pin 5 from Pin 6, allowing `/TIP_SW` to charge via `R30 = 22 kOhm` (`C25768`) toward `/+2V8_ANA` (`2.80 V`) across `C23 = 2.2 uF` (`C159814`, `tau = 48.4 ms`, crossing `U1` rising threshold `V_TH+ = 2.365 V` at `t_qual = 90.1 ms` after contact bounce and Sleeve insertion wiping have completed), protected by ESD diode `D10` (`PESD3V3U1UA,115`, LCSC `C403915`).
 
-2. **Rail-to-Rail Input Open-Drain Comparators (`U1..U3`, TI `TLV7041DBVR`, LCSC `C702122`, `[P0]` & `[P2]` Resolved)**:
-   - **Rail-to-Rail Input Common-Mode Range**:
-     - Replaced `LMV331IDBVR` (`V_ICR_max = VCC - 0.8 V = 2.50 V`) with `TI TLV7041DBVR` (`SOT-23-5`, LCSC `C702122`), which features a rail-to-rail input stage (`V_CM = VEE to VCC + 0.1 V = 0.00 V .. 3.40 V` over `-40 C to +125 C` at `VCC = 3.30 V`), open-drain output (`1.6 V .. 6.5 V` supply), `315 nA` ultra-low quiescent current, and `7 mV` built-in internal hysteresis.
-     - Both `/V_REF_HI` (`2.365 V .. 2.853 V`) and unplugged `/DET_IN` (`2.970 V`) lie strictly inside the `0.00 V .. 3.40 V` valid input common-mode range across temperature.
-   - **Sub-Audio Filtered CTIA Bias (`R11`, `C11`, `R1`, `C9`) & Voice-Band Rejecting Sense Filter (`R12`, `C12`)**:
-     - `R11` (`470 Ohm`) and `C11` (`10 uF`, 25 V X5R 0603) filter `+3V3` (`f_c = 33.9 Hz`) to generate low-noise bias rail `HS_BIAS`.
-     - `R1` (`2.2 kOhm`) biases `HS_MIC_DET` (`J1` Pin 1 Sleeve) from `HS_BIAS`, while `C9` (`100 pF` 50 V C0G) shunts RF ingress (`f_c = 723 kHz`).
-     - `R12` (`10 kOhm`) and `C12` (`2.2 uF` 25 V X5R 0402) low-pass filter `HS_MIC_DET` onto `/DET_IN` with `-3 dB` cutoff `f_c = 1 / (2 * pi * 10 kOhm * 2.2 uF) = 7.23 Hz` (more than 10x below the `80 Hz` human voice fundamental, preventing voice/plosive peaks or slow insertion from chattering the comparators).
-   - **Bypassed Reference Ladder (`R13 = 22 kOhm`, `R14 = 100 kOhm`, `R16 = 22 kOhm`, `C17 = 100 nF`, `C18 = 100 nF`) & External Positive-Feedback Hysteresis (`R23..R28`)**:
-     - `C17` (`100 nF` 50 V X7R) bypasses `/V_REF_HI` to `/GND` (`f_c = 85 Hz`) and `C18` (`100 nF` 50 V X7R) bypasses `/V_REF_LO` to `/GND` (`f_c = 85 Hz`), rejecting `/+3V3` supply noise on the reference nodes.
-     - Positive feedback hysteresis networks `R23 = 2.2 kOhm` / `R24 = 100 kOhm` (on `U1_INP`), `R25 = 2.2 kOhm` / `R26 = 100 kOhm` (on `U2_INP`), and `R27 = 2.2 kOhm` / `R28 = 100 kOhm` (on `U3_INP`) add `~65 mV` of external hysteresis on top of `TLV7041DBVR`'s `7 mV` internal hysteresis.
-     - Verified self-consistent nodal operating points across all plug states (`R15 = 10 kOhm` pull-up on `HP_DET_N`, `R17 = 10 kOhm` pull-up on `MIC_SEL`):
-       - **Unplugged (`R_jack = inf`)**: `V(DET_IN) = 2.970 V`, `V(V_REF_HI) = 2.365 V`, `V(V_REF_LO) = 0.427 V` -> `V(HP_DET_N) = 3.271 V` (HIGH on `HP_DET` `J2.7`), `V(MIC_SEL) = 0.004 V` (LOW, selecting internal MEMS mic `MK1`).
-       - **4-Pole CTIA TRRS Headset (`2.2 kOhm .. 5.6 kOhm` mic)**: `V(DET_IN) = 1.503 V .. 2.110 V` (strictly inside `[0.513 V, 2.845 V]`) -> `V(HP_DET_N) = 0.003 V` (LOW on `HP_DET` `J2.7`), `V(MIC_SEL) = 3.116 V .. 3.166 V` (HIGH `> V_IH = 2.0 V`, selecting CTIA headset mic and local AC ground reference on `U4`).
-       - **3-Pole TRS Stereo Headphone (`Sleeve = 0 Ohm` to `GND`)**: `V(DET_IN) = 0.001 V < V(V_REF_LO) = 0.426 V` -> `V(HP_DET_N) = 0.003 V` (LOW on `HP_DET` `J2.7`), `V(MIC_SEL) = 0.004 V` (LOW, keeping internal MEMS mic `MK1` selected).
+2. **Decoupled Mechanical Headphone Plug Detection (`U1`) & Deterministic Monostable Microphone Source Selection (`U2, U3`, `3x TI TLV7041DBVR`, LCSC `C702122`, `[P1]` & `[P2]` Resolved)**:
+   - **Headphone Plug Detection (`U1` driving `/HP_DET_N -> R4 = 1 kOhm -> /HP_DET` on `J2.7`)**:
+     - `U1.4` (`IN-`) senses `/TIP_SW`; `U1.3` (`IN+`) senses `/U1_INP` (`V_REF_HI = 2.344 V` via `R23 = 22 kOhm` with `R31 = 1 MOhm` positive feedback to `/HP_DET_N`, giving `V_TH+ = 2.365 V` rising at `t = 90.1 ms` and `V_TH- = 2.293 V` falling, `72 mV` hysteresis).
+     - `/HP_DET` is **100% independent of Sleeve microphone impedance**: inline hardware mic-mute switches (`R_sleeve = inf`), detached boom mics, or open-mic Y-splitters never cause false unplug events on `/HP_DET`.
+   - **Synchronous Debounced Plug-Presence Gate (`U2`) & Deterministic 3-Pole TRS vs 4-Pole CTIA Classifier (`U3`) on `/MIC_SEL` (`R17 = 2.2 kOhm` pull-up to `/+3V3`)**:
+     - Reference divider on `/+2V8_ANA` (`2.80 V`): `R13 = 2.2 kOhm`, `R14 = 10 kOhm`, `R16 = 1.3 kOhm` (`C25866`) -> `V_REF_HI = 2.344 V` (`C17 = 100 nF`), `V_REF_LO = 0.270 V` (`C18 = 100 nF`).
+     - **Synchronous Plug-Presence Gate (`U2`)**: `U2.3` (`IN+`) = `/V_REF_HI` (`2.344 V`), `U2.4` (`IN-`) = `/HP_DET_N` (driven directly by `U1.1`'s debounced output with `72 mV` hysteresis). Whenever unplugged (`V_TIP_SW < 2.365 V`) or during the first `90.1 ms` of plug insertion (`/HP_DET_N = 3.30 V`), `U2.1` holds `/MIC_SEL` LOW (`0.00 V`, selecting internal MEMS mic `MK1`). Once `U1` qualifies the seated plug at `t = 90.1 ms` (`/HP_DET_N = 0.00 V`), `U2.1` releases `/MIC_SEL` synchronously with `/HP_DET_N`.
+     - **Non-Loading Sleeve Sense Tap & Rail-to-Rail Clamp (`R12, C12, D11`)**:
+       - Sleeve `/HS_MIC_DET` is sensed through high-impedance `R12 = 47 kOhm` (`C25792`) and `C12 = 4.7 nF` (`C1538`, `tau = 221 us << 90.1 ms`), loading the positive mic leg by `< 0.2 dB` across `20 Hz .. 20 kHz` so `/HS_MIC_MUX` (`1.29 kOhm .. 1.32 kOhm`) stays balanced within `1.5%` of `/HS_REF_MUX` (`R29 = 1.30 kOhm`).
+       - `D11` (`BAV99,215`, LCSC `C2500`, `I_R < 1 nA` typ) clamps `/DET_IN` between `/GND` (Pin 1) and `/+2V8_ANA` (Pin 2) behind `R12 = 47 kOhm`, ensuring `/DET_IN` never exceeds `-0.3 V` or `+2V8_ANA + 0.3 V`.
+     - **Deterministic 3-Pole TRS vs 4-Pole CTIA Selection (`U3`)**:
+       - `U3.4` (`IN-`) = `/V_REF_LO` (`0.270 V`); `U3.3` (`IN+` = `/U3_INP`) is connected via `R27 = 2.2 kOhm` (`C25879`) to `/DET_IN` with `R28 = 1 MOhm` (`C26083`) hysteresis to `/MIC_SEL`.
+       - **3-Pole TRS Headphones (`R_sleeve < 100 Ohm`, e.g. `0 Ohm` grounded Sleeve)**: `V_HS_MIC_DET < 0.100 V` settles on `/DET_IN` in `< 1.1 ms << 90.1 ms`. Even if `/MIC_SEL` were transiently `3.30 V`, `V_U3P(R_sleeve = 0 Ohm, MIC_SEL = 3.30 V) = 3.30 V * (47k + 2.2k) / (47k + 2.2k + 1000k) = 0.155 V < V_REF_LO (0.270 V)` (`V_TH- = 0.121 V` [`120 Ohm`], `V_TH+ = 0.283 V` [`300 Ohm`]). Thus `U3.1` deterministically holds or resets `/MIC_SEL = 0.00 V` (internal mic `MK1`) with **zero bistable lockup** on TRS contact bounce.
+       - **4-Pole CTIA Headset (`680 Ohm <= R_sleeve <= 10 kOhm`, or `R_sleeve = inf` when inline hardware mute switch is open at boot, plug-in, or during capture)**: `0.568 V <= V_HS_MIC_DET <= 2.800 V -> 0.541 V <= V_U3P <= 2.823 V > V_REF_LO (0.270 V)`. Both `U2.1` and `U3.1` release `/MIC_SEL` to `3.30 V`, switching `U4` (`TS5A23159DGSR`) to the external headset microphone (`NO1/NO2`) so a muted CTIA headset never silently falls back to internal mic `MK1`.
 
-3. **Dual SPDT Differential Microphone Multiplexer (`U4`, TI `TS5A23159DGSR`, LCSC `C42751`, `[P1]` Resolved)**:
-   - Replaced single-pole switch `SN74LVC1G3157DBVR` with `TI TS5A23159DGSR` (`VSSOP-10`, `1.1 Ohm` low `R_ON`, `1.65 V .. 5.5 V` supply, break-before-make dual 2:1 SPDT analog switch).
-   - Both control inputs `IN1` (Pin 1) and `IN2` (Pin 5) are driven by `/MIC_SEL`:
-     - **When `/MIC_SEL = LOW` (Unplugged or 3-Pole TRS Headphone)**:
-       - Channel 1 routes `MK1.3` (`OUTPUT+`, `/MIC_OUT_P`) from `NC1` (Pin 9) to `COM1` (Pin 10, `/MIC_MUX_P` -> `C13 = 2.2 uF` -> `R8 = 100 Ohm` -> `/MIC_P` on `J2.5`).
-       - Channel 2 routes `MK1.2` (`OUTPUT-`, `/MIC_OUT_N`) from `NC2` (Pin 7) to `COM2` (Pin 6, `/MIC_MUX_N` -> `C14 = 2.2 uF` -> `R9 = 100 Ohm` -> `/MIC_N` on `J2.6`).
-     - **When `/MIC_SEL = HIGH` (4-Pole CTIA TRRS Headset)**:
-       - Both `MK1.3` (`OUTPUT+`) and `MK1.2` (`OUTPUT-`) are completely disconnected (`-65 dB` off-isolation), eliminating internal chassis/keyboard/speaker acoustic bleed from `MK1` into the headset microphone path.
-       - Channel 1 routes `/HS_MIC_MUX` from `NO1` (Pin 2) to `COM1` (Pin 10, `/MIC_MUX_P` -> `C13` -> `R8` -> `/MIC_P`).
-       - Channel 2 routes `/HS_REF_MUX` from `NO2` (Pin 4) to `COM2` (Pin 6, `/MIC_MUX_N` -> `C14` -> `R9` -> `/MIC_N`), where `/HS_REF_MUX` is AC-terminated to local ground at `J1.2` (Ring 2 GND) via matched `C20 = 2.2 uF` (`25 V` X5R 0402) and DC-biased via `R22 = 47 kOhm` to `/MUX_BIAS_FILT` (`0.595 V` DC, matching `NO1` bias via `R20 = 47 kOhm` for pop-free switching).
+3. **Ultra-Low-Noise 2.8 V Analog LDO & Back-Drive Protection (`U5`, TI `LP5907MFX-2.8/NOPB`, LCSC `C186700`, `R24`, `D12`, `[P1]` Resolved)**:
+   - Powered from `/+3V3` with local `1 uF` input cap `C22` (`C52923`) within `1.5 mm` of `U5.1`/`U5.2` and local `1 uF` output cap `C21` (`C52923`) on `/+2V8_ANA`.
+   - `R24 = 1.3 kOhm` (`C25866`) minimum preload bleeder from `/+2V8_ANA` to `/GND` (`2.154 mA`) combines with the reference dividers (`0.237 mA`) and `MK1` (`0.185 mA` min) to guarantee `>= 2.575 mA` continuous sink load on `/+2V8_ANA`, exceeding the maximum back-drive current (`(6.0 V - 2.8 V) / (2.67k || 47k) = 1.27 mA`) under external `3 V .. 6 V` faults on `J1.1` before `D3` (`PESD3V3U1UA,115`) and `D12` (`PESD3V3U1UA,115` on `/+2V8_ANA`) clamp to `/GND`.
 
-4. **Series Current Limiting & Schottky Negative Transient Clamping on `/HS_MIC_MUX` (`R21`, `D8`, `[P1]` Resolved)**:
-   - `C10` (`2.2 uF`) couples `HS_MIC_DET` (`J1.1` Sleeve) to `/HS_MIC_AC`, which passes through series current-limiting resistor `R21 = 1 kOhm` (`0402WGF1001TCE`, LCSC `C11702`) to `/HS_MIC_MUX` (`U4.2` `NO1`).
-   - Low-capacitance Schottky barrier diode `D8` (`onsemi BAT54HT1G`, `SOD-323`, LCSC `C21107`, `30 V`, `200 mA` continuous / `600 mA` peak forward current) is connected on `/HS_MIC_MUX` with Cathode (Pin 1) at `/HS_MIC_MUX` (`+0.595 V` DC, reverse-biased during normal operation) and Anode (Pin 2) at `/GND`.
-   - During abrupt TRS plug insertion or CTIA inline button press (`HS_MIC_DET` stepping from `3.30 V` to `0.00 V`), `R21 = 1 kOhm` limits peak negative discharge current from `C10` to `I_pk = (2.71 V - 0.28 V) / 1 kOhm = 2.43 mA` (more than 20x below `TS5A23159`'s `-50 mA` clamp diode limit and 80x below `BAT54HT1G`'s `200 mA` continuous rating), while `D8` clamps `/HS_MIC_MUX` at `-0.28 V` so `U4`'s internal substrate diode never conducts.
-
-5. **Low-Impedance MEMS Microphone Supply Filter (`R5 = 22 Ohm`) & Decoupled T-Network Mux Bias (`R18`, `R19`, `C19`, `R20`, `R22`, `[P2]` Resolved)**:
-   - Reduced `R5` from `1 kOhm` to `22 Ohm` 1% (`0402WGF220JTCE`, LCSC `C25092`) feeding `/MIC_VDD` (`C1 = 100 nF` + `C2 = 10 uF` right at `MK1.1`), keeping DC drop across `R5` below `8.3 mV` at `375 uA` max (`V_DD = 3.292 V`, matching `ICS-40720` low-impedance supply requirements).
-   - Decoupled `/MUX_BIAS_FILT` (`R18 = 100 kOhm` to `/+3V3`, `R19 = 22 kOhm` to `/GND`, `V_bias = 0.595 V`) with `C19 = 2.2 uF` to `/GND` (`f_c = 4.01 Hz`) and isolated `NO1` (`/HS_MIC_MUX`) and `NO2` (`/HS_REF_MUX`) through independent `47 kOhm` resistors `R20` and `R22`, completely eliminating `/MIC_VDD` modulation coupling.
-
-6. **Unidirectional 3.3 V TVS Protection, Zero-Stub Inline Routing & Acoustic Port Keepout (`D1..D7`, `R6`, `R7`, `MK1`)**:
-   - Unipolar 3.3 V nets (`HS_MIC_DET` on `D3`, `HP_DET` on `D4`, `+3V3` on `D7`) use unidirectional 3.3 V low-capacitance TVS diodes (`PESD3V3U1UA,115`, LCSC `C403915`), while bipolar AC audio nets (`HP_L_JACK` on `D1`, `HP_R_JACK` on `D2`, `MIC_P` on `D5`, `MIC_N` on `D6`) use bidirectional TVS diodes (`PESD5V0S1BA`, LCSC `C2827694`).
-   - `D1`, `D2`, and `D3` are routed inline with `0.00 mm` stubs at `J1` Pads 4, 3, and 1; `R6` and `R7` (`2.2 Ohm`) provide headphone build-out isolation; `MK1` includes its `0.70 mm` NPTH bottom acoustic port at `(18.75, 10.01) mm` with matching `F.Cu`/`B.Cu` keepouts.
-
----
-
-## Component Ratings & Derating Verification (`>= 1.5x` Margin)
-
-| Ref | MPN | LCSC | Value / Function | Max Operating Stress | Component Rating | Derating Margin | Status |
-|---|---|---|---|---|---|---|---|
-| `J1` | `PJ-320D` | `C431535` | 3.5mm CTIA TRRS Jack | `3.3 V`, `30 mA` | `30 V DC`, `500 mA` | `9.09x V`, `16.7x I` | PASS |
-| `J2` | `FPC-05F-8PH20` | `C2856797` | 8P 0.5mm FFC Connector | `3.3 V`, `< 2 mA` (`+3V3`) | `50 V`, `500 mA`/pin | `15.2x V`, `> 250x I` | PASS |
-| `MK1` | `ICS-40720` | `C3171779` | Differential MEMS Mic | `V_DD = 3.29 V`, `285 uA` | `V_DD = 1.5 - 3.63 V` | Within nominal window | PASS |
-| `U1..U3` | `TLV7041DBVR` | `C702122` | Rail-to-Rail Open-Drain Comp | `V_CC = 3.30 V`, `V_IN <= 2.98 V` | `V_CC = 1.6 - 6.5 V`, `V_CM = 0..3.4 V` | `1.97x V`, RRI valid | PASS |
-| `U4` | `TS5A23159DGSR` | `C42751` | Dual 1.1-Ohm SPDT Audio Mux | `V_+ = 3.30 V`, `I_clamp = 0 mA` | `V_+ = 1.65 - 5.5 V`, `+/- 50 mA` | `1.67x V` | PASS |
-| `D1, D2, D5, D6` | `PESD5V0S1BA` | `C2827694` | Bidirectional Audio TVS | `+/- 1.5 V_pk` AC audio | `V_RWM = +/- 5.0 V` | `3.33x V` | PASS |
-| `D3, D4, D7` | `PESD3V3U1UA,115` | `C403915` | Unidirectional 3.3V TVS | `0 .. 3.30 V` unipolar | `V_RWM = 3.3 V`, `V_BR = 4.5 V` | Clamps `-0.7V / +4.5V` | PASS |
-| `D8` | `BAT54HT1G` | `C21107` | Schottky Transient Clamp | `0.60 V` rev, `2.43 mA` pk fwd | `30 V`, `200 mA` cont / `600 mA` pk | `50.0x V`, `82.3x I` | PASS |
-| `C1, C3, C15..C18` | `GCM155R71H104KE02D` | `C85858` | `100 nF` X7R 0402 | `<= 3.30 V` | `50 V` | `15.2x V` (`>= 1.5x`) | PASS |
-| `C2, C6, C11` | `CL10A106MA8NRNC` | `C96446` | `10 uF` X5R 0603 | `3.30 V` | `25 V` | `7.58x V` (`>= 1.5x`) | PASS |
-| `C4, C5, C7..C9` | `0402CG101J500NT` | `C1546` | `100 pF` C0G 0402 | `<= 3.30 V` | `50 V` | `15.2x V` (`>= 1.5x`) | PASS |
-| `C10, C12..C14, C19, C20` | `CL05A225MA5NUNC` | `C159814` | `2.2 uF` X5R 0402 | `<= 3.30 V` | `25 V` | `7.58x V` (`>= 1.5x`) | PASS |
-| `R1, R23, R25, R27` | `0402WGF2201TCE` | `C25879` | `2.2 kOhm` 1% 0402 | `<= 3.30 V`, `<= 3.4 mW` | `50 V`, `62.5 mW` | `15.2x V`, `18.4x P` | PASS |
-| `R2, R3, R12, R15, R17` | `0402WGF1002TCE` | `C25744` | `10 kOhm` 1% 0402 | `<= 3.30 V`, `1.1 mW` | `50 V`, `62.5 mW` | `15.2x V`, `56.8x P` | PASS |
-| `R4, R21` | `0402WGF1001TCE` | `C11702` | `1 kOhm` 1% 0402 | `<= 3.30 V`, `<= 7.5 mW` | `50 V`, `62.5 mW` | `15.2x V`, `8.33x P` | PASS |
-| `R5` | `0402WGF220JTCE` | `C25092` | `22 Ohm` 1% 0402 | `8.3 mV`, `3.1 uW` | `50 V`, `62.5 mW` | `> 1000x V`, `> 1000x P` | PASS |
-| `R6, R7` | `0402WGF220KTCE` | `C25101` | `2.2 Ohm` 1% 0402 | `1.0 V_rms`, `2.0 mW` | `50 V`, `62.5 mW` | `50.0x V`, `31.3x P` | PASS |
-| `R8, R9` | `0402WGF1000TCE` | `C25076` | `100 Ohm` 1% 0402 | `1.0 V`, `< 0.1 mW` | `50 V`, `62.5 mW` | `50.0x V`, `> 500x P` | PASS |
-| `R11` | `0402WGF4700TCE` | `C25117` | `470 Ohm` 1% 0402 | `3.30 V`, `0.72 mW` | `50 V`, `62.5 mW` | `15.2x V`, `86.8x P` | PASS |
-| `R13, R16, R19` | `0402WGF2202TCE` | `C25768` | `22 kOhm` 1% 0402 | `<= 3.30 V`, `< 0.2 mW` | `50 V`, `62.5 mW` | `15.2x V`, `> 300x P` | PASS |
-| `R14, R18, R24, R26, R28` | `0402WGF1003TCE` | `C25741` | `100 kOhm` 1% 0402 | `<= 3.30 V`, `< 0.1 mW` | `50 V`, `62.5 mW` | `15.2x V`, `> 500x P` | PASS |
-| `R20, R22` | `0402WGF4702TCE` | `C25792` | `47 kOhm` 1% 0402 | `<= 0.60 V`, `< 0.1 mW` | `50 V`, `62.5 mW` | `83.3x V`, `> 500x P` | PASS |
-
----
-
-## Gate Verification Summary (`audio_right`)
-- `sourcing.bom`: **PASS** (63 placed BOM symbols, 22 unique in-stock LCSC parts)
-- `kicad.erc`: **PASS** (0 errors, 0 warnings)
-- `kicad.drc`: **PASS** (0 errors, 0 warnings, 0 unconnected items, 0 schematic parity issues)
-- `kicad.rules`: **PASS** (JLCPCB 2-layer rules satisfied)
-- `board.contract`: **PASS** (`36.0 x 38.0 mm` outline, plated M2 holes `H1`/`H2`, `J1`, `MK1`, `J2` within tolerance)
-- `kicad.models` & `kicad.parts`: **PASS** (all footprints match exact LCSC packages and verified 3D STEP models)
-- `board.cable_pinout`: **PASS** (`c_audio_right` 8-pin FFC pinout matches main board `J_AUDR` 1:1)
-- `board.stackup` & `board.high_speed`: **PASS**
-- `board.user_ports` & `board.port_facing`: **PASS** (`J1` mouth `[1, 0, 0]` faces right-edge cutout `F_AUDIO`; `J2` mouth `[-1, 0, 0]` faces left edge)
-- `spec.locked`: **PASS**
+4. **Dual SPDT Differential Microphone Multiplexer (`U4`, TI `TS5A23159DGSR`, LCSC `C42751`) & Matched Low-Leakage Silicon Clamps (`D8, D9`, `BAV99,215`, LCSC `C2500`)**:
+   - Biased at `/MUX_BIAS_FILT = 0.795 V` via `R18 = 68 kOhm` (`C36871`) and `R19 = 27 kOhm` (`C25771`) from `/+2V8_ANA`, matching `MK1` (`ICS-40720`) `0.80 V` DC common-mode output within `5 mV` for clickless switching.
+   - Clamped by matched ultra-low-leakage dual-series silicon diodes `D8` (on `/HS_MIC_MUX`) and `D9` (on `/HS_REF_MUX`) between `/GND` and `/+3V3`.

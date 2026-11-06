@@ -7,2242 +7,4126 @@
   (title_block
     (title "13-inch Thin Aluminum CM5 Laptop - Right Audio & Mic Daughter Board")
     (rev "2.0")
-    (comment 1 "audio_right: PJ-320D CTIA TRRS, ICS-40720 MEMS mic, TLV7041 RRI comparators, TS5A23159 dual SPDT mux")
+    (comment 1 "audio_right: PJ-3701-SMT 6-pin CTIA TRRS with NC Tip switch, FPC-05FB-8PH20 8P FFC, LP5907MFX-2.8/NOPB LDO, ICS-40720 MEMS mic, TLV7041DBVR U1..U3 comparators, TS5A23159DGSR dual SPDT mux")
   )
   (lib_symbols
-    (symbol "lcsc:FPC-05F-8PH20"
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "FPC"
-        (at 0 19.05 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "FPC-05F-8PH20"
-        (at 0 -19.05 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "lcsc:FPC-SMD_8P-P0.50_FPC-05F-8PH20"
-        (at 0 -21.59 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" "https://www.lcsc.com/datasheet/C2856797.pdf"
-        (at 0 -24.13 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Manufacturer" "XUNPU(讯普)"
-        (at 0 -26.67 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "MPN" "FPC-05F-8PH20"
-        (at 0 -29.21 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "LCSC Part" "C2856797"
-        (at 0 -31.75 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_keywords" "FFC/FPC Connectors"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "FPC-05F-8PH20_0_1"
-        (rectangle
-          (start -1.27 11.43)
-          (end 3.81 -11.43)
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (circle
-          (center 0 10.16)
-          (radius 0.38)
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (pin passive line
-          (at -3.81 8.89 0)
-          (length 2.54)
-          (name "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -3.81 6.35 0)
-          (length 2.54)
-          (name "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -3.81 3.81 0)
-          (length 2.54)
-          (name "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -3.81 1.27 0)
-          (length 2.54)
-          (name "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -3.81 -1.27 0)
-          (length 2.54)
-          (name "5"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "5"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -3.81 -3.81 0)
-          (length 2.54)
-          (name "6"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "6"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -3.81 -6.35 0)
-          (length 2.54)
-          (name "7"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "7"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -3.81 -8.89 0)
-          (length 2.54)
-          (name "8"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "8"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 2.54 -13.97 90)
-          (length 2.54)
-          (name "9"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "9"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 2.54 13.97 270)
-          (length 2.54)
-          (name "10"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "10"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:PJ-320D"
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "CN"
-        (at 0 7.62 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "PJ-320D"
-        (at 0 -10.16 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "lcsc:AUDIO-SMD_PJ-320D-1"
-        (at 0 -12.7 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" "https://lcsc.com/product-detail/Audio-Video-Connectors_SHOU-HAN-PJ-320D_C431535.html"
-        (at 0 -15.24 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Manufacturer" "SHOU HAN(首韩)"
-        (at 0 -17.78 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "MPN" "PJ-320D"
-        (at 0 -20.32 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "LCSC Part" "C431535"
-        (at 0 -22.86 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_keywords" "Audio Connectors"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "PJ-320D_0_1"
-        (rectangle
-          (start -8.38 0)
-          (end -6.86 -4.57)
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (polyline
-          (pts
-            (xy 2.54 2.54)
-            (xy -7.62 2.54)
-            (xy -7.62 0)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy 2.54 -2.54)
-            (xy -2.03 -2.54)
-            (xy -2.54 -1.52)
-            (xy -3.05 -2.54)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy 2.54 -5.08)
-            (xy -3.3 -5.08)
-            (xy -3.81 -4.06)
-            (xy -4.32 -5.08)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy 3.56 0)
-            (xy -0.76 0)
-            (xy -1.27 -1.02)
-            (xy -1.78 0)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (pin passive line
-          (at 7.62 2.54 180)
-          (length 5.08)
-          (name "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 7.62 -5.08 180)
-          (length 5.08)
-          (name "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 7.62 -2.54 180)
-          (length 5.08)
-          (name "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 7.62 0 180)
-          (length 5.08)
-          (name "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:ICS-40720"
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "U"
-        (at 0 8.89 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "ICS-40720"
-        (at 0 -8.89 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "lcsc:SMD_4P-P0.88_ICS-40720"
-        (at 0 -11.43 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" "https://www.lcsc.com/datasheet/C3171779.pdf"
-        (at 0 -13.97 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Manufacturer" "TDK InvenSense(应美盛)"
-        (at 0 -16.51 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "MPN" "ICS-40720"
-        (at 0 -19.05 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "LCSC Part" "C3171779"
-        (at 0 -21.59 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "ICS-40720_0_1"
-        (rectangle
-          (start -6.35 6.35)
-          (end 8.89 -6.35)
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (circle
-          (center -5.08 5.08)
-          (radius 0.38)
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (pin passive line
-          (at -8.89 3.81 0)
-          (length 2.54)
-          (name "VDD"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -8.89 1.27 0)
-          (length 2.54)
-          (name "OUTPUT−"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -8.89 -1.27 0)
-          (length 2.54)
-          (name "OUTPUT+"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -8.89 -3.81 0)
-          (length 2.54)
-          (name "GND"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:MountingHole_Pad"
-      (pin_numbers
-        (hide yes)
-      )
-      (pin_names
-        (offset 1.016)
-        (hide yes)
-      )
-      (exclude_from_sim yes)
-      (in_bom no)
-      (on_board yes)
-      (in_pos_files no)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "H"
-        (at 0 5.08 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "MountingHole_Pad"
-        (at 0 3.175 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "lcsc:MountingHole_2.2mm_M2_Pad"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" "~"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" "Mounting Hole with connection"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "MountingHole_Pad_0_1"
-        (circle
-          (center 0 0)
-          (radius 1.778)
-          (stroke
-            (width 1.27)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-      )
-      (symbol "MountingHole_Pad_1_1"
-        (pin passive line
-          (at 0 -5.08 90)
-          (length 3.302)
-          (name "MP"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:TLV7041DBVR"
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "U"
-        (at 0 15.24 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "TLV7041DBVR"
-        (at 0 -15.24 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "lcsc:SOT-23-5_L2.9-W1.6-P0.95-LS2.8-BR"
-        (at 0 -17.78 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" "https://www.lcsc.com/datasheet/C702122.pdf"
-        (at 0 -20.32 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Manufacturer" "TI(德州仪器)"
-        (at 0 -22.86 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "MPN" "TLV7041DBVR"
-        (at 0 -25.4 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "LCSC Part" "C702122"
-        (at 0 -27.94 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_keywords" "Pre-ordered Chips"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "TLV7041DBVR_0_1"
-        (polyline
-          (pts
-            (xy -5.08 -5.08)
-            (xy 5.08 0)
-            (xy -5.08 5.08)
-            (xy -5.08 -5.08)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (polyline
-          (pts
-            (xy -4.06 2.54)
-            (xy -2.54 2.54)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy -4.06 -2.54)
-            (xy -2.54 -2.54)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy -3.3 -1.78)
-            (xy -3.3 -3.3)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy 0 5.08)
-            (xy 0 2.54)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy 0 -2.54)
-            (xy 0 -5.08)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (pin passive line
-          (at 10.16 0 180)
-          (length 5.08)
-          (name "OUT"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 0 -10.16 90)
-          (length 5.08)
-          (name "VEE"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -10.16 -2.54 0)
-          (length 5.08)
-          (name "IN+"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -10.16 2.54 0)
-          (length 5.08)
-          (name "IN-"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 0 10.16 270)
-          (length 5.08)
-          (name "VCC"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "5"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:TS5A23159DGSR"
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "U"
-        (at 0 10.16 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "TS5A23159DGSR"
-        (at 0 -10.16 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "lcsc:VSSOP-10_L3.0-W3.0-P0.50-LS4.9-BL"
-        (at 0 -12.7 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" "https://lcsc.com/product-detail/Analog-Switches_TI_TS5A23159DGSR_TS5A23159DGSR_C42751.html"
-        (at 0 -15.24 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Manufacturer" "TI(德州仪器)"
-        (at 0 -17.78 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "MPN" "TS5A23159DGSR"
-        (at 0 -20.32 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "LCSC Part" "C42751"
-        (at 0 -22.86 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_keywords" "Analog Switches / Multiplexers"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "TS5A23159DGSR_0_1"
-        (rectangle
-          (start -7.62 7.62)
-          (end 7.62 -7.62)
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (pin passive line
-          (at -12.7 5.08 0)
-          (length 5.08)
-          (name "IN1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -12.7 2.54 0)
-          (length 5.08)
-          (name "NO1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -12.7 0 0)
-          (length 5.08)
-          (name "GND"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -12.7 -2.54 0)
-          (length 5.08)
-          (name "NO2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -12.7 -5.08 0)
-          (length 5.08)
-          (name "IN2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "5"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 12.7 -5.08 180)
-          (length 5.08)
-          (name "COM2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "6"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 12.7 -2.54 180)
-          (length 5.08)
-          (name "NC2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "7"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 12.7 0 180)
-          (length 5.08)
-          (name "V+"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "8"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 12.7 2.54 180)
-          (length 5.08)
-          (name "NC1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "9"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 12.7 5.08 180)
-          (length 5.08)
-          (name "COM1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "10"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:C"
-      (pin_numbers
-        (hide yes)
-      )
-      (pin_names
-        (offset 0.254)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "C"
-        (at 0.635 2.54 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (justify left)
-        )
-      )
-      (property "Value" "C"
-        (at 0.635 -2.54 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (justify left)
-        )
-      )
-      (property "Footprint" ""
-        (at 0.9652 -3.81 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" "Unpolarized capacitor"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_keywords" "cap capacitor"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_fp_filters" "C_*"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "C_0_1"
-        (polyline
-          (pts
-            (xy -2.032 0.762)
-            (xy 2.032 0.762)
-          )
-          (stroke
-            (width 0.508)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy -2.032 -0.762)
-            (xy 2.032 -0.762)
-          )
-          (stroke
-            (width 0.508)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-      )
-      (symbol "C_1_1"
-        (pin passive line
-          (at 0 3.81 270)
-          (length 2.794)
-          (name ""
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 0 -3.81 90)
-          (length 2.794)
-          (name ""
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:R"
-      (pin_numbers
-        (hide yes)
-      )
-      (pin_names
-        (offset 0)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "R"
-        (at 2.032 0 90)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "R"
-        (at 0 0 90)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" ""
-        (at -1.778 0 90)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" "Resistor"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_keywords" "R res resistor"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_fp_filters" "R_*"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "R_0_1"
-        (rectangle
-          (start -1.016 -2.54)
-          (end 1.016 2.54)
-          (stroke
-            (width 0.254)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-      )
-      (symbol "R_1_1"
-        (pin passive line
-          (at 0 3.81 270)
-          (length 1.27)
-          (name ""
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 0 -3.81 90)
-          (length 1.27)
-          (name ""
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:PESD5V0S1BA"
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "D"
-        (at 0 5.08 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "PESD5V0S1BA"
-        (at 0 -5.08 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "lcsc:SOD-323_L1.7-W1.3-LS2.5-BI"
-        (at 0 -7.62 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" "https://www.lcsc.com/datasheet/C2827694.pdf"
-        (at 0 -10.16 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" "Bidirectional 5V ESD Protection Diode SOD-323"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Manufacturer" "TECH PUBLIC"
-        (at 0 -12.7 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "MPN" "PESD5V0S1BA"
-        (at 0 -15.24 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "LCSC Part" "C2827694"
-        (at 0 -17.78 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "PESD5V0S1BA_0_1"
-        (polyline
-          (pts
-            (xy -2.54 1.27)
-            (xy 0 0)
-            (xy -2.54 -1.27)
-            (xy -2.54 1.27)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (polyline
-          (pts
-            (xy 2.54 1.27)
-            (xy 0 0)
-            (xy 2.54 -1.27)
-            (xy 2.54 1.27)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (pin passive line
-          (at -5.08 0 0)
-          (length 2.54)
-          (name "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 5.08 0 180)
-          (length 2.54)
-          (name "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:PESD3V3U1UA,115"
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "D"
-        (at 0 5.08 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "PESD3V3U1UA,115"
-        (at 0 -5.08 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "lcsc:SOD-323_L1.7-W1.3-LS2.5-RD"
-        (at 0 -7.62 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" "https://lcsc.com/product-detail/Diodes-ESD_Nexperia-PESD3V3U1UA_C403915.html"
-        (at 0 -10.16 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Manufacturer" "Nexperia(安世)"
-        (at 0 -12.7 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "MPN" "PESD3V3U1UA,115"
-        (at 0 -15.24 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "LCSC Part" "C403915"
-        (at 0 -17.78 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_keywords" "ESD Protection Devices"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "PESD3V3U1UA,115_0_1"
-        (polyline
-          (pts
-            (xy -1.27 -1.52)
-            (xy -1.27 1.52)
-            (xy -0.51 1.52)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy 1.27 1.52)
-            (xy -1.27 0)
-            (xy 1.27 -1.52)
-            (xy 1.27 1.52)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (pin passive line
-          (at -3.81 0 0)
-          (length 2.54)
-          (name "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 3.81 0 180)
-          (length 2.54)
-          (name "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
-    (symbol "lcsc:BAT54HT1G"
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "D"
-        (at 0 5.08 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "BAT54HT1G"
-        (at 0 -5.08 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "lcsc:SOD-323_L1.8-W1.3-LS2.5-RD"
-        (at 0 -7.62 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Datasheet" "https://lcsc.com/product-detail/Schottky-Barrier-Diodes-SBD_ON_BAT54HT1G_BAT54HT1G_C21107.html"
-        (at 0 -10.16 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Description" "BAT54HT1G"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Manufacturer" "onsemi(安森美)"
-        (at 0 -12.7 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "MPN" "BAT54HT1G"
-        (at 0 -15.24 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "LCSC Part" "C21107"
-        (at 0 -17.78 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "ki_keywords" "Schottky Barrier Diodes (SBD)"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "BAT54HT1G_0_1"
-        (polyline
-          (pts
-            (xy -2.03 1.52)
-            (xy -2.03 1.78)
-            (xy -1.52 1.78)
-            (xy -1.52 -2.03)
-            (xy -1.02 -2.03)
-            (xy -1.02 -1.78)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy 1.27 1.52)
-            (xy -1.27 0)
-            (xy 1.27 -1.78)
-            (xy 1.27 1.52)
-          )
-          (stroke
-            (width 0)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (pin passive line
-          (at -5.08 0 0)
-          (length 3.81)
-          (name "K"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 5.08 0 180)
-          (length 3.81)
-          (name "A"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
+	(symbol "lcsc:BAT54HT1G"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT54HT1G"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOD-323_L1.8-W1.3-LS2.5-RD"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Schottky-Barrier-Diodes-SBD_ON_BAT54HT1G_BAT54HT1G_C21107.html"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "BAT54HT1G"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi(安森美)"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BAT54HT1G"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C21107"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Schottky Barrier Diodes (SBD)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "BAT54HT1G_0_1"
+			(polyline
+				(pts
+					(xy -2.03 1.52) (xy -2.03 1.78) (xy -1.52 1.78) (xy -1.52 -2.03) (xy -1.02 -2.03) (xy -1.02 -1.78)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.52) (xy -1.27 0) (xy 1.27 -1.78) (xy 1.27 1.52)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 3.81)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:BAV99,215"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAV99,215"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Switching-Diode_NXP_BAV99_BAV99_C2500.html"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "BAV99"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 0 -22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BAV99,215"
+			(at 0 -25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C2500"
+			(at 0 -27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Switching Diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "BAV99,215_0_1"
+			(rectangle
+				(start -10.16 5.08)
+				(end 10.41 -5.08)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -7.62 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -7.62 0) (xy -2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -5.08 -5.08) (xy -5.08 2.79) (xy 5.08 2.79)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -2.54) (xy -5.08 0) (xy -7.62 -2.54) (xy -2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -2.54) (xy -5.08 0) (xy -7.62 -2.54) (xy -2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 5.08) (xy 0 2.79)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 5.08 -2.54) (xy 7.62 0) (xy 2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 5.08 -2.54) (xy 7.62 0) (xy 2.54 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.08 2.79) (xy 5.08 -5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.62 -2.54) (xy 2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 7.62 -2.54) (xy 2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 -10.16 90)
+				(length 5.08)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 -10.16 90)
+				(length 5.08)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 10.16 270)
+				(length 5.08)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:DRV5032AJDBZR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRV5032AJDBZR"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOT-23-3_L2.9-W1.3-P0.95-LS2.4-BR"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_Texas-Instruments_DRV5032AJDBZR_Texas-Instruments-TI-DRV5032AJDBZR_C266120.html"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "DRV5032AJDBZR"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C266120"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Magnetic Sensors"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "DRV5032AJDBZR_0_1"
+			(rectangle
+				(start -2.54 5.08)
+				(end 5.08 -5.08)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center -1.27 3.81)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 2.54)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:DRV5032FADBZR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DRV5032FADBZR"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOT-23-3_L2.9-W1.3-P0.95-LS2.4-BR"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C140921.pdf"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "DRV5032FADBZR"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C140921"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Magnetic Sensors"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "DRV5032FADBZR_0_1"
+			(rectangle
+				(start -2.54 5.08)
+				(end 5.08 -5.08)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center -1.27 3.81)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 2.54)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:FPC-05F-8PH20"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "FPC"
+			(at 0 19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FPC-05F-8PH20"
+			(at 0 -19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:FPC-SMD_8P-P0.50_FPC-05F-8PH20"
+			(at 0 -21.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2856797.pdf"
+			(at 0 -24.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XUNPU(讯普)"
+			(at 0 -26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FPC-05F-8PH20"
+			(at 0 -29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C2856797"
+			(at 0 -31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "FFC/FPC Connectors"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "FPC-05F-8PH20_0_1"
+			(rectangle
+				(start -1.27 11.43)
+				(end 3.81 -11.43)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center 0 10.16)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -3.81 8.89 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 6.35 0)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 3.81 0)
+				(length 2.54)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 1.27 0)
+				(length 2.54)
+				(name "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -1.27 0)
+				(length 2.54)
+				(name "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -3.81 0)
+				(length 2.54)
+				(name "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -6.35 0)
+				(length 2.54)
+				(name "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -8.89 0)
+				(length 2.54)
+				(name "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -13.97 90)
+				(length 2.54)
+				(name "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 13.97 270)
+				(length 2.54)
+				(name "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:FPC-05FB-8PH20"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "FPC"
+			(at 0 19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FPC-05FB-8PH20"
+			(at 0 -19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:FPC-SMD_8P-P0.50_XUNPU_FPC-05FB-8PH20"
+			(at 0 -21.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2856828.pdf"
+			(at 0 -24.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XUNPU(讯普)"
+			(at 0 -26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FPC-05FB-8PH20"
+			(at 0 -29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C2856828"
+			(at 0 -31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "FFC/FPC Connectors"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "FPC-05FB-8PH20_0_1"
+			(rectangle
+				(start -1.27 11.43)
+				(end 3.81 -11.43)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center 0 10.16)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -3.81 8.89 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 6.35 0)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 3.81 0)
+				(length 2.54)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 1.27 0)
+				(length 2.54)
+				(name "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -1.27 0)
+				(length 2.54)
+				(name "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -3.81 0)
+				(length 2.54)
+				(name "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -6.35 0)
+				(length 2.54)
+				(name "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.81 -8.89 0)
+				(length 2.54)
+				(name "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -13.97 90)
+				(length 2.54)
+				(name "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 13.97 270)
+				(length 2.54)
+				(name "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:ICS-40720"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 8.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ICS-40720"
+			(at 0 -8.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SMD_4P-P0.88_ICS-40720"
+			(at 0 -11.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C3171779.pdf"
+			(at 0 -13.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TDK InvenSense(应美盛)"
+			(at 0 -16.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ICS-40720"
+			(at 0 -19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C3171779"
+			(at 0 -21.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "ICS-40720_0_1"
+			(rectangle
+				(start -6.35 6.35)
+				(end 8.89 -6.35)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center -5.08 5.08)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -8.89 3.81 0)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -8.89 1.27 0)
+				(length 2.54)
+				(name "OUTPUT−"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -8.89 -1.27 0)
+				(length 2.54)
+				(name "OUTPUT+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -8.89 -3.81 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:LMV331IDBVR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 13.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LMV331IDBVR"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Analog-Comparators_TI_LMV331IDBVR_LMV331IDBVR_C34731.html"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LMV331IDBVR"
+			(at 0 -25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C34731"
+			(at 0 -27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Comparators"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LMV331IDBVR_0_1"
+			(rectangle
+				(start -5.08 6.35)
+				(end 5.08 -7.62)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center -4.32 -6.86)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -2.54 -10.16 90)
+				(length 2.54)
+				(name "IN+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -10.16 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 -10.16 90)
+				(length 2.54)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 2.54 8.89 270)
+				(length 2.54)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 8.89 270)
+				(length 2.54)
+				(name "VCC+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:LP5907MFX-2.8_NOPB"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LP5907MFX-2.8/NOPB"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:TSOT-23-5_L2.9-W1.6-P0.95-LS2.8-BL"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_Texas-Instruments_LP5907MFX-2-8-NOPB_Texas-Instruments-TI-LP5907MFX-2-8-NOPB_C186700.html"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "LP5907MFX-2.8/NOPB"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C186700"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Linear Voltage Regulators (LDO)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LP5907MFX-2.8_NOPB_0_1"
+			(rectangle
+				(start -7.62 5.08)
+				(end 7.62 -5.08)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center -6.98 4.44)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -10.16 2.54 0)
+				(length 2.54)
+				(name "IN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 0 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 -1.27 180)
+				(length 2.54)
+				(name "N/C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 1.27 180)
+				(length 2.54)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:LP5907MFX-3.0_NOPB"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LP5907MFX-3.0/NOPB"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BL"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C475492.pdf"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C475492"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C475492"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LP5907MFX-3.0_NOPB_0_1"
+			(rectangle
+				(start -6.35 5.08)
+				(end 6.35 -5.08)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin passive line
+				(at -8.89 2.54 0)
+				(length 2.54)
+				(name "IN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -8.89 0 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -8.89 -2.54 0)
+				(length 2.54)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 -2.54 180)
+				(length 2.54)
+				(name "N/C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 2.54 180)
+				(length 2.54)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:MountingHole_Pad"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "H"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 0 3.175 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:MountingHole_2.2mm_M2_Pad"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "MountingHole_Pad_0_1"
+			(circle
+				(center 0 0)
+				(radius 1.778)
+				(stroke
+					(width 1.27)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "MountingHole_Pad_1_1"
+			(pin passive line
+				(at 0 -5.08 90)
+				(length 3.302)
+				(name "MP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:PESD3V3U1UA,115"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PESD3V3U1UA,115"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOD-323_L1.7-W1.3-LS2.5-RD"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Diodes-ESD_Nexperia-PESD3V3U1UA_C403915.html"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PESD3V3U1UA,115"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C403915"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "ESD Protection Devices"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PESD3V3U1UA,115_0_1"
+			(polyline
+				(pts
+					(xy -1.27 -1.52) (xy -1.27 1.52) (xy -0.51 1.52)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.52) (xy -1.27 0) (xy 1.27 -1.52) (xy 1.27 1.52)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:PESD5V0S1BA"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PESD5V0S1BA"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOD-323_L1.7-W1.3-LS2.5-BI"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2827694.pdf"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bidirectional 5V ESD Protection Diode SOD-323"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TECH PUBLIC"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PESD5V0S1BA"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C2827694"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PESD5V0S1BA_0_1"
+			(polyline
+				(pts
+					(xy -2.54 1.27) (xy 0 0) (xy -2.54 -1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 1.27) (xy 0 0) (xy 2.54 -1.27) (xy 2.54 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:PJ-3701-SMT"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "CN"
+			(at 0 10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ-3701-SMT"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:AUDIO-SMD_PJ-3701-SMT"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2684645.pdf"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XKB Connection"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PJ-3701-SMT"
+			(at 0 -22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C2684645"
+			(at 0 -25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Audio Connectors"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PJ-3701-SMT_0_1"
+			(rectangle
+				(start -6.86 4.32)
+				(end -5.84 -6.1)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.02 0) (xy -1.27 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 5.08) (xy -4.83 5.08) (xy -5.33 4.06) (xy -5.84 5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -5.08) (xy -3.81 -5.08) (xy -4.32 -4.06) (xy -4.83 -5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.52 2.54) (xy -1.02 2.54) (xy -1.02 0) (xy -0.76 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.52 -7.62) (xy -6.35 -7.62) (xy -6.35 -6.1)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy -2.79 0) (xy -2.79 -1.02) (xy -3.3 -1.02) (xy -3.3 0) (xy -2.79 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 -2.54) (xy -2.54 -2.54) (xy -3.05 -1.52) (xy -3.56 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 6.35 -7.62 180)
+				(length 5.08)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 6.35 5.08 180)
+				(length 5.08)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 6.35 -5.08 180)
+				(length 5.08)
+				(name "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 6.35 -2.54 180)
+				(length 5.08)
+				(name "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 6.35 0 180)
+				(length 5.08)
+				(name "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 6.35 2.54 180)
+				(length 5.08)
+				(name "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:SN74LVC1G3157DBVR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SN74LVC1G3157DBVR"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/74-Series_TI_SN74LVC1G3157DBVR_SN74LVC1G3157DBVR_C10426.html"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "SN74LVC1G3157DBVR"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C10426"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "74 Series"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SN74LVC1G3157DBVR_0_1"
+			(rectangle
+				(start -7.62 5.59)
+				(end 7.62 -5.59)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(circle
+				(center -6.35 4.32)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -6.35 4.32)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -10.16 2.54 0)
+				(length 2.54)
+				(name "B2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 0 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -2.54 0)
+				(length 2.54)
+				(name "B1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 -2.54 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 0 180)
+				(length 2.54)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 10.16 2.54 180)
+				(length 2.54)
+				(name "S"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:TLV7041DBVR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLV7041DBVR"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:SOT-23-5_L2.9-W1.6-P0.95-LS2.8-BR"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C702122.pdf"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TLV7041DBVR"
+			(at 0 -25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C702122"
+			(at 0 -27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Pre-ordered Chips"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TLV7041DBVR_0_1"
+			(polyline
+				(pts
+					(xy -5.08 -5.08) (xy 5.08 0) (xy -5.08 5.08) (xy -5.08 -5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -4.06 2.54) (xy -2.54 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -4.06 -2.54) (xy -2.54 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.3 -1.78) (xy -3.3 -3.3)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 5.08) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -2.54) (xy 0 -5.08)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at 10.16 0 180)
+				(length 5.08)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -10.16 90)
+				(length 5.08)
+				(name "VEE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -2.54 0)
+				(length 5.08)
+				(name "IN+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 2.54 0)
+				(length 5.08)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 10.16 270)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "lcsc:TS5A23159DGSR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TS5A23159DGSR"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lcsc:VSSOP-10_L3.0-W3.0-P0.50-LS4.9-BL"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Analog-Switches_TI_TS5A23159DGSR_TS5A23159DGSR_C42751.html"
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 0 -17.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TS5A23159DGSR"
+			(at 0 -20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C42751"
+			(at 0 -22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Analog Switches / Multiplexers"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TS5A23159DGSR_0_1"
+			(rectangle
+				(start -7.62 7.62)
+				(end 7.62 -7.62)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin passive line
+				(at -12.7 5.08 0)
+				(length 5.08)
+				(name "IN1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 2.54 0)
+				(length 5.08)
+				(name "NO1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 0 0)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 -2.54 0)
+				(length 5.08)
+				(name "NO2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 -5.08 0)
+				(length 5.08)
+				(name "IN2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 -5.08 180)
+				(length 5.08)
+				(name "COM2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 -2.54 180)
+				(length 5.08)
+				(name "NC2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 0 180)
+				(length 5.08)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 2.54 180)
+				(length 5.08)
+				(name "NC1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 5.08 180)
+				(length 5.08)
+				(name "COM1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+
   )
   (symbol
-    (lib_id "lcsc:FPC-05F-8PH20")
+    (lib_id "lcsc:FPC-05FB-8PH20")
     (at 50.8 63.5 0)
     (unit 1)
     (exclude_from_sim no)
@@ -2258,7 +4142,7 @@
         )
       )
     )
-    (property "Value" "FPC-05F-8PH20"
+    (property "Value" "FPC-05FB-8PH20"
       (at 50.8 69.85 0)
       (effects
         (font
@@ -2266,7 +4150,7 @@
         )
       )
     )
-    (property "Footprint" "lcsc:FPC-SMD_8P-P0.50_FPC-05F-8PH20"
+    (property "Footprint" "lcsc:FPC-SMD_8P-P0.50_XUNPU_FPC-05FB-8PH20"
       (at 50.8 63.5 0)
       (effects
         (font
@@ -2275,7 +4159,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C2856797.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C2856828.pdf"
       (at 50.8 63.5 0)
       (effects
         (font
@@ -2284,7 +4168,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C2856797"
+    (property "LCSC" "C2856828"
       (at 50.8 63.5 0)
       (effects
         (font
@@ -2293,7 +4177,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C2856797"
+    (property "LCSC Part" "C2856828"
       (at 50.8 63.5 0)
       (effects
         (font
@@ -2302,7 +4186,16 @@
         (hide yes)
       )
     )
-    (pin "1"
+        (property "Description" "Top-contact 8P 0.5mm ZIF FFC receptacle (Pad 1 South y=19.75mm, Pad 8 North y=16.25mm, contacts +Z); mates via 45mm Type-B (opposite-side / reversed-contact) 8P 0.5mm FFC cable c_audio_right to main-board bottom-contact J_AUDR (FPC-05F-8PH20)"
+      (at 50.8 63.5 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+(pin "1"
       (uuid "7b0905e4-ef20-4813-8563-7c789594c5b7")
     )
     (pin "2"
@@ -2552,7 +4445,7 @@
     (uuid "9139b837-406b-4983-bac4-8ab6911dd948")
   )
   (symbol
-    (lib_id "lcsc:PJ-320D")
+    (lib_id "lcsc:PJ-3701-SMT")
     (at 50.8 114.3 0)
     (unit 1)
     (exclude_from_sim no)
@@ -2561,22 +4454,22 @@
     (dnp no)
     (uuid "fa580561-d72c-4cd1-9045-ef049e8ba74c")
     (property "Reference" "J1"
-      (at 50.8 107.95 0)
+      (at 50.8 101.6 0)
       (effects
         (font
           (size 1.27 1.27)
         )
       )
     )
-    (property "Value" "PJ-320D"
-      (at 50.8 120.65 0)
+    (property "Value" "PJ-3701-SMT"
+      (at 50.8 127.0 0)
       (effects
         (font
           (size 1.27 1.27)
         )
       )
     )
-    (property "Footprint" "lcsc:AUDIO-SMD_PJ-320D-1"
+    (property "Footprint" "lcsc:AUDIO-SMD_PJ-3701-SMT"
       (at 50.8 114.3 0)
       (effects
         (font
@@ -2585,7 +4478,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C431535.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C2684645.pdf"
       (at 50.8 114.3 0)
       (effects
         (font
@@ -2594,7 +4487,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C431535"
+    (property "LCSC" "C2684645"
       (at 50.8 114.3 0)
       (effects
         (font
@@ -2603,7 +4496,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C431535"
+    (property "LCSC Part" "C2684645"
       (at 50.8 114.3 0)
       (effects
         (font
@@ -2624,6 +4517,12 @@
     (pin "4"
       (uuid "0372d6c3-64db-4c2b-a8d6-3397a5e957f9")
     )
+    (pin "5"
+      (uuid "0372d6c3-64db-4c2b-a8d6-3397a5e957fa")
+    )
+    (pin "6"
+      (uuid "0372d6c3-64db-4c2b-a8d6-3397a5e957fb")
+    )
     (instances
       (project "thin-laptop-cm5-audio_right"
         (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
@@ -2635,29 +4534,8 @@
   )
   (wire
     (pts
-      (xy 58.42 111.76)
-      (xy 63.5 111.76)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "87451eb3-df7b-4a40-a481-3d436e7934b4")
-  )
-  (label "HS_MIC_DET"
-    (at 63.5 111.76 0)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify left bottom)
-    )
-    (uuid "06950e31-41c6-4bd6-b3e9-2553cc5c6832")
-  )
-  (wire
-    (pts
-      (xy 58.42 119.38)
-      (xy 63.5 119.38)
+      (xy 57.15 109.22)
+      (xy 63.5 109.22)
     )
     (stroke
       (width 0)
@@ -2666,7 +4544,7 @@
     (uuid "4d2fa625-d4c1-4c9d-8318-7831c8b9de84")
   )
   (label "GND"
-    (at 63.5 119.38 0)
+    (at 63.5 109.22 0)
     (effects
       (font
         (size 1.27 1.27)
@@ -2677,8 +4555,71 @@
   )
   (wire
     (pts
-      (xy 58.42 116.84)
+      (xy 57.15 111.76)
+      (xy 63.5 111.76)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "4d2fa625-d4c1-4c9d-8318-7831c8b9de85")
+  )
+  (label "GND"
+    (at 63.5 111.76 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "d1c0f06b-ec3e-476d-84ac-4393f2438ffa")
+  )
+  (wire
+    (pts
+      (xy 57.15 114.3)
+      (xy 63.5 114.3)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "4d2fa625-d4c1-4c9d-8318-7831c8b9de86")
+  )
+  (label "TIP_SW"
+    (at 63.5 114.3 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "d1c0f06b-ec3e-476d-84ac-4393f2438ffb")
+  )
+  (wire
+    (pts
+      (xy 57.15 116.84)
       (xy 63.5 116.84)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "af3149a9-00ba-4d1a-9da1-ae4a094ed16a")
+  )
+  (label "HP_L_JACK"
+    (at 63.5 116.84 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "b91e4e19-4fa2-449f-99ba-19e02f5ed82a")
+  )
+  (wire
+    (pts
+      (xy 57.15 119.38)
+      (xy 63.5 119.38)
     )
     (stroke
       (width 0)
@@ -2687,7 +4628,7 @@
     (uuid "92269a68-e2b1-46b6-88ea-feb96a541110")
   )
   (label "HP_R_JACK"
-    (at 63.5 116.84 0)
+    (at 63.5 119.38 0)
     (effects
       (font
         (size 1.27 1.27)
@@ -2698,24 +4639,24 @@
   )
   (wire
     (pts
-      (xy 58.42 114.3)
-      (xy 63.5 114.3)
+      (xy 57.15 121.92)
+      (xy 63.5 121.92)
     )
     (stroke
       (width 0)
       (type default)
     )
-    (uuid "af3149a9-00ba-4d1a-9da1-ae4a094ed16a")
+    (uuid "87451eb3-df7b-4a40-a481-3d436e7934b4")
   )
-  (label "HP_L_JACK"
-    (at 63.5 114.3 0)
+  (label "HS_MIC_DET"
+    (at 63.5 121.92 0)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify left bottom)
     )
-    (uuid "b91e4e19-4fa2-449f-99ba-19e02f5ed82a")
+    (uuid "06950e31-41c6-4bd6-b3e9-2553cc5c6832")
   )
   (symbol
     (lib_id "lcsc:ICS-40720")
@@ -3194,7 +5135,7 @@
     )
     (uuid "fbecc628-5c8a-481e-92cc-890379cd22cb")
   )
-  (label "V_REF_HI"
+  (label "TIP_SW"
     (at 99.06 60.96 180)
     (effects
       (font
@@ -3363,7 +5304,7 @@
     )
     (uuid "b09aad8a-0df0-45fc-94cd-7ec13962a328")
   )
-  (label "U2_INP"
+  (label "V_REF_HI"
     (at 99.06 116.84 180)
     (effects
       (font
@@ -3384,7 +5325,7 @@
     )
     (uuid "4622177d-6b8c-4d0f-a510-e0ae749e4741")
   )
-  (label "DET_IN"
+  (label "HP_DET_N"
     (at 99.06 111.76 180)
     (effects
       (font
@@ -5230,7 +7171,7 @@
         )
       )
     )
-    (property "Value" "2.2uF"
+    (property "Value" "4.7nF"
       (at 215.9 127.0 0)
       (effects
         (font
@@ -5247,7 +7188,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C159814.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C1538.pdf"
       (at 215.9 120.65 0)
       (effects
         (font
@@ -5256,7 +7197,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C159814"
+    (property "LCSC" "C1538"
       (at 215.9 120.65 0)
       (effects
         (font
@@ -5265,7 +7206,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C159814"
+    (property "LCSC Part" "C1538"
       (at 215.9 120.65 0)
       (effects
         (font
@@ -6244,7 +8185,7 @@
     )
     (uuid "2ec9a834-585f-45e2-9052-79b934b8226d")
   )
-  (label "HS_REF_MUX"
+  (label "HS_REF_AC"
     (at 215.9 257.81 90)
     (effects
       (font
@@ -6764,7 +8705,7 @@
         )
       )
     )
-    (property "Value" "22R"
+    (property "Value" "220R"
       (at 266.7 152.4 0)
       (effects
         (font
@@ -6781,7 +8722,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25092.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25091.pdf"
       (at 266.7 146.05 0)
       (effects
         (font
@@ -6790,7 +8731,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25092"
+    (property "LCSC" "C25091"
       (at 266.7 146.05 0)
       (effects
         (font
@@ -6799,7 +8740,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25092"
+    (property "LCSC Part" "C25091"
       (at 266.7 146.05 0)
       (effects
         (font
@@ -6834,7 +8775,7 @@
     )
     (uuid "2c6d5167-b37e-465e-abb6-6c31b4438d15")
   )
-  (label "+3V3"
+  (label "+2V8_ANA"
     (at 266.7 137.16 90)
     (effects
       (font
@@ -7424,7 +9365,7 @@
     )
     (uuid "cd8706c8-e781-45e0-84e1-c88194df6fdc")
   )
-  (label "+3V3"
+  (label "+2V8_ANA"
     (at 304.8 35.56 90)
     (effects
       (font
@@ -7472,7 +9413,7 @@
         )
       )
     )
-    (property "Value" "10k"
+    (property "Value" "47k"
       (at 304.8 76.2 0)
       (effects
         (font
@@ -7489,7 +9430,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25744.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25792.pdf"
       (at 304.8 69.85 0)
       (effects
         (font
@@ -7498,7 +9439,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25744"
+    (property "LCSC" "C25792"
       (at 304.8 69.85 0)
       (effects
         (font
@@ -7507,7 +9448,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25744"
+    (property "LCSC Part" "C25792"
       (at 304.8 69.85 0)
       (effects
         (font
@@ -7590,7 +9531,7 @@
         )
       )
     )
-    (property "Value" "22k"
+    (property "Value" "2.2k"
       (at 304.8 101.6 0)
       (effects
         (font
@@ -7607,7 +9548,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25768.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25879.pdf"
       (at 304.8 95.25 0)
       (effects
         (font
@@ -7616,7 +9557,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25768"
+    (property "LCSC" "C25879"
       (at 304.8 95.25 0)
       (effects
         (font
@@ -7625,7 +9566,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25768"
+    (property "LCSC Part" "C25879"
       (at 304.8 95.25 0)
       (effects
         (font
@@ -7660,7 +9601,7 @@
     )
     (uuid "3bfc1fde-896e-49fd-940c-38887fe27c5a")
   )
-  (label "+3V3"
+  (label "+2V8_ANA"
     (at 304.8 86.36 90)
     (effects
       (font
@@ -7708,7 +9649,7 @@
         )
       )
     )
-    (property "Value" "100k"
+    (property "Value" "10k"
       (at 304.8 127.0 0)
       (effects
         (font
@@ -7725,7 +9666,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25741.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25744.pdf"
       (at 304.8 120.65 0)
       (effects
         (font
@@ -7734,7 +9675,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25741"
+    (property "LCSC" "C25744"
       (at 304.8 120.65 0)
       (effects
         (font
@@ -7743,7 +9684,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25741"
+    (property "LCSC Part" "C25744"
       (at 304.8 120.65 0)
       (effects
         (font
@@ -7944,7 +9885,7 @@
         )
       )
     )
-    (property "Value" "22k"
+    (property "Value" "1.3k"
       (at 304.8 177.8 0)
       (effects
         (font
@@ -7961,7 +9902,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25768.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25866.pdf"
       (at 304.8 171.45 0)
       (effects
         (font
@@ -7970,7 +9911,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25768"
+    (property "LCSC" "C25866"
       (at 304.8 171.45 0)
       (effects
         (font
@@ -7979,7 +9920,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25768"
+    (property "LCSC Part" "C25866"
       (at 304.8 171.45 0)
       (effects
         (font
@@ -8062,7 +10003,7 @@
         )
       )
     )
-    (property "Value" "10k"
+    (property "Value" "2.2k"
       (at 304.8 203.2 0)
       (effects
         (font
@@ -8079,7 +10020,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25744.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25879.pdf"
       (at 304.8 196.85 0)
       (effects
         (font
@@ -8088,7 +10029,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25744"
+    (property "LCSC" "C25879"
       (at 304.8 196.85 0)
       (effects
         (font
@@ -8097,7 +10038,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25744"
+    (property "LCSC Part" "C25879"
       (at 304.8 196.85 0)
       (effects
         (font
@@ -8180,7 +10121,7 @@
         )
       )
     )
-    (property "Value" "100k"
+    (property "Value" "68k"
       (at 304.8 228.6 0)
       (effects
         (font
@@ -8197,7 +10138,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25741.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C36871.pdf"
       (at 304.8 222.25 0)
       (effects
         (font
@@ -8206,7 +10147,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25741"
+    (property "LCSC" "C36871"
       (at 304.8 222.25 0)
       (effects
         (font
@@ -8215,7 +10156,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25741"
+    (property "LCSC Part" "C36871"
       (at 304.8 222.25 0)
       (effects
         (font
@@ -8250,7 +10191,7 @@
     )
     (uuid "05fb1429-9b20-4276-a49f-90ad7fc86f14")
   )
-  (label "+3V3"
+  (label "+2V8_ANA"
     (at 304.8 213.36 90)
     (effects
       (font
@@ -8298,7 +10239,7 @@
         )
       )
     )
-    (property "Value" "22k"
+    (property "Value" "27k"
       (at 304.8 254.0 0)
       (effects
         (font
@@ -8315,7 +10256,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25768.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25771.pdf"
       (at 304.8 247.65 0)
       (effects
         (font
@@ -8324,7 +10265,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25768"
+    (property "LCSC" "C25771"
       (at 304.8 247.65 0)
       (effects
         (font
@@ -8333,7 +10274,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25768"
+    (property "LCSC Part" "C25771"
       (at 304.8 247.65 0)
       (effects
         (font
@@ -8534,7 +10475,7 @@
         )
       )
     )
-    (property "Value" "1k"
+    (property "Value" "220R"
       (at 342.9 76.2 0)
       (effects
         (font
@@ -8551,7 +10492,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C11702.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25091.pdf"
       (at 342.9 69.85 0)
       (effects
         (font
@@ -8560,7 +10501,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C11702"
+    (property "LCSC" "C25091"
       (at 342.9 69.85 0)
       (effects
         (font
@@ -8569,7 +10510,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C11702"
+    (property "LCSC Part" "C25091"
       (at 342.9 69.85 0)
       (effects
         (font
@@ -8770,7 +10711,7 @@
         )
       )
     )
-    (property "Value" "2.2k"
+    (property "Value" "22k"
       (at 342.9 127.0 0)
       (effects
         (font
@@ -8787,7 +10728,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25879.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25768.pdf"
       (at 342.9 120.65 0)
       (effects
         (font
@@ -8796,7 +10737,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25879"
+    (property "LCSC" "C25768"
       (at 342.9 120.65 0)
       (effects
         (font
@@ -8805,7 +10746,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25879"
+    (property "LCSC Part" "C25768"
       (at 342.9 120.65 0)
       (effects
         (font
@@ -8840,7 +10781,7 @@
     )
     (uuid "69c97b09-e27b-48f1-9f6d-0b84bd9357a4")
   )
-  (label "DET_IN"
+  (label "V_REF_HI"
     (at 342.9 111.76 90)
     (effects
       (font
@@ -8888,7 +10829,7 @@
         )
       )
     )
-    (property "Value" "100k"
+    (property "Value" "1.3k"
       (at 342.9 152.4 0)
       (effects
         (font
@@ -8905,7 +10846,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25741.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25866.pdf"
       (at 342.9 146.05 0)
       (effects
         (font
@@ -8914,7 +10855,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25741"
+    (property "LCSC" "C25866"
       (at 342.9 146.05 0)
       (effects
         (font
@@ -8923,7 +10864,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25741"
+    (property "LCSC Part" "C25866"
       (at 342.9 146.05 0)
       (effects
         (font
@@ -8958,7 +10899,7 @@
     )
     (uuid "a687da07-3114-42d2-9db2-caf17301cb7f")
   )
-  (label "HP_DET_N"
+  (label "+2V8_ANA"
     (at 342.9 137.16 90)
     (effects
       (font
@@ -8979,7 +10920,7 @@
     )
     (uuid "14d230de-8ee1-4d4f-ae9e-2e6538f0227a")
   )
-  (label "U1_INP"
+  (label "GND"
     (at 342.9 154.94 270)
     (effects
       (font
@@ -8988,242 +10929,6 @@
       (justify right bottom)
     )
     (uuid "5a97c8b9-5469-4fd2-b068-58817838d517")
-  )
-  (symbol
-    (lib_id "lcsc:R")
-    (at 342.9 171.45 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "041307e1-6b01-4923-8c56-67753e6f99ce")
-    (property "Reference" "R25"
-      (at 342.9 165.1 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "2.2k"
-      (at 342.9 177.8 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-      (at 342.9 171.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25879.pdf"
-      (at 342.9 171.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (property "LCSC" "C25879"
-      (at 342.9 171.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (property "LCSC Part" "C25879"
-      (at 342.9 171.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (pin "1"
-      (uuid "7d719b7b-11a0-4706-abea-fcb1bd7d26cd")
-    )
-    (pin "2"
-      (uuid "3a93bec5-5248-4c6a-8670-947210a4ff40")
-    )
-    (instances
-      (project "thin-laptop-cm5-audio_right"
-        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
-          (reference "R25")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (wire
-    (pts
-      (xy 342.9 167.64)
-      (xy 342.9 162.56)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "36340ac5-0980-4212-9adb-74e6ce97de74")
-  )
-  (label "V_REF_HI"
-    (at 342.9 162.56 90)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify left bottom)
-    )
-    (uuid "95a3fe8c-0aad-4864-8fb5-86c5dd5c3489")
-  )
-  (wire
-    (pts
-      (xy 342.9 175.26)
-      (xy 342.9 180.34)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "08372331-8f40-44a6-bbcd-90a7871aaf93")
-  )
-  (label "U2_INP"
-    (at 342.9 180.34 270)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify right bottom)
-    )
-    (uuid "e9a53236-fc54-4b30-8a5f-b24ba1167206")
-  )
-  (symbol
-    (lib_id "lcsc:R")
-    (at 342.9 196.85 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "d4c92fac-f3c9-4009-bbe6-fdb72e9d3424")
-    (property "Reference" "R26"
-      (at 342.9 190.5 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "100k"
-      (at 342.9 203.2 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-      (at 342.9 196.85 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25741.pdf"
-      (at 342.9 196.85 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (property "LCSC" "C25741"
-      (at 342.9 196.85 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (property "LCSC Part" "C25741"
-      (at 342.9 196.85 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (pin "1"
-      (uuid "bfa77a3d-2be5-4a27-952d-f07cbe749be1")
-    )
-    (pin "2"
-      (uuid "78a2c1a0-9b72-417b-aecc-6a342ebcae2e")
-    )
-    (instances
-      (project "thin-laptop-cm5-audio_right"
-        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
-          (reference "R26")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (wire
-    (pts
-      (xy 342.9 193.04)
-      (xy 342.9 187.96)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "0a403557-795c-45b2-be1d-0ed6c4e62138")
-  )
-  (label "MIC_SEL"
-    (at 342.9 187.96 90)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify left bottom)
-    )
-    (uuid "a4276c7c-c6f1-4c6e-9787-fb795a21e09d")
-  )
-  (wire
-    (pts
-      (xy 342.9 200.66)
-      (xy 342.9 205.74)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "d0ad9066-6526-44ec-b194-fd3c515a315d")
-  )
-  (label "U2_INP"
-    (at 342.9 205.74 270)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify right bottom)
-    )
-    (uuid "97350c2d-4250-44fd-895f-eba0268875a1")
   )
   (symbol
     (lib_id "lcsc:R")
@@ -9360,7 +11065,7 @@
         )
       )
     )
-    (property "Value" "100k"
+    (property "Value" "1M"
       (at 342.9 254.0 0)
       (effects
         (font
@@ -9377,7 +11082,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C25741.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C26083.pdf"
       (at 342.9 247.65 0)
       (effects
         (font
@@ -9386,7 +11091,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C25741"
+    (property "LCSC" "C26083"
       (at 342.9 247.65 0)
       (effects
         (font
@@ -9395,7 +11100,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C25741"
+    (property "LCSC Part" "C26083"
       (at 342.9 247.65 0)
       (effects
         (font
@@ -10288,7 +11993,7 @@
     (uuid "a339d239-8414-40dc-839b-4121306853dd")
   )
   (symbol
-    (lib_id "lcsc:BAT54HT1G")
+    (lib_id "lcsc:BAV99,215")
     (at 381.0 222.25 0)
     (unit 1)
     (exclude_from_sim no)
@@ -10297,22 +12002,22 @@
     (dnp no)
     (uuid "7da75e1d-c65a-4b80-a956-5a3871f4da6e")
     (property "Reference" "D8"
-      (at 381.0 215.9 0)
+      (at 368.3 222.25 0)
       (effects
         (font
           (size 1.27 1.27)
         )
       )
     )
-    (property "Value" "BAT54HT1G"
-      (at 381.0 228.6 0)
+    (property "Value" "BAV99,215"
+      (at 394.97 222.25 0)
       (effects
         (font
           (size 1.27 1.27)
         )
       )
     )
-    (property "Footprint" "lcsc:SOD-323_L1.8-W1.3-LS2.5-RD"
+    (property "Footprint" "lcsc:SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR"
       (at 381.0 222.25 0)
       (effects
         (font
@@ -10321,7 +12026,7 @@
         (hide yes)
       )
     )
-    (property "Datasheet" "https://www.lcsc.com/datasheet/C21107.pdf"
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C2500.pdf"
       (at 381.0 222.25 0)
       (effects
         (font
@@ -10330,7 +12035,7 @@
         (hide yes)
       )
     )
-    (property "LCSC" "C21107"
+    (property "LCSC" "C2500"
       (at 381.0 222.25 0)
       (effects
         (font
@@ -10339,7 +12044,7 @@
         (hide yes)
       )
     )
-    (property "LCSC Part" "C21107"
+    (property "LCSC Part" "C2500"
       (at 381.0 222.25 0)
       (effects
         (font
@@ -10354,6 +12059,9 @@
     (pin "2"
       (uuid "822b8683-90f7-40d6-b7ee-76156c669d8f")
     )
+    (pin "3"
+      (uuid "822b8683-90f7-40d6-b7ee-76156c669d90")
+    )
     (instances
       (project "thin-laptop-cm5-audio_right"
         (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
@@ -10365,8 +12073,8 @@
   )
   (wire
     (pts
-      (xy 375.92 222.25)
-      (xy 370.84 222.25)
+      (xy 375.92 232.41)
+      (xy 375.92 237.49)
     )
     (stroke
       (width 0)
@@ -10374,8 +12082,8 @@
     )
     (uuid "c17f559a-4509-458f-b891-96edc31dd793")
   )
-  (label "HS_MIC_MUX"
-    (at 370.84 222.25 180)
+  (label "GND"
+    (at 375.92 237.49 270)
     (effects
       (font
         (size 1.27 1.27)
@@ -10386,8 +12094,8 @@
   )
   (wire
     (pts
-      (xy 386.08 222.25)
-      (xy 391.16 222.25)
+      (xy 386.08 232.41)
+      (xy 386.08 237.49)
     )
     (stroke
       (width 0)
@@ -10395,15 +12103,1572 @@
     )
     (uuid "9896331c-575a-4cad-82d8-95247b87579c")
   )
-  (label "GND"
-    (at 391.16 222.25 0)
+  (label "+3V3"
+    (at 386.08 237.49 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "ba7397ca-95fc-4c89-b57a-383abf566e4b")
+  )
+  (wire
+    (pts
+      (xy 381.0 212.09)
+      (xy 381.0 207.01)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "9896331c-575a-4cad-82d8-95247b87579d")
+  )
+  (label "HS_MIC_MUX"
+    (at 381.0 207.01 90)
     (effects
       (font
         (size 1.27 1.27)
       )
       (justify left bottom)
     )
-    (uuid "ba7397ca-95fc-4c89-b57a-383abf566e4b")
+    (uuid "ba7397ca-95fc-4c89-b57a-383abf566e4c")
+  )
+  (symbol
+    (lib_id "lcsc:LP5907MFX-2.8_NOPB")
+    (at 114.3 260.35 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440500")
+    (property "Reference" "U5"
+      (at 114.3 252.73 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "LP5907MFX-2.8/NOPB"
+      (at 114.3 267.97 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "lcsc:TSOT-23-5_L2.9-W1.6-P0.95-LS2.8-BL"
+      (at 114.3 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C186700.pdf"
+      (at 114.3 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C186700"
+      (at 114.3 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C186700"
+      (at 114.3 260.35 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440501")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440502")
+    )
+    (pin "3"
+      (uuid "550e8400-e29b-41d4-a716-446655440503")
+    )
+    (pin "4"
+      (uuid "550e8400-e29b-41d4-a716-446655440504")
+    )
+    (pin "5"
+      (uuid "550e8400-e29b-41d4-a716-446655440505")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "U5")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 104.14 257.81)
+      (xy 99.06 257.81)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440511")
+  )
+  (label "+3V3"
+    (at 99.06 257.81 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440512")
+  )
+  (wire
+    (pts
+      (xy 104.14 260.35)
+      (xy 99.06 260.35)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440513")
+  )
+  (label "GND"
+    (at 99.06 260.35 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440514")
+  )
+  (wire
+    (pts
+      (xy 104.14 262.89)
+      (xy 99.06 262.89)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440515")
+  )
+  (label "+3V3"
+    (at 99.06 262.89 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440516")
+  )
+  (wire
+    (pts
+      (xy 124.46 261.62)
+      (xy 129.54 261.62)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440517")
+  )
+  (label "GND"
+    (at 129.54 261.62 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440518")
+  )
+  (wire
+    (pts
+      (xy 124.46 259.08)
+      (xy 129.54 259.08)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440519")
+  )
+  (label "+2V8_ANA"
+    (at 129.54 259.08 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440520")
+  )
+  (symbol
+    (lib_id "lcsc:C")
+    (at 215.9 292.1 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440600")
+    (property "Reference" "C21"
+      (at 215.9 285.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "1uF"
+      (at 215.9 298.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 215.9 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C52923.pdf"
+      (at 215.9 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C52923"
+      (at 215.9 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C52923"
+      (at 215.9 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440601")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440602")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "C21")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 215.9 288.29)
+      (xy 215.9 283.21)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440611")
+  )
+  (label "+2V8_ANA"
+    (at 215.9 283.21 90)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440612")
+  )
+  (wire
+    (pts
+      (xy 215.9 295.91)
+      (xy 215.9 300.99)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440613")
+  )
+  (label "GND"
+    (at 215.9 300.99 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440614")
+  )
+  (symbol
+    (lib_id "lcsc:R")
+    (at 342.9 273.05 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440700")
+    (property "Reference" "R29"
+      (at 342.9 266.7 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "1.3k"
+      (at 342.9 279.4 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 342.9 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25866.pdf"
+      (at 342.9 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C25866"
+      (at 342.9 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C25866"
+      (at 342.9 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440701")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440702")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "R29")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 342.9 269.24)
+      (xy 342.9 264.16)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440711")
+  )
+  (label "HS_REF_AC"
+    (at 342.9 264.16 90)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440712")
+  )
+  (wire
+    (pts
+      (xy 342.9 276.86)
+      (xy 342.9 281.94)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440713")
+  )
+  (label "HS_REF_MUX"
+    (at 342.9 281.94 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440714")
+  )
+  (symbol
+    (lib_id "lcsc:BAV99,215")
+    (at 381.0 265.43 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440800")
+    (property "Reference" "D9"
+      (at 368.3 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV99,215"
+      (at 394.97 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "lcsc:SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR"
+      (at 381.0 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C2500.pdf"
+      (at 381.0 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C2500"
+      (at 381.0 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C2500"
+      (at 381.0 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440801")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440802")
+    )
+    (pin "3"
+      (uuid "550e8400-e29b-41d4-a716-446655440803")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "D9")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 375.92 275.59)
+      (xy 375.92 280.67)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440811")
+  )
+  (label "GND"
+    (at 375.92 280.67 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440812")
+  )
+  (wire
+    (pts
+      (xy 386.08 275.59)
+      (xy 386.08 280.67)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440813")
+  )
+  (label "+3V3"
+    (at 386.08 280.67 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440814")
+  )
+  (wire
+    (pts
+      (xy 381.0 255.27)
+      (xy 381.0 250.19)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440815")
+  )
+  (label "HS_REF_MUX"
+    (at 381.0 250.19 90)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440816")
+  )
+  (symbol
+    (lib_id "lcsc:C")
+    (at 190.5 292.1 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440900")
+    (property "Reference" "C22"
+      (at 190.5 285.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "1uF"
+      (at 190.5 298.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 190.5 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C52923.pdf"
+      (at 190.5 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C52923"
+      (at 190.5 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C52923"
+      (at 190.5 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440901")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440902")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "C22")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 190.5 288.29)
+      (xy 190.5 283.21)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440911")
+  )
+  (label "+3V3"
+    (at 190.5 283.21 90)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440912")
+  )
+  (wire
+    (pts
+      (xy 190.5 295.91)
+      (xy 190.5 300.99)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440913")
+  )
+  (label "GND"
+    (at 190.5 300.99 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440914")
+  )
+  (symbol
+    (lib_id "lcsc:BAV99,215")
+    (at 50.8 265.43 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440860")
+    (property "Reference" "D11"
+      (at 38.1 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV99,215"
+      (at 64.77 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "lcsc:SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR"
+      (at 50.8 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C2500.pdf"
+      (at 50.8 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C2500"
+      (at 50.8 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C2500"
+      (at 50.8 265.43 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440861")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440862")
+    )
+    (pin "3"
+      (uuid "550e8400-e29b-41d4-a716-446655440863")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "D11")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 45.72 275.59)
+      (xy 45.72 280.67)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440864")
+  )
+  (label "GND"
+    (at 45.72 280.67 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440865")
+  )
+  (wire
+    (pts
+      (xy 55.88 275.59)
+      (xy 55.88 280.67)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440866")
+  )
+  (label "+2V8_ANA"
+    (at 55.88 280.67 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440867")
+  )
+  (wire
+    (pts
+      (xy 50.8 255.27)
+      (xy 50.8 250.19)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440868")
+  )
+  (label "DET_IN"
+    (at 50.8 250.19 90)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440869")
+  )
+  (symbol
+    (lib_id "lcsc:PESD3V3U1UA,115")
+    (at 342.9 184.15 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440870")
+    (property "Reference" "D12"
+      (at 342.9 177.8 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "PESD3V3U1UA,115"
+      (at 342.9 190.5 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "lcsc:SOD-323_L1.7-W1.3-LS2.5-RD"
+      (at 342.9 184.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C403915.pdf"
+      (at 342.9 184.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C403915"
+      (at 342.9 184.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C403915"
+      (at 342.9 184.15 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440871")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440872")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "D12")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 339.09 184.15)
+      (xy 334.01 184.15)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440873")
+  )
+  (label "+2V8_ANA"
+    (at 334.01 184.15 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440874")
+  )
+  (wire
+    (pts
+      (xy 346.71 184.15)
+      (xy 351.79 184.15)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440875")
+  )
+  (label "GND"
+    (at 351.79 184.15 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440876")
+  )
+  (symbol
+    (lib_id "lcsc:R")
+    (at 266.7 273.05 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440810")
+    (property "Reference" "R30"
+      (at 266.7 266.7 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "22k"
+      (at 266.7 279.4 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 266.7 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C25768.pdf"
+      (at 266.7 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C25768"
+      (at 266.7 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C25768"
+      (at 266.7 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440811")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440812")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "R30")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 266.7 269.24)
+      (xy 266.7 264.16)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440813")
+  )
+  (label "+2V8_ANA"
+    (at 266.7 264.16 90)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440814")
+  )
+  (wire
+    (pts
+      (xy 266.7 276.86)
+      (xy 266.7 281.94)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440815")
+  )
+  (label "TIP_SW"
+    (at 266.7 281.94 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440816")
+  )
+  (symbol
+    (lib_id "lcsc:R")
+    (at 304.8 273.05 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440820")
+    (property "Reference" "R31"
+      (at 304.8 266.7 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "1M"
+      (at 304.8 279.4 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 304.8 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C26083.pdf"
+      (at 304.8 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C26083"
+      (at 304.8 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C26083"
+      (at 304.8 273.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440821")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440822")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "R31")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 304.8 269.24)
+      (xy 304.8 264.16)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440823")
+  )
+  (label "HP_DET_N"
+    (at 304.8 264.16 90)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440824")
+  )
+  (wire
+    (pts
+      (xy 304.8 276.86)
+      (xy 304.8 281.94)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440825")
+  )
+  (label "U1_INP"
+    (at 304.8 281.94 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440826")
+  )
+  (symbol
+    (lib_id "lcsc:C")
+    (at 177.8 292.1 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440830")
+    (property "Reference" "C23"
+      (at 177.8 285.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "2.2uF"
+      (at 177.8 298.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 177.8 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C159814.pdf"
+      (at 177.8 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C159814"
+      (at 177.8 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C159814"
+      (at 177.8 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440831")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440832")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "C23")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 177.8 288.29)
+      (xy 177.8 283.21)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440833")
+  )
+  (label "TIP_SW"
+    (at 177.8 283.21 90)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440834")
+  )
+  (wire
+    (pts
+      (xy 177.8 295.91)
+      (xy 177.8 300.99)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440835")
+  )
+  (label "GND"
+    (at 177.8 300.99 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440836")
+  )
+  (symbol
+    (lib_id "lcsc:C")
+    (at 152.4 292.1 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440840")
+    (property "Reference" "C24"
+      (at 152.4 285.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "100nF"
+      (at 152.4 298.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 152.4 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C85858.pdf"
+      (at 152.4 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C85858"
+      (at 152.4 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C85858"
+      (at 152.4 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440841")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440842")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "C24")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 152.4 288.29)
+      (xy 152.4 283.21)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440843")
+  )
+  (label "+3V3"
+    (at 152.4 283.21 90)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440844")
+  )
+  (wire
+    (pts
+      (xy 152.4 295.91)
+      (xy 152.4 300.99)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440845")
+  )
+  (label "GND"
+    (at 152.4 300.99 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440846")
+  )
+  (symbol
+    (lib_id "lcsc:PESD3V3U1UA,115")
+    (at 381.0 292.1 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "550e8400-e29b-41d4-a716-446655440850")
+    (property "Reference" "D10"
+      (at 381.0 285.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "PESD3V3U1UA,115"
+      (at 381.0 298.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "lcsc:SOD-323_L1.7-W1.3-LS2.5-RD"
+      (at 381.0 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.lcsc.com/datasheet/C403915.pdf"
+      (at 381.0 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC" "C403915"
+      (at 381.0 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "LCSC Part" "C403915"
+      (at 381.0 292.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (pin "1"
+      (uuid "550e8400-e29b-41d4-a716-446655440851")
+    )
+    (pin "2"
+      (uuid "550e8400-e29b-41d4-a716-446655440852")
+    )
+    (instances
+      (project "thin-laptop-cm5-audio_right"
+        (path "/83cb882a-1c73-5b98-95d8-66433e482e75"
+          (reference "D10")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (wire
+    (pts
+      (xy 377.19 292.1)
+      (xy 372.11 292.1)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440853")
+  )
+  (label "TIP_SW"
+    (at 372.11 292.1 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440854")
+  )
+  (wire
+    (pts
+      (xy 384.81 292.1)
+      (xy 389.89 292.1)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440855")
+  )
+  (label "GND"
+    (at 389.89 292.1 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left bottom)
+    )
+    (uuid "550e8400-e29b-41d4-a716-446655440856")
   )
   (sheet_instances
     (path "/"

@@ -2,7 +2,7 @@
 
 Deterministic checks run on the design files (KiCad, the enclosure meshes, the assembly and the manufacturing outputs). Each one is a pytest case in CopperPilot's build pipeline.
 
-Verdict **PASS**: 43 pass, 3 warn, 0 fail, 0 error, 0 not applicable. Generated 2026-11-02T05:30:53Z.
+Verdict **PASS**: 46 pass, 2 warn, 0 fail, 0 error, 0 not applicable. Generated 2026-11-06T01:30:29Z.
 
 | Gate | What it checks | Status | Notes |
 |---|---|---|---|
@@ -10,9 +10,9 @@ Verdict **PASS**: 43 pass, 3 warn, 0 fail, 0 error, 0 not applicable. Generated 
 | `inputs.present` | Input images and prompt are inside the workspace | PASS |  |
 | `brand.clean` | No third-party brand marks in names, silkscreen, case or docs | PASS |  |
 | `scope.board_fits` | Every board fits inside the product's rounded outline, inside its wall | PASS |  |
-| `sourcing.bom` | Every placed part has a live, in-stock LCSC/JLCPCB part | WARN | 69 extended parts (each adds a JLCPCB feeder fee); prefer basic parts where equivalent |
+| `sourcing.bom` | Every placed part has a live, in-stock part at the fab's parts source | WARN | 84 extended parts (each adds a JLCPCB feeder fee); prefer basic parts where equivalent |
 | `kicad.erc` | Schematic ERC: 0 errors | PASS |  |
-| `kicad.drc` | PCB DRC with schematic parity + zone refill: 0/0/0 | WARN | [main] DRC warning lib_footprint_mismatch x59<br>[main] DRC warning track_dangling x6 |
+| `kicad.drc` | PCB DRC with schematic parity + zone refill: 0/0/0 | WARN | [main] DRC warning lib_footprint_mismatch x82<br>[main] DRC warning silk_over_copper x75 |
 | `kicad.rules` | Project rules are no looser than the fab profile; nothing silenced | PASS |  |
 | `board.contract` | Board outline, holes and user-facing parts match the spec | PASS |  |
 | `kicad.models` | Every placed footprint has a 3D model on disk | PASS |  |
@@ -27,8 +27,9 @@ Verdict **PASS**: 43 pass, 3 warn, 0 fail, 0 error, 0 not applicable. Generated 
 | `board.ground_pins` | No ground pin is left unconnected | PASS |  |
 | `board.pd_autonomous` | A USB-PD charging input negotiates with no processor running | PASS |  |
 | `board.connector_mating` | Every connector mates from a known side, toward its cable, with a clear mating zone in its footprint | PASS |  |
+| `board.height_zones` | Parts under an overhead part stay below the zone's height limit | PASS |  |
 | `board.port_facing` | Every user-facing port's connector opens towards its case opening (3D model) | PASS |  |
-| `review.design` | Datasheet-level design review (CopperPilot validate): no P0 findings | WARN | [audio_right] Hysteresis networks R23-R28 heavily load high-impedance nodes /V_REF_HI and /DET_IN, shifting thresholds by 503 mV and leaving only 38.2 mV unplug release margin<br>[main] Backlight high-side load switch Q_BL/Q_BL_EN is hard-wired ON to /+3V3, leaving /LED_ANODE continuously energized |
+| `review.design` | Datasheet-level design review (CopperPilot validate): no open P0 or P1 findings | PASS |  |
 | `mech.meshes` | Enclosure parts exist, are closed solids, and fit the envelope | PASS |  |
 | `mech.openings` | Every front/rear/edge feature has an opening in the shell, at its size | PASS |  |
 | `mech.assembly` | Draft assembly: no collisions seated or along insertion paths | PASS |  |
@@ -43,6 +44,7 @@ Verdict **PASS**: 43 pass, 3 warn, 0 fail, 0 error, 0 not applicable. Generated 
 | `integration.retention` | Every assembled part is held in place by something real (snap, clip, screw, adhesive, press fit, captured) | PASS |  |
 | `integration.rf` | A radio's antenna is not sealed inside metal (an RF window exists) | PASS |  |
 | `integration.battery_fill` | In a laptop- or tablet-sized product the battery fills the free space at its height | PASS |  |
+| `integration.camera_view` | Every camera sees out: its whole field of view clears the case | PASS |  |
 | `fab.package` | Gerbers, drill, BOM and CPL exist and agree with the PCB | PASS |  |
 | `video.build` | 3D build video exists and actually shows motion | PASS |  |
 | `tests.integrity` | Generated test suite is the rea template, unmodified | PASS |  |

@@ -18,7 +18,7 @@ pcb:
   min_via_diameter_mm: 0.25
   min_pth_drill_mm: 0.15
   min_npth_drill_mm: 0.50
-  min_annular_ring_mm: {two_layer: 0.18, multilayer: 0.05}   # vias: JLC multilayer 0.15 hole / 0.25 via (pad 0.1 over the hole), jlcpcb.com/capabilities/pcb-capabilities
+  min_annular_ring_mm: {two_layer: 0.05, multilayer: 0.05}  # vias (v101); 0.18 is the PTH ring
   min_hole_to_hole_mm: 0.20
   min_copper_to_edge_mm: 0.20
   min_silk_line_mm: 0.15

@@ -274,6 +274,37 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "c9366466-c779-4348-824e-91ce0487decc")
 	)
+	(zone
+		(layer "F.Cu")
+		(uuid "825a3138-7ef0-4997-8281-3a2200d626cf")
+		(name "MATING")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads allowed)
+			(copperpour allowed)
+			(footprints not_allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 4.24 1.89) (xy -4.24 1.89) (xy -4.24 7.89) (xy 4.24 7.89)
+			)
+		)
+	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/lcsc.3dshapes/FPC-SMD_8P-P0.50_FPC-05F-8PH20.step"
 		(offset
@@ -286,9 +317,4 @@
 			(xyz 0 0 0)
 		)
 	)
-	(zone (net 0) (net_name "") (layers "F.Cu") (name "MATING") (hatch edge 0.5)
-		(connect_pads (clearance 0)) (min_thickness 0.25) (filled_areas_thickness no)
-		(keepout (tracks allowed) (vias allowed) (pads allowed) (copperpour allowed) (footprints not_allowed))
-		(fill (thermal_gap 0.5) (thermal_bridge_width 0.5))
-		(polygon (pts (xy 4.24 1.89) (xy -4.24 1.89) (xy -4.24 7.89) (xy 4.24 7.89))))
 )

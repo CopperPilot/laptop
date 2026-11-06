@@ -4,7 +4,7 @@
 
 **A 13-inch, 13.5 mm thin aluminium laptop built around a Raspberry Pi Compute Module 5, with a 66 Wh 2S battery, 20 V USB-C charging, a scissor keyboard, a glass trackpad and a webcam. Designed end to end by CopperPilot.**
 
-[![Designed by: CopperPilot](https://img.shields.io/badge/Designed%20by-CopperPilot-b87333.svg)](https://copperpilot.ai) ![KiCad: 10](https://img.shields.io/badge/KiCad-10-314cb0.svg) [![Design gates: 43 pass · 3 warn · 0 fail](https://img.shields.io/badge/Design%20gates-43%20pass%20·%203%20warn%20·%200%20fail-brightgreen.svg)](reviews/gates.md) [![ERC / DRC: 0 errors](https://img.shields.io/badge/ERC%20%2F%20DRC-0%20errors-brightgreen.svg)](reviews/kicad) [![Review: 0 P0 · 9 P1 open](https://img.shields.io/badge/Review-0%20P0%20·%209%20P1%20open-yellow.svg)](reviews) ![Hardware: not yet built](https://img.shields.io/badge/Hardware-not%20yet%20built-orange.svg) [![License: CERN-OHL-S-2.0](https://img.shields.io/badge/License-CERN--OHL--S--2.0-blue.svg)](LICENSE)
+[![Designed by: CopperPilot](https://img.shields.io/badge/Designed%20by-CopperPilot-b87333.svg)](https://copperpilot.ai) ![KiCad: 10](https://img.shields.io/badge/KiCad-10-314cb0.svg) [![Design gates: 46 pass · 2 warn · 0 fail](https://img.shields.io/badge/Design%20gates-46%20pass%20·%202%20warn%20·%200%20fail-brightgreen.svg)](reviews/gates.md) [![ERC / DRC: 0 errors](https://img.shields.io/badge/ERC%20%2F%20DRC-0%20errors-brightgreen.svg)](reviews/kicad) [![Review: 0 P0 · 0 P1 open](https://img.shields.io/badge/Review-0%20P0%20·%200%20P1%20open-brightgreen.svg)](reviews) ![Hardware: not yet built](https://img.shields.io/badge/Hardware-not%20yet%20built-orange.svg) [![License: CERN-OHL-S-2.0](https://img.shields.io/badge/License-CERN--OHL--S--2.0-blue.svg)](LICENSE)
 
 > [!NOTE]
 > **Designed by [CopperPilot](https://copperpilot.ai).** CopperPilot's agents designed every board, schematic, layout and enclosure part in this repo from one prompt and a few reference photos, then checked them with the gates and reviews below. Nobody edited the design files by hand: the owner gave plain-English feedback between runs (it is at the end of the prompt), and the agents made every change. **It has not been fabricated, assembled or powered on yet.** Everything here is open for review: if you see something a senior engineer would flag, [open an issue](../../issues/new/choose).
@@ -27,7 +27,7 @@ display and webcam cables, which pass through a barrel between the two torque hi
 - [x] Every user-facing connector opens towards its case opening (checked on its 3D model)
 - [x] Every connector mates from a known side, with a keep-clear zone KiCad DRC enforces
 - [x] Both ends of every board-to-board cable carry the same signal on each wire
-- [x] Datasheet-level design review: 0 P0 (must-fix) findings on every board
+- [x] Datasheet-level design review: 0 P0 and 0 P1 findings open on every board
 - [x] Enclosure parts are closed solids that fit the product envelope
 - [x] Every enclosure part is manufacturable by its process (wall thickness, build size)
 - [x] Full assembly with the real PCBAs: no collisions, seated or along any insertion path
@@ -35,35 +35,29 @@ display and webcam cables, which pass through a barrel between the two torque hi
 - [x] Every connector faces what mates with it; every screw hole sits on a boss
 - [x] Every port opening has its connector right behind it
 - [x] Every button and control physically reaches the switch it works
+- [x] Every camera's whole field of view clears the case
 - [x] Every part is held by something real (screw, snap, clip, adhesive, press fit)
 - [x] Gerbers, drill, BOM and CPL exist and agree with the PCB
 - [x] Independent judge (compares renders to the reference photos): **8/10** ([notes](reviews/judge.md))
 
 ### Pending
 
-- [ ] **P1, Main board:** Backlight high-side load switch Q_BL/Q_BL_EN is hard-wired ON to /+3V3, leaving /LED_ANODE continuously energized ([review](reviews/review-main.md))
-- [ ] **P1, Main board:** Battery connector J_BAT (/VBAT_PACK and /VBAT) lacks reverse-polarity protection, TVS clamping, and hot-plug RC damping ([review](reviews/review-main.md))
-- [ ] **P1, Main board:** Battery fuse F1 (5A JFC1206-1500FS) is undersized for the 2S battery discharge and 5A fast-charge current budget ([review](reviews/review-main.md))
-- [ ] **P1, Main board:** CM5 internal +3.3v_(Output) PMIC rail (/+3V3) is routed directly off-board to three FFC/FPC connectors without overcurrent protection ([review](reviews/review-main.md))
-- [ ] **P1, Main board:** Dual +5V buck converters U_BUCK and U_BUCK2 (TPS56628DDAR) EN UVLO dividers cut off the 2S battery prematurely at 6.53V-7.10V ([review](reviews/review-main.md))
-- [ ] **P1, Left Dual USB-C PD & Data Daughter Board:** 20V PD rail TVS clamping voltage (D6/D7 SMF24A, 38.9V) exceeds Q1/Q2 AO4407A (-30V), U1 CH224A (32V), and C15 (25V) ratings ([review](reviews/review-usb_left.md))
-- [ ] **P1, Left Dual USB-C PD & Data Daughter Board:** CH224A VHV/VBUS pins use CH224K 1k series resistors (R3, R4) and PG-gated 1:1 divider (R13/R14) blocks <20V charging and under-drives Q1/Q2 at low VBUS ([review](reviews/review-usb_left.md))
-- [ ] **P1, Left Dual USB-C PD & Data Daughter Board:** U4 (XC6216B332MR-G) upstream dropper (D3 + R12=1k + D8=BZT52C16) risks /PD_VDD_3V3 brownout at minimum vSafe5V and overloads R12 during surges ([review](reviews/review-usb_left.md))
-- [ ] **P1, Right Headphone & Microphone Daughter Board:** Hysteresis networks R23-R28 heavily load high-impedance nodes /V_REF_HI and /DET_IN, shifting thresholds by 503 mV and leaving only 38.2 mV unplug release margin ([review](reviews/review-audio_right.md))
-- [ ] Gate `sourcing.bom` warn: 69 extended parts (each adds a JLCPCB feeder fee); prefer basic parts where equivalent
-- [ ] Gate `kicad.drc` warn: [main] DRC warning lib_footprint_mismatch x59
+- [ ] Gate `sourcing.bom` warn: 84 extended parts (each adds a JLCPCB feeder fee); prefer basic parts where equivalent
+- [ ] Gate `kicad.drc` warn: [main] DRC warning lib_footprint_mismatch x82
 - [ ] **Not built.** No board has been fabricated, assembled or powered on, and the enclosure has not been machined.
 - [ ] **No software bring-up.** The CM5 device tree, keyboard matrix (TCA8418), trackpad, display panel, webcam and charger settings over I2C are not written or tested.
 - [ ] **Bought parts are specified from drawings.** The keyboard, trackpad, 13-inch MIPI panel, hinges, speakers and the custom 2S2P pack are modelled from typical drawings; real suppliers and exact parts still have to be chosen and the models checked against them.
 - [ ] **Thermal design not analysed.** No thermal simulation or heat-spreading plan for the CM5 inside the closed aluminium case.
+- [ ] **Peak battery current to verify.** Several earlier design reviews estimated that peak load near the 2S cut-off (CM5, display, speakers and USB-C together) can exceed the BQ25798's 6 A internal battery switch; the final review did not raise it. Measure the peak load budget at bring-up, and add an external battery switch or a load cap if it holds.
 - [ ] **Thickness:** the assembly measures 13.45 mm against the 12.7 mm target (within the ±1 mm tolerance the design contract allows).
-- [ ] **Judge notes:** shallow 0.75 mm bosses under the bottom shell (the reference is flat); small gaps between the centre hinge barrel and the torque hinges; the webcam sits in the bezel margin outside the panel outline.
+- [ ] **Judge notes (8/10):** separate left and right torque-hinge barrels with a centre cable cover, where the reference has one full-width clutch cover; full-height arrow keys instead of a half-height inverted-T cluster; the webcam window is a rectangular cutout rather than a flush glass hole.
+- [ ] **DRC warnings:** 245 across the boards (mostly footprints that differ from their library copy and silkscreen over copper or overlapping); 0 errors.
 
-0 P0 · 9 P1 · 8 P2 review findings in total; the full reviews with evidence and suggested fixes are in [reviews/](reviews). The build pipeline only runs fix rounds while a P0 is open, so the P1s above are still to do.
+0 P0 · 0 P1 · 0 P2 review findings open; the full reviews with evidence and suggested fixes are in [reviews/](reviews). Every P0 and P1 the reviews raised was fixed before release.
 
 ## Build film
 
-[docs/build-film.mp4](docs/build-film.mp4) (49 s, 1080p). Every part moves in the assembly order and along the insertion path that the collision gates checked, and every cable is drawn along its real route.
+[docs/build-film.mp4](docs/build-film.mp4) (49 s, 720p). Every part moves in the assembly order and along the insertion path that the collision gates checked, and every cable is drawn along its real route.
 
 ## Renders
 
@@ -83,9 +77,9 @@ display and webcam cables, which pass through a barrel between the two torque hi
 
 | Board | Size | Layers | Parts | Tracks | Vias | KiCad project | Review |
 |---|---|---|---|---|---|---|---|
-| Main board | 160 × 44 mm | 4 | 220 | 3,688 | 740 | [`hardware/thin-laptop-cm5.kicad_pro`](hardware/thin-laptop-cm5.kicad_pro) | [0 P0 · 5 P1](reviews/review-main.md) |
-| Left Dual USB-C PD & Data Daughter Board | 36 × 38 mm | 2 | 64 | 754 | 53 | [`hardware/usb_left/thin-laptop-cm5-usb_left.kicad_pro`](hardware/usb_left/thin-laptop-cm5-usb_left.kicad_pro) | [0 P0 · 3 P1](reviews/review-usb_left.md) |
-| Right Headphone & Microphone Daughter Board | 36 × 38 mm | 2 | 64 | 501 | 37 | [`hardware/audio_right/thin-laptop-cm5-audio_right.kicad_pro`](hardware/audio_right/thin-laptop-cm5-audio_right.kicad_pro) | [0 P0 · 1 P1](reviews/review-audio_right.md) |
+| Main board | 160 × 44 mm | 4 | 285 | 5,693 | 856 | [`hardware/thin-laptop-cm5.kicad_pro`](hardware/thin-laptop-cm5.kicad_pro) | [0 P0 · 0 P1](reviews/review-main.md) |
+| Left Dual USB-C PD & Data Daughter Board | 36 × 38 mm | 4 | 67 | 1,218 | 93 | [`hardware/usb_left/thin-laptop-cm5-usb_left.kicad_pro`](hardware/usb_left/thin-laptop-cm5-usb_left.kicad_pro) | [0 P0 · 0 P1](reviews/review-usb_left.md) |
+| Right Headphone & Microphone Daughter Board | 36 × 38 mm | 2 | 74 | 555 | 84 | [`hardware/audio_right/thin-laptop-cm5-audio_right.kicad_pro`](hardware/audio_right/thin-laptop-cm5-audio_right.kicad_pro) | [0 P0 · 0 P1](reviews/review-audio_right.md) |
 
 **Bought parts** (modelled from their drawings; the assembly checks use these models):
 
@@ -94,7 +88,7 @@ display and webcam cables, which pass through a barrel between the two torque hi
 - **Trackpad module**: Capacitive multi-touch glass-surface I2C laptop trackpad module with 8-pin 0.5mm FPC tail
 - **Display panel**: 13.0-inch 2560x1600 4-lane MIPI DSI IPS thin LCD panel with integrated WLED backlight bar
 - **Webcam module**: Slim 1080p MIPI CSI-2 camera module with 22-pin 0.5mm micro-coax receptacle for laptop top bezel
-- **Battery pack**: Custom 2S2P 7.4V nominal (6.0-8.4V) 9000mAh / 66.6Wh Li-Po laptop battery pack built from four identical LP4466104 pouch cells (4x 3.7V 4500mAh, 104.0 x 66.0 x 4.4 mm each) joined by the pack maker with one integrated 2S protection and cell-balancing board (PCM with internal mid-point balance lead), 10k NTC thermistor, and one 8-pin JST-PH 2.0mm harness connector, contoured around and under the trackpad
+- **Battery pack**: Custom 2S2P 7.4V nominal
 - **Speaker left**: Low-profile 8-ohm 2W rectangular laptop speaker box module (left channel)
 - **Speaker right**: Low-profile 8-ohm 2W rectangular laptop speaker box module (right channel)
 - **Hinge left**: Compact friction torque laptop hinge (left)
@@ -104,7 +98,7 @@ display and webcam cables, which pass through a barrel between the two torque hi
 
 CopperPilot's agents worked from the prompt in [reference/prompt.md](reference/prompt.md) and 6 reference photos ([reference/](reference)). The pipeline scopes the product into a written contract ([design/spec.yaml](design/spec.yaml)), designs the boards and the enclosure in parallel, integrates them, and only moves on when the gates pass. A separate review agent reads every board against the part datasheets, and a separate judge compares the result with the photos.
 
-- Pipeline wall clock: about **64 h** over 11 launches (pipeline v68 to v97).
+- Pipeline wall clock: about **136 h** over 20 launches (pipeline v68 to v119).
 
 **Reference vs build:**
 
