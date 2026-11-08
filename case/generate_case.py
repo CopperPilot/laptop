@@ -4,7 +4,7 @@
 from pathlib import Path
 import sys
 
-for _sp in Path("~/.t3/worktrees/rea-hardware/t3-d3f20bea/.venv/lib").glob("python*/site-packages"):
+for _sp in Path("~/rea-hardware/.venv/lib").glob("python*/site-packages"):
     if str(_sp) not in sys.path:
         sys.path.append(str(_sp))
 

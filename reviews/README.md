@@ -5,4 +5,5 @@
 - [Left Dual USB-C PD & Data Daughter Board](review-usb_left.md): 0 P0, 0 P1, 0 P2
 - [Right Headphone & Microphone Daughter Board](review-audio_right.md): 0 P0, 0 P1, 0 P2
 - [Independent judge](judge.md): the build compared with the reference photos.
+- [Build film review](film.md): the film watched frame by frame by a separate critic.
 - [KiCad ERC and DRC](kicad): the raw JSON reports for every board.
