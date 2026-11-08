@@ -98,7 +98,7 @@ display and webcam cables, which pass through a barrel between the two torque hi
 
 CopperPilot's agents worked from the prompt in [reference/prompt.md](reference/prompt.md) and 6 reference photos ([reference/](reference)). The pipeline scopes the product into a written contract ([design/spec.yaml](design/spec.yaml)), designs the boards and the enclosure in parallel, integrates them, and only moves on when the gates pass. A separate review agent reads every board against the part datasheets, and a separate judge compares the result with the photos.
 
-- Pipeline wall clock: about **136 h** over 23 launches (pipeline v68 to v123).
+- Pipeline wall clock: about **136 h** over 25 launches (pipeline v68 to v127).
 
 **Reference vs build:**
 
